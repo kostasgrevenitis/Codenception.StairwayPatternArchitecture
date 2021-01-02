@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Codenception.StairwayPatternArchitecture.Domain.Clients.ConsoleApp
+namespace Codenception.StairwayPatternArchitecture.Clients.ConsoleApp
 {
     class Program
     {
