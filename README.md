@@ -1,1 +1,1 @@
-# Codenception.StairwayPatternArchitecture
+# Stairway Pattern Architecture
