@@ -1,29 +1,42 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <DirectedGraph DataVirtualized="True" Layout="Sugiyama" ZoomLevel="-1" xmlns="http://schemas.microsoft.com/vs/2009/dgml">
   <Nodes>
-    <Node Id="(@1)" Category="CodeSchema_Assembly" Bounds="-317,156,400.453333333333,25" CodeSchemaProperty_StrongName="Codenception.StairwayPatternArchitecture.Repositories.MsSql, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" FilePath="$(bf9601e5-8746-4aa0-b8ae-07f5e0cacca5.OutputPath)" Group="Collapsed" Label="Codenception.StairwayPatternArchitecture.Repositories.MsSql.dll" UseManualLocation="True" />
-    <Node Id="(@2)" Category="CodeSchema_Assembly" Bounds="-83,-31.6001,342.486666666667,25" CodeSchemaProperty_StrongName="Codenception.StairwayPatternArchitecture.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" FilePath="$(7a74d2bf-d9eb-46e7-aea4-ae2dae1dc29a.OutputPath)" Group="Collapsed" Label="Codenception.StairwayPatternArchitecture.Domain.dll" UseManualLocation="True" />
-    <Node Id="(@5)" Category="CodeSchema_Assembly" Bounds="-547,-163.6002,397.17,25" CodeSchemaProperty_StrongName="Codenception.StairwayPatternArchitecture.Services.Interfaces, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" FilePath="$(0bf3e256-fd43-4907-bbb2-1266c38e0039.OutputPath)" Group="Collapsed" Label="Codenception.StairwayPatternArchitecture.Services.Interfaces.dll" UseManualLocation="True" />
-    <Node Id="(@8)" Category="CodeSchema_Assembly" Bounds="-425,43.4001,389.276666666667,25" CodeSchemaProperty_StrongName="Codenception.StairwayPatternArchitecture.DatabaseModels, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" FilePath="$(2d18f536-5908-4f36-8e39-8d3dc6150ffa.OutputPath)" Group="Collapsed" Label="Codenception.StairwayPatternArchitecture.DatabaseModels.dll" UseManualLocation="True" />
-    <Node Id="@4" Category="CodeSchema_Assembly" Bounds="-111,-98.5998,396.363333333333,25" CodeSchemaProperty_StrongName="Codenception.StairwayPatternArchitecture.Domain.Interfaces, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" FilePath="$(7f43adc7-bb5a-419e-a6b1-e14fb8c558cc.OutputPath)" Group="Collapsed" Label="Codenception.StairwayPatternArchitecture.Domain.Interfaces.dll" UseManualLocation="True" />
-    <Node Id="@7" Category="CodeSchema_Assembly" Bounds="-519,-95.6,343.293333333333,25" CodeSchemaProperty_StrongName="Codenception.StairwayPatternArchitecture.Services, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" FilePath="$(6065fe84-0672-4a1b-9a43-fda371c77852.OutputPath)" Group="Collapsed" Label="Codenception.StairwayPatternArchitecture.Services.dll" UseManualLocation="True" />
+    <Node Id="(@1)" Category="CodeSchema_Assembly" Bounds="-573.871666666667,65.000000003,380.743333333333,25" CodeSchemaProperty_StrongName="Codenception.StairwayPatternArchitecture.Clients.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" FilePath="$(VsSolution)\Codenception.StairwayPatternArchitecture.Clients.WebApi\bin\Debug\net5.0\Codenception.StairwayPatternArchitecture.Clients.WebApi.dll" Group="Collapsed" Label="Codenception.StairwayPatternArchitecture.Clients.WebApi.dll" UseManualLocation="True" />
+    <Node Id="(@11)" Category="CodeSchema_Assembly" Bounds="-94.7866666666668,361,347.436666666667,25" CodeSchemaProperty_StrongName="Codenception.StairwayPatternArchitecture.Mappers, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" FilePath="$(3c0a5576-f509-452a-baae-bd2f16886c16.OutputPath)" Group="Collapsed" Label="Codenception.StairwayPatternArchitecture.Mappers.dll" UseManualLocation="True" />
+    <Node Id="(@2)" Category="CodeSchema_Assembly" Bounds="684.136666666667,357.499949998025,400.453333333333,25" CodeSchemaProperty_StrongName="Codenception.StairwayPatternArchitecture.Repositories.MsSql, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" FilePath="$(bf9601e5-8746-4aa0-b8ae-07f5e0cacca5.OutputPath)" Group="Collapsed" Label="Codenception.StairwayPatternArchitecture.Repositories.MsSql.dll" UseManualLocation="True" />
+    <Node Id="(@3)" Category="CodeSchema_Assembly" Bounds="282.65,359.500049998025,342.486666666667,25" CodeSchemaProperty_StrongName="Codenception.StairwayPatternArchitecture.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" FilePath="$(7a74d2bf-d9eb-46e7-aea4-ae2dae1dc29a.OutputPath)" Group="Collapsed" Label="Codenception.StairwayPatternArchitecture.Domain.dll" UseManualLocation="True" />
+    <Node Id="(@4)" Category="CodeSchema_Assembly" Bounds="-163.128333333333,62.9998000057,403.376666666667,25" CodeSchemaProperty_StrongName="Codenception.StairwayPatternArchitecture.Clients.ConsoleApp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" FilePath="$(VsSolution)\Codenception.StairwayPatternArchitecture.Clients.ConsoleApp\bin\Debug\net5.0\Codenception.StairwayPatternArchitecture.Clients.ConsoleApp.dll" Group="Collapsed" Label="Codenception.StairwayPatternArchitecture.Clients.ConsoleApp.dll" UseManualLocation="True" />
+    <Node Id="@10" Category="CodeSchema_Assembly" Bounds="312.486666666667,139.50005,343.293333333333,25" CodeSchemaProperty_StrongName="Codenception.StairwayPatternArchitecture.Services, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" FilePath="$(6065fe84-0672-4a1b-9a43-fda371c77852.OutputPath)" Group="Collapsed" Label="Codenception.StairwayPatternArchitecture.Services.dll" UseManualLocation="True" />
+    <Node Id="@6" Category="CodeSchema_Assembly" Bounds="288,252,396.363333333333,25" CodeSchemaProperty_StrongName="Codenception.StairwayPatternArchitecture.Domain.Interfaces, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" FilePath="$(7f43adc7-bb5a-419e-a6b1-e14fb8c558cc.OutputPath)" Group="Collapsed" Label="Codenception.StairwayPatternArchitecture.Domain.Interfaces.dll" UseManualLocation="True" />
+    <Node Id="@8" Category="CodeSchema_Assembly" Bounds="-461,134.9999000057,397.17,25" CodeSchemaProperty_StrongName="Codenception.StairwayPatternArchitecture.Services.Interfaces, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" FilePath="$(0bf3e256-fd43-4907-bbb2-1266c38e0039.OutputPath)" Group="Collapsed" Label="Codenception.StairwayPatternArchitecture.Services.Interfaces.dll" UseManualLocation="True" />
   </Nodes>
   <Links>
-    <Link Source="(@2)" Target="@4" Category="Implements" Bounds="87.5223343707506,-64.6009296954652,0.522925936385079,33.0008296954652" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="3">
+    <Link Source="(@1)" Target="@8" Category="CodeMap_ProjectReference" Bounds="-361.877647683188,90.000000003,70.0486159276364,40.4954875522326" />
+    <Link Source="(@11)" Target="@6" Category="References" Bounds="125.634648318043,279.326935173578,305.150051840005,81.6730648264223" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="7">
+      <Category Ref="CodeMap_ProjectReference" />
+      <Category Ref="CodeSchema_ReturnTypeLink" />
+      <Category Ref="Implements" />
+    </Link>
+    <Link Source="(@2)" Target="@6" Category="Implements" Bounds="542.059423787047,279.305052757833,295.125964595351,78.194897240192" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="1">
       <Category Ref="CodeMap_ProjectReference" />
     </Link>
-    <Link Source="@7" Target="(@5)" Category="Implements" Bounds="-348.079344090163,-129.601296703198,0.530852017100301,34.0012967031981" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="1">
+    <Link Source="(@3)" Target="@6" Category="Implements" Bounds="457.647788951485,285.61959047817,22.1904725052756,73.8804595198553" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="3">
       <Category Ref="CodeMap_ProjectReference" />
     </Link>
-    <Link Source="@7" Target="@4" Category="References" Bounds="-175.706666666667,-84.6695287437131,55.7068811196375,0.384570867669325" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="22">
+    <Link Source="(@4)" Target="@8" Category="CodeMap_ProjectReference" Bounds="-201.409441405452,87.9998000057,187.716909811746,44.9061758555917" />
+    <Link Source="@10" Target="@6" Category="References" Bounds="484.360926027078,164.50005,1.42930836132541,78.5014414241001" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="34">
       <Category Ref="CodeMap_ProjectReference" />
       <Category Ref="CodeSchema_Calls" />
+    </Link>
+    <Link Source="@10" Target="@8" Category="Implements" Bounds="-54.8301635079212,148.751209343684,367.316830174588,2.21416451877386" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="1">
+      <Category Ref="CodeMap_ProjectReference" />
     </Link>
   </Links>
   <Categories>
     <Category Id="CodeMap_ProjectReference" Label="Project Reference" CanBeDataDriven="True" CanLinkedNodesBeDataDriven="True" IncomingActionLabel="Referenced By" OutgoingActionLabel="References" />
     <Category Id="CodeSchema_Assembly" Label="Assembly" BasedOn="File" CanBeDataDriven="True" DefaultAction="Microsoft.Contains" Icon="CodeSchema_Assembly" NavigationActionLabel="Assemblies" />
     <Category Id="CodeSchema_Calls" Label="Calls" CanBeDataDriven="True" CanLinkedNodesBeDataDriven="True" IncomingActionLabel="Called By" OutgoingActionLabel="Calls" />
+    <Category Id="CodeSchema_ReturnTypeLink" Label="Return" CanBeDataDriven="True" CanLinkedNodesBeDataDriven="True" IncomingActionLabel="Return types" OutgoingActionLabel="Return types" />
     <Category Id="File" Label="File" CanBeDataDriven="True" DefaultAction="Microsoft.Contains" Icon="File" NavigationActionLabel="Files" />
     <Category Id="Implements" Label="Implements" CanBeDataDriven="True" CanLinkedNodesBeDataDriven="True" IncomingActionLabel="Implemented by" OutgoingActionLabel="Implements" />
     <Category Id="References" Label="References" CanBeDataDriven="True" CanLinkedNodesBeDataDriven="True" IncomingActionLabel="Referenced By" OutgoingActionLabel="References" />
@@ -62,14 +75,17 @@
     <Name Id="Assembly" Label="Assembly" ValueType="Uri" />
   </QualifiedNames>
   <IdentifierAliases>
-    <Alias n="1" Uri="Assembly=$(bf9601e5-8746-4aa0-b8ae-07f5e0cacca5.OutputPathUri)" />
-    <Alias n="2" Uri="Assembly=$(7a74d2bf-d9eb-46e7-aea4-ae2dae1dc29a.OutputPathUri)" />
-    <Alias n="3" Uri="Assembly=$(7f43adc7-bb5a-419e-a6b1-e14fb8c558cc.OutputPathUri)" />
-    <Alias n="4" Id="(@3)" />
-    <Alias n="5" Uri="Assembly=$(0bf3e256-fd43-4907-bbb2-1266c38e0039.OutputPathUri)" />
-    <Alias n="6" Uri="Assembly=$(6065fe84-0672-4a1b-9a43-fda371c77852.OutputPathUri)" />
-    <Alias n="7" Id="(@6)" />
-    <Alias n="8" Uri="Assembly=$(2d18f536-5908-4f36-8e39-8d3dc6150ffa.OutputPathUri)" />
+    <Alias n="1" Uri="Assembly=$(VsSolutionUri)/Codenception.StairwayPatternArchitecture.Clients.WebApi/bin/Debug/net5.0/Codenception.StairwayPatternArchitecture.Clients.WebApi.dll" />
+    <Alias n="2" Uri="Assembly=$(bf9601e5-8746-4aa0-b8ae-07f5e0cacca5.OutputPathUri)" />
+    <Alias n="3" Uri="Assembly=$(7a74d2bf-d9eb-46e7-aea4-ae2dae1dc29a.OutputPathUri)" />
+    <Alias n="4" Uri="Assembly=$(VsSolutionUri)/Codenception.StairwayPatternArchitecture.Clients.ConsoleApp/bin/Debug/net5.0/Codenception.StairwayPatternArchitecture.Clients.ConsoleApp.dll" />
+    <Alias n="5" Uri="Assembly=$(7f43adc7-bb5a-419e-a6b1-e14fb8c558cc.OutputPathUri)" />
+    <Alias n="6" Id="(@5)" />
+    <Alias n="7" Uri="Assembly=$(0bf3e256-fd43-4907-bbb2-1266c38e0039.OutputPathUri)" />
+    <Alias n="8" Id="(@7)" />
+    <Alias n="9" Uri="Assembly=$(6065fe84-0672-4a1b-9a43-fda371c77852.OutputPathUri)" />
+    <Alias n="10" Id="(@9)" />
+    <Alias n="11" Uri="Assembly=$(3c0a5576-f509-452a-baae-bd2f16886c16.OutputPathUri)" />
   </IdentifierAliases>
   <Styles>
     <Style TargetType="Node" GroupLabel="Results" ValueLabel="True">
@@ -291,8 +307,8 @@
   <Paths>
     <Path Id="0bf3e256-fd43-4907-bbb2-1266c38e0039.OutputPath" Value="D:\Codenception.StairwayPatternArchitecture\Codenception.StairwayPatternArchitecture.Services.Interfaces\bin\Debug\net5.0\Codenception.StairwayPatternArchitecture.Services.Interfaces.dll" />
     <Path Id="0bf3e256-fd43-4907-bbb2-1266c38e0039.OutputPathUri" Value="file:///D:/Codenception.StairwayPatternArchitecture/Codenception.StairwayPatternArchitecture.Services.Interfaces/bin/Debug/net5.0/Codenception.StairwayPatternArchitecture.Services.Interfaces.dll" />
-    <Path Id="2d18f536-5908-4f36-8e39-8d3dc6150ffa.OutputPath" Value="D:\Codenception.StairwayPatternArchitecture\Codenception.StairwayPatternArchitecture.DatabaseModels\bin\Debug\net5.0\Codenception.StairwayPatternArchitecture.DatabaseModels.dll" />
-    <Path Id="2d18f536-5908-4f36-8e39-8d3dc6150ffa.OutputPathUri" Value="file:///D:/Codenception.StairwayPatternArchitecture/Codenception.StairwayPatternArchitecture.DatabaseModels/bin/Debug/net5.0/Codenception.StairwayPatternArchitecture.DatabaseModels.dll" />
+    <Path Id="3c0a5576-f509-452a-baae-bd2f16886c16.OutputPath" Value="D:\Codenception.StairwayPatternArchitecture\Codenception.StairwayPatternArchitecture.Mappers\bin\Debug\net5.0\Codenception.StairwayPatternArchitecture.Mappers.dll" />
+    <Path Id="3c0a5576-f509-452a-baae-bd2f16886c16.OutputPathUri" Value="file:///D:/Codenception.StairwayPatternArchitecture/Codenception.StairwayPatternArchitecture.Mappers/bin/Debug/net5.0/Codenception.StairwayPatternArchitecture.Mappers.dll" />
     <Path Id="6065fe84-0672-4a1b-9a43-fda371c77852.OutputPath" Value="D:\Codenception.StairwayPatternArchitecture\Codenception.StairwayPatternArchitecture.Services\bin\Debug\net5.0\Codenception.StairwayPatternArchitecture.Services.dll" />
     <Path Id="6065fe84-0672-4a1b-9a43-fda371c77852.OutputPathUri" Value="file:///D:/Codenception.StairwayPatternArchitecture/Codenception.StairwayPatternArchitecture.Services/bin/Debug/net5.0/Codenception.StairwayPatternArchitecture.Services.dll" />
     <Path Id="7a74d2bf-d9eb-46e7-aea4-ae2dae1dc29a.OutputPath" Value="D:\Codenception.StairwayPatternArchitecture\Codenception.StairwayPatternArchitecture.Domain\bin\Debug\net5.0\Codenception.StairwayPatternArchitecture.Domain.dll" />
@@ -301,5 +317,7 @@
     <Path Id="7f43adc7-bb5a-419e-a6b1-e14fb8c558cc.OutputPathUri" Value="file:///D:/Codenception.StairwayPatternArchitecture/Codenception.StairwayPatternArchitecture.Domain.Interfaces/bin/Debug/net5.0/Codenception.StairwayPatternArchitecture.Domain.Interfaces.dll" />
     <Path Id="bf9601e5-8746-4aa0-b8ae-07f5e0cacca5.OutputPath" Value="D:\Codenception.StairwayPatternArchitecture\Codenception.StairwayPatternArchitecture.Repositories.MsSql\bin\Debug\net5.0\Codenception.StairwayPatternArchitecture.Repositories.MsSql.dll" />
     <Path Id="bf9601e5-8746-4aa0-b8ae-07f5e0cacca5.OutputPathUri" Value="file:///D:/Codenception.StairwayPatternArchitecture/Codenception.StairwayPatternArchitecture.Repositories.MsSql/bin/Debug/net5.0/Codenception.StairwayPatternArchitecture.Repositories.MsSql.dll" />
+    <Path Id="VsSolution" Value="D:\Codenception.StairwayPatternArchitecture" />
+    <Path Id="VsSolutionUri" Value="file:///D:/Codenception.StairwayPatternArchitecture" />
   </Paths>
 </DirectedGraph>

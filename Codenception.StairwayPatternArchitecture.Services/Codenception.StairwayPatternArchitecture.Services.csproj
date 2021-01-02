@@ -6,7 +6,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Codenception.StairwayPatternArchitecture.Domain.Interfaces\Codenception.StairwayPatternArchitecture.Domain.Interfaces.csproj" />
-    <ProjectReference Include="..\Codenception.StairwayPatternArchitecture.Domain\Codenception.StairwayPatternArchitecture.Domain.csproj" />
     <ProjectReference Include="..\Codenception.StairwayPatternArchitecture.Services.Interfaces\Codenception.StairwayPatternArchitecture.Services.Interfaces.csproj" />
   </ItemGroup>
 

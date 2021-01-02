@@ -1,11 +1,15 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <TargetFramework>net5.0</TargetFramework>
     <AssemblyName>Codenception.StairwayPatternArchitecture.Clients.WebApi</AssemblyName>
     <OutputType>Exe</OutputType>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="Carter" Version="5.2.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Codenception.StairwayPatternArchitecture.Services.Interfaces\Codenception.StairwayPatternArchitecture.Services.Interfaces.csproj" />
   </ItemGroup>
 </Project>
