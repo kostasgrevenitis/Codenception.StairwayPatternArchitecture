@@ -1,4 +1,7 @@
-﻿using Codenception.StairwayPatternArchitecture.Domain.Interfaces.Restaurant;
+﻿using Codenception.StairwayPatternArchitecture.Domain.Interfaces.Restaurant.Cqrs;
+using Codenception.StairwayPatternArchitecture.Domain.Interfaces.Restaurant.Entities;
+using Codenception.StairwayPatternArchitecture.Domain.Interfaces.Restaurant.Mappers;
+using Codenception.StairwayPatternArchitecture.Domain.Interfaces.Restaurant.Records;
 using Codenception.StairwayPatternArchitecture.Services.Interfaces;
 using System.Collections.Generic;
 
