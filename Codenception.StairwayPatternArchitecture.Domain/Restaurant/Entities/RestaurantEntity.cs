@@ -4,7 +4,7 @@ using Codenception.StairwayPatternArchitecture.Domain.Validators;
 
 namespace Codenception.StairwayPatternArchitecture.Domain.Restaurant.Entities
 {
-    public class RestaurantEntity : IRestaurantEntity<RestaurantRecord, AddressInfo>
+    public class RestaurantEntity : IEntity<RestaurantRecord, AddressInfo>
     {
         private readonly RestaurantValidator _restaurantValidator;
 

@@ -2,7 +2,7 @@
 
 namespace Codenception.StairwayPatternArchitecture.Domain.Interfaces.Restaurant.Entities
 {
-    public interface IRestaurantEntity<TRestaurantRecord, TAddressInfo>
+    public interface IEntity<TRestaurantRecord, TAddressInfo>
         where TRestaurantRecord : IDomainRecord
         where TAddressInfo : IDomainRecord
     {

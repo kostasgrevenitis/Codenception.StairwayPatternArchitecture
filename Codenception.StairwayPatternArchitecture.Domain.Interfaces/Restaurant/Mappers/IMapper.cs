@@ -2,7 +2,7 @@
 
 namespace Codenception.StairwayPatternArchitecture.Domain.Interfaces.Restaurant.Mappers
 {
-    public interface IRestaurantMappers<TRecord, TDatabaseRecord>
+    public interface IMapper<TRecord, TDatabaseRecord>
         where TRecord : IDomainRecord
         where TDatabaseRecord : IDatabaseRecord<System.ValueType>
     {
