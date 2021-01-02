@@ -3,7 +3,7 @@ using System;
 
 namespace Codenception.StairwayPatternArchitecture.Domain.Records
 {
-    public record RestaurantRecord : IRecord
+    public record RestaurantRecord : IDomainRecord
     {
         public DateTime Date
         {
@@ -19,7 +19,7 @@ namespace Codenception.StairwayPatternArchitecture.Domain.Records
             get; init;
         }
 
-        public IRecord Map<TId>(IDatabaseRecord<TId> databaseRecord)
+        public IDomainRecord Map<TId>(IDatabaseRecord<TId> databaseRecord)
         {
             return new RestaurantRecord();
         }

@@ -1,8 +1,8 @@
 ﻿namespace Codenception.StairwayPatternArchitecture.Domain.Interfaces.Restaurant
 {
-    public interface IRecord
+    public interface IDomainRecord
     {
-        public IRecord Map<TId>(IDatabaseRecord<TId> databaseRecord);
+        public IDomainRecord Map<TId>(IDatabaseRecord<TId> databaseRecord);
 
         public string RecordToString();
     }

@@ -1,8 +1,8 @@
 ﻿namespace Codenception.StairwayPatternArchitecture.Domain.Interfaces.Restaurant
 {
     public interface IRestaurantEntity<TRestaurantRecord, TAddressInfo>
-        where TRestaurantRecord : IRecord
-        where TAddressInfo : IRecord
+        where TRestaurantRecord : IDomainRecord
+        where TAddressInfo : IDomainRecord
     {
         public void Validate(TRestaurantRecord restaurantRecord);
 
