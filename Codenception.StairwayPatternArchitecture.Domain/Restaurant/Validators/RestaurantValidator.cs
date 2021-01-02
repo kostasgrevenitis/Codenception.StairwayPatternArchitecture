@@ -1,4 +1,4 @@
-﻿using Codenception.StairwayPatternArchitecture.Domain.Records;
+﻿using Codenception.StairwayPatternArchitecture.Domain.Restaurant.Records;
 using FluentValidation;
 
 namespace Codenception.StairwayPatternArchitecture.Domain.Validators

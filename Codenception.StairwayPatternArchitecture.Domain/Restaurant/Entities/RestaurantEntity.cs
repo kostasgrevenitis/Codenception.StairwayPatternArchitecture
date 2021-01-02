@@ -1,8 +1,8 @@
-﻿using Codenception.StairwayPatternArchitecture.Domain.Interfaces.Restaurant;
-using Codenception.StairwayPatternArchitecture.Domain.Records;
+﻿using Codenception.StairwayPatternArchitecture.Domain.Interfaces.Restaurant.Entities;
+using Codenception.StairwayPatternArchitecture.Domain.Restaurant.Records;
 using Codenception.StairwayPatternArchitecture.Domain.Validators;
 
-namespace Codenception.StairwayPatternArchitecture.Domain.Entities
+namespace Codenception.StairwayPatternArchitecture.Domain.Restaurant.Entities
 {
     public class RestaurantEntity : IRestaurantEntity<RestaurantRecord, AddressInfo>
     {

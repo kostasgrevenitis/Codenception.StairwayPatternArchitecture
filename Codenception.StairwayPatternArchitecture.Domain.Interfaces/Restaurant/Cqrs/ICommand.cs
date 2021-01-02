@@ -1,4 +1,4 @@
-﻿namespace Codenception.StairwayPatternArchitecture.Domain.Interfaces.Restaurant
+﻿namespace Codenception.StairwayPatternArchitecture.Domain.Interfaces.Restaurant.Cqrs
 {
     public interface ICommand<TRecord, TId> where TRecord : class
     {

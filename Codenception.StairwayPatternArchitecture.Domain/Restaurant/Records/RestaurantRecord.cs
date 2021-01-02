@@ -1,7 +1,7 @@
-﻿using Codenception.StairwayPatternArchitecture.Domain.Interfaces.Restaurant;
+﻿using Codenception.StairwayPatternArchitecture.Domain.Interfaces.Restaurant.Records;
 using System;
 
-namespace Codenception.StairwayPatternArchitecture.Domain.Records
+namespace Codenception.StairwayPatternArchitecture.Domain.Restaurant.Records
 {
     public record RestaurantRecord : IDomainRecord
     {
@@ -17,11 +17,6 @@ namespace Codenception.StairwayPatternArchitecture.Domain.Records
         public AddressInfo AddressInfo
         {
             get; init;
-        }
-
-        public IDomainRecord Map<TId>(IDatabaseRecord<TId> databaseRecord)
-        {
-            return new RestaurantRecord();
         }
 
         public string RecordToString()

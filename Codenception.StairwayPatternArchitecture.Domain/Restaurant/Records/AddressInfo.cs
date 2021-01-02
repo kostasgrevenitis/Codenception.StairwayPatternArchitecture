@@ -1,7 +1,7 @@
-﻿using Codenception.StairwayPatternArchitecture.Domain.Interfaces.Restaurant;
+﻿using Codenception.StairwayPatternArchitecture.Domain.Interfaces.Restaurant.Records;
 using System;
 
-namespace Codenception.StairwayPatternArchitecture.Domain.Records
+namespace Codenception.StairwayPatternArchitecture.Domain.Restaurant.Records
 {
     public record AddressInfo : IDomainRecord
     {

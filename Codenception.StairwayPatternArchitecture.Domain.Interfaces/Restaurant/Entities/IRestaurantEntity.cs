@@ -1,4 +1,6 @@
-﻿namespace Codenception.StairwayPatternArchitecture.Domain.Interfaces.Restaurant
+﻿using Codenception.StairwayPatternArchitecture.Domain.Interfaces.Restaurant.Records;
+
+namespace Codenception.StairwayPatternArchitecture.Domain.Interfaces.Restaurant.Entities
 {
     public interface IRestaurantEntity<TRestaurantRecord, TAddressInfo>
         where TRestaurantRecord : IDomainRecord
