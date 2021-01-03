@@ -57,7 +57,7 @@ Each domain entity is assembled by three items:
 - A Record type item, that carries the data
 - A Validator class item, that validates the data integrity
 
-All 3 are immutable and any data changes should only be possible using methods. 
+All 3 are immutable and any state changes should only be possible using methods. 
 Data must be validated to ensure that we always have a valid state.
 
 ## Services
@@ -129,6 +129,7 @@ is more scalable this ways.
 - [ ] Queue messaging management
 - [ ] UI project
 - [ ] Integration tests
+- [ ] Multitenant support
 - [ ] Docker/Containers
 
 # Versions
