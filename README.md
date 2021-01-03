@@ -1,7 +1,7 @@
 ﻿# Stairway Pattern Architecture
 > Last update 03/01/2021
 > 
-> Document version 0.1
+> Document version 0.2
 
 🚧 Work in progress. It can't be used yet! 🚧
 
@@ -9,7 +9,8 @@
 
 ## Introduction
 
-There is an excellent book called **"Adaptive Code: Agile coding with design patterns and SOLID principles (Developer Best Practices) 2nd Edition"**, by Gary McLean Hall.
+There is an excellent book called 
+[**"Adaptive Code: Agile coding with design patterns and SOLID principles (Developer Best Practices) 2nd Edition"**](https://www.amazon.com/Adaptive-Code-principles-Developer-Practices/dp/1509302581), by Gary McLean Hall.
 
 ## What is Entourage anti-pattern?
 
@@ -35,8 +36,6 @@ but it would be good if those projects contain no implementations at all.
 
 # Solution analysis
 
-## Introduction
-
 As we speak: 
 
 - The codebase has 14 projects.	
@@ -44,7 +43,7 @@ As we speak:
 - It is layer structured.
 - It is tier structured.
 - Embraces DI
-- Carter template is used instead of ASP.NET Core WebApi template
+- Carter template is used instead of ASP.NET Core WebApi template, for the Web API
 
 ## Domain
 
