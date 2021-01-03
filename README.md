@@ -3,9 +3,9 @@
 > 
 > Document version 0.1
 
-⚠️ Warning ⚠️
-
 🚧 Work in progress. It can't be used yet! 🚧
+
+⚠️ Disclaimer. This is one man project, some its progress won't be the fastest one ⚠️
 
 ## Introduction
 
@@ -113,6 +113,8 @@ is more scalable this ways.
 - [ ] Caching 
 - [ ] Session management
 - [ ] Encryption
+- [ ] Files managements
+- [ ] Queue
 - [ ] UI project
 - [ ] Integration tests
 - [ ] Docker/Containers
