@@ -1,11 +1,15 @@
 ﻿# Stairway Pattern Architecture
-> Last update 03/01/2021
-> 
-> Document version 0.2
 
 🚧 Work in progress. It can't be used yet! 🚧
 
 ⚠️ Disclaimer. This is one man project, some its progress won't be the fastest one ⚠️
+
+
+> Last update 03/01/2021
+> 
+> Document version 0.2
+> 
+> ![Appveyor status image](https://ci.appveyor.com/api/projects/status/github/kostasgrevenitis/Codenception.StairwayPatternArchitecture?branch=master&svg=true)
 
 ## Introduction
 
