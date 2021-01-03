@@ -10,7 +10,7 @@
 ## Introduction
 
 There is an excellent book called 
-[**"Adaptive Code: Agile coding with design patterns and SOLID principles (Developer Best Practices) 2nd Edition"**](https://www.amazon.com/Adaptive-Code-principles-Developer-Practices/dp/1509302581){:target="_blank"}, by Gary McLean Hall.
+[**"Adaptive Code: Agile coding with design patterns and SOLID principles (Developer Best Practices) 2nd Edition"**](https://www.amazon.com/Adaptive-Code-principles-Developer-Practices/dp/1509302581), by Gary McLean Hall.
 
 ## What is Entourage anti-pattern?
 
@@ -34,11 +34,18 @@ Also, those interface only projects should not depend
 on other third party (e.g. nuget) references. It's not possible all the time, 
 but it would be good if those projects contain no implementations at all.
 
+**The current structure allows the programmers to develop diffent implementations for different clients
+following the same methods signatures by implementing the interfaces.**
+
 # Solution analysis
 
 As we speak: 
 
-- The codebase has 14 projects.	
+- The codebase has 14 projects.
+- - 2 clients projects
+  - 2 unit tests projects
+  - 6 interfaces projects
+  - 4 implementations projects
 - It borrows elements from DDD.
 - It is layer structured.
 - It is tier structured.
