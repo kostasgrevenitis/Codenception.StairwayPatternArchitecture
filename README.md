@@ -140,7 +140,7 @@ is more scalable this ways.
 - [ ] Caching 
 - [ ] Session management
 - [ ] Encryption
-- [ ] Files management
+- [ ] IO management
 - [ ] Queue messaging management
 - [ ] UI project
 - [ ] Integration tests
