@@ -79,6 +79,18 @@ that comprises the data source layer.
 
 ## Infrastructure
 
+### Database
+
+-- TODO --
+
+### IO
+
+### Caching
+
+-- TODO --
+
+###	Queue messaging
+
 -- TODO --
 
 ## Mappers
@@ -106,6 +118,7 @@ is more scalable this ways.
 
 # Roadmap
 
+- [ ] Option
 - [ ] Exceptions
 - [ ] To json
 - [ ] Unit tests
@@ -113,8 +126,8 @@ is more scalable this ways.
 - [ ] Caching 
 - [ ] Session management
 - [ ] Encryption
-- [ ] Files managements
-- [ ] Queue
+- [ ] Files management
+- [ ] Queue messaging management
 - [ ] UI project
 - [ ] Integration tests
 - [ ] Docker/Containers
