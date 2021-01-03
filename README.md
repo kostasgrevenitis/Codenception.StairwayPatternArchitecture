@@ -135,7 +135,6 @@ is more scalable this ways.
 - [ ] Option
 - [ ] Exceptions
 - [ ] To json
-- [ ] Unit tests
 - [ ] Authentication/Authorization/Roles
 - [ ] Caching 
 - [ ] Session management
@@ -143,7 +142,6 @@ is more scalable this ways.
 - [ ] IO management
 - [ ] Queue messaging management
 - [ ] UI project
-- [ ] Integration tests
 - [ ] Multitenant support
 - [ ] Docker/Containers
 
