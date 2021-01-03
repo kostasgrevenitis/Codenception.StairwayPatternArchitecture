@@ -10,7 +10,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Codenception.StairwayPatternArchitecture.Application.Interfaces\Codenception.StairwayPatternArchitecture.Application.Interfaces.csproj" />
     <ProjectReference Include="..\Codenception.StairwayPatternArchitecture.Services.Interfaces\Codenception.StairwayPatternArchitecture.Services.Interfaces.csproj" />
   </ItemGroup>
 </Project>
