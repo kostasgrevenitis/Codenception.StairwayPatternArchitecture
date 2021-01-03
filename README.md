@@ -1,15 +1,19 @@
 ﻿# Stairway Pattern Architecture
 
+![alt text](https://repository-images.githubusercontent.com/324436469/d8b51780-4db8-11eb-8c68-f890b154a1b4)
+
 🚧 Work in progress. It can't be used yet! 🚧
 
 ⚠️ Disclaimer. This is one man project, some its progress won't be the fastest one ⚠️
 
 
-> Last update 03/01/2021
+> Last update 04/01/2021
 > 
 > Document version 0.2
 > 
 > ![Appveyor status image](https://ci.appveyor.com/api/projects/status/github/kostasgrevenitis/Codenception.StairwayPatternArchitecture?branch=main&svg=true)
+>
+> [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
 ## Introduction
 
