@@ -10,7 +10,7 @@
 ## Introduction
 
 There is an excellent book called 
-[**"Adaptive Code: Agile coding with design patterns and SOLID principles (Developer Best Practices) 2nd Edition"**](https://www.amazon.com/Adaptive-Code-principles-Developer-Practices/dp/1509302581), by Gary McLean Hall.
+[**"Adaptive Code: Agile coding with design patterns and SOLID principles (Developer Best Practices) 2nd Edition"**](https://www.amazon.com/Adaptive-Code-principles-Developer-Practices/dp/1509302581){:target="_blank"}, by Gary McLean Hall.
 
 ## What is Entourage anti-pattern?
 
