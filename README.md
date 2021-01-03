@@ -49,7 +49,7 @@ As we speak:
 - It borrows elements from DDD.
 - It is layer structured.
 - It is tier structured.
-- Embraces DI
+- It embraces DI
 - Carter template is used instead of ASP.NET Core WebApi template, for the Web API
 
 ## Domain
