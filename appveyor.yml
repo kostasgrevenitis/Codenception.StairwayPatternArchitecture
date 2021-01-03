@@ -25,7 +25,7 @@ clone_depth: 1
 test_script:
   # restore packages for our unit tests
   - cmd: dotnet restore
-  - cmd: dotnet xunit
+  - cmd: dotnet test
 #on_finish :
   # any cleanup in here
 deploy: off
