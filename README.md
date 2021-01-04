@@ -131,6 +131,7 @@ is more scalable this ways.
 
 - [Fluent validation nuget package](https://www.nuget.org/packages/FluentValidation/)
 - [Carter](https://www.nuget.org/packages/Carter/)
+- [Autofac](https://www.nuget.org/packages/Autofac/)
 - [xunit](https://www.nuget.org/packages/xunit/)
 - [NSubstitute](https://www.nuget.org/packages/NSubstitute)
 - [NSubstitute.Analyzers.CSharp](https://www.nuget.org/packages/NSubstitute.Analyzers.CSharp/)
