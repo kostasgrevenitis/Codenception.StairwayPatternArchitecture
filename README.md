@@ -55,6 +55,7 @@ As we speak:
   - 2 unit tests projects
   - 6 interfaces projects
   - 4 implementations projects
+ - An appveyor.yml file
 - It borrows elements from DDD.
 - It is layer structured.
 - It is tier structured.
@@ -128,13 +129,18 @@ is more scalable this ways.
 -- TODO --
 
 ## External dependencies
-
-- [Fluent validation nuget package](https://www.nuget.org/packages/FluentValidation/)
-- [Carter](https://www.nuget.org/packages/Carter/)
+	
 - [Autofac](https://www.nuget.org/packages/Autofac/)
-- [xunit](https://www.nuget.org/packages/xunit/)
+- [Carter](https://www.nuget.org/packages/Carter/)
+- [DocumentFormat.OpenXml](https://www.nuget.org/packages/DocumentFormat.OpenXml/)
+- [Finbuckle.MultiTenant](https://www.nuget.org/packages/Finbuckle.MultiTenant/)
+- [Fluent validation](https://www.nuget.org/packages/FluentValidation/)
+- [Microsoft.Extensions.Caching.Redis](https://www.nuget.org/packages/Microsoft.Extensions.Caching.Redis)
 - [NSubstitute](https://www.nuget.org/packages/NSubstitute)
 - [NSubstitute.Analyzers.CSharp](https://www.nuget.org/packages/NSubstitute.Analyzers.CSharp/)
+- [Serilog](https://www.nuget.org/packages/Serilog/2.10.1-dev-01265)
+- [xunit](https://www.nuget.org/packages/xunit/)
+
 
 # How to use the solution
 
@@ -145,14 +151,14 @@ is more scalable this ways.
 | Option monad  | `null` is used to indicate no value. The method called can't produce a value of the expected type, and therefore it returns "nothing". The programmer must continually check if the value is null. It's only a matter of time before a null reference exception crops up because the variable wasn't checked. This is where `Option` monad steps in. In functional languages use what's known as an option type. In F# it's called Option, in Haskell it's called Maybe. Option<T> works in a very similar way to Nullable<T>, except it works with all types rather than just value types. It's a struct and therefore can't be null. An instance can be created by either calling Some(value), which represents a positive "I have a value" response, or None, which is the equivalent of returning null.  | TODO |
 | Exceptions  | TODO  | TODO |
 | To json  | TODO  | TODO |
-| Authentication/Authorization/Roles  | Content Cell  | TODO |
-| Session management  | Implementation built with Redis   | TODO |
-| IO management  | Microsoft Office files management with OpenXml  | TODO |
+| Authentication/Authorization/Roles  | TODO  | TODO |
+| Caching management  | Implementation with Redis   | TODO |
+| IO management  | Microsoft Office files management with DocumentFormat.OpenXml  | TODO |
 | Logging  | Implementation with Serilog, ElasticSearch, Kibana  | TODO |
 | UI project  | UI project built with Blazor  | TODO |
-| Queue messaging management  | Implementation built with MassTransit  | TODO |
-| Multitenant support  | TODOl  | TODO |
 | Docker/Containers  | TODO  | TODO |
+| Queue messaging management  | Implementation with MassTransit  | TODO |
+| Multitenant support  | Implementation with Finbuckle.MultiTenant  | TODO |
 
 # Versions
 
