@@ -6,10 +6,9 @@
 
 ⚠️ Disclaimer. This is one man project, some its progress won't be the fastest one ⚠️
 
-
 > Last update 04/01/2021
 > 
-> Document version 0.2
+> Document version 0.4
 > 
 > ![Appveyor status image](https://ci.appveyor.com/api/projects/status/github/kostasgrevenitis/Codenception.StairwayPatternArchitecture?branch=main&svg=true)
 >
@@ -24,9 +23,8 @@ There is an excellent book called
 
 The Entourage anti-pattern in simple Enlgish means that when you invite one, and only one, friend
 to your party, we brings his own uninvited friends. This causes undesirable dependency management.
+It brings unnecessary dependencies on board.
 
-
-The Entourage anti-pattern brings unnecessary dependencies on board.
 When we develop a project and add references to another project of conrcrete implementations
 with references to other projects of concrete implementations as well, or/and nuget packages too, 
 therefore we have to add those references as well. In simple words, in a ASP.NET Web app project, in the bin folder 
@@ -128,25 +126,29 @@ is more scalable this ways.
 
 ## External dependencies
 
-- Fluent validation nuget package
+- [Fluent validation nuget package](https://www.nuget.org/packages/FluentValidation/)
+- [Carter](https://www.nuget.org/packages/Carter/)
+- [xunit](https://www.nuget.org/packages/xunit/)
+- [NSubstitute](https://www.nuget.org/packages/NSubstitute)
+- [NSubstitute.Analyzers.CSharp](https://www.nuget.org/packages/NSubstitute.Analyzers.CSharp/)
 
 # How to use the solution
 
-# Roadmap
+# Features roadmap
 
 | Features  | Description |	Version|
 | ------------- | ------------- |--|
-| Option  | Content Cell  | |
-| Exceptions  | Content Cell  | |
-| To json  | Content Cell  | |
-| Authentication/Authorization/Roles  | Content Cell  | |
-| Caching   | Content Cell  | |
-| Session management  | Content Cell  | |
-| IO management  | Content Cell  | |
-| Queue messaging management  | Content Cell  | |
-| UI project  | Content Cell  | |
-| Multitenant support  | Content Cell  | |
-| Docker/Containers  | Content Cell  | |
+| Option monad  | `null` is used to indicate no value. The method called can't produce a value of the expected type, and therefore it returns "nothing". The programmer must continually check if the value is null. It's only a matter of time before a null reference exception crops up because the variable wasn't checked. This is where `Option` monad steps in. In functional languages use what's known as an option type. In F# it's called Option, in Haskell it's called Maybe. Option<T> works in a very similar way to Nullable<T>, except it works with all types rather than just value types. It's a struct and therefore can't be null. An instance can be created by either calling Some(value), which represents a positive "I have a value" response, or None, which is the equivalent of returning null.  | TODO |
+| Exceptions  | TODO  | TODO |
+| To json  | TODO  | TODO |
+| Authentication/Authorization/Roles  | Content Cell  | TODO |
+| Caching   | Implementation built with Redis  | TODO |
+| Session management  | TODO  | TODO |
+| IO management  | Microsoft Office files management with OpenXml  | TODO |
+| Queue messaging management  | Implementation built with MassTransit  | TODO |
+| UI project  | UI project built with Blazor  | TODO |
+| Multitenant support  | TODOl  | TODO |
+| Docker/Containers  | TODO  | TODO |
 
 # Versions
 
