@@ -50,7 +50,7 @@ following the same methods signatures by implementing the interfaces.**
 As we speak: 
 
 - The codebase has 14 projects.
-- - 2 clients projects
+  - 2 clients projects
   - 2 unit tests projects
   - 6 interfaces projects
   - 4 implementations projects
@@ -99,6 +99,8 @@ that comprises the data source layer.
 
 ### IO
 
+-- TODO --
+
 ### Caching
 
 -- TODO --
@@ -132,20 +134,19 @@ is more scalable this ways.
 
 # Roadmap
 
-- [ ] Option
-- [ ] Exceptions
-- [ ] To json
-- [ ] Unit tests
-- [ ] Authentication/Authorization/Roles
-- [ ] Caching 
-- [ ] Session management
-- [ ] Encryption
-- [ ] IO management
-- [ ] Queue messaging management
-- [ ] UI project
-- [ ] Integration tests
-- [ ] Multitenant support
-- [ ] Docker/Containers
+| Features  | Description |	Version|
+| ------------- | ------------- |--|
+| Option  | Content Cell  | |
+| Exceptions  | Content Cell  | |
+| To json  | Content Cell  | |
+| Authentication/Authorization/Roles  | Content Cell  | |
+| Caching   | Content Cell  | |
+| Session management  | Content Cell  | |
+| IO management  | Content Cell  | |
+| Queue messaging management  | Content Cell  | |
+| UI project  | Content Cell  | |
+| Multitenant support  | Content Cell  | |
+| Docker/Containers  | Content Cell  | |
 
 # Versions
 
