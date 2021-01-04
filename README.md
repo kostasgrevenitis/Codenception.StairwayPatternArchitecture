@@ -148,8 +148,9 @@ is more scalable this ways.
 | Authentication/Authorization/Roles  | Content Cell  | TODO |
 | Session management  | Implementation built with Redis   | TODO |
 | IO management  | Microsoft Office files management with OpenXml  | TODO |
-| Queue messaging management  | Implementation built with MassTransit  | TODO |
+| Logging  | Implementation with Serilog, ElasticSearch, Kibana  | TODO |
 | UI project  | UI project built with Blazor  | TODO |
+| Queue messaging management  | Implementation built with MassTransit  | TODO |
 | Multitenant support  | TODOl  | TODO |
 | Docker/Containers  | TODO  | TODO |
 
