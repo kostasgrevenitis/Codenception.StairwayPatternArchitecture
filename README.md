@@ -1,4 +1,4 @@
-﻿# Stairway Pattern Architecture
+# Stairway Pattern Architecture
 
 ![alt text](https://repository-images.githubusercontent.com/324436469/d8b51780-4db8-11eb-8c68-f890b154a1b4)
 
