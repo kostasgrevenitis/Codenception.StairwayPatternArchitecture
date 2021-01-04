@@ -146,8 +146,7 @@ is more scalable this ways.
 | Exceptions  | TODO  | TODO |
 | To json  | TODO  | TODO |
 | Authentication/Authorization/Roles  | Content Cell  | TODO |
-| Caching   | Implementation built with Redis  | TODO |
-| Session management  | TODO  | TODO |
+| Session management  | Implementation built with Redis   | TODO |
 | IO management  | Microsoft Office files management with OpenXml  | TODO |
 | Queue messaging management  | Implementation built with MassTransit  | TODO |
 | UI project  | UI project built with Blazor  | TODO |
