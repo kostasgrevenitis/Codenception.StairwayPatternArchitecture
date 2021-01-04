@@ -30,6 +30,7 @@ with references to other projects of concrete implementations as well, or/and nu
 therefore we have to add those references as well. In simple words, in a ASP.NET Web app project, in the bin folder 
 you will see the EF related assemblies as implicit dependencies.
 
+![EntourageAntiPattern image](EntourageAntiPattern.png "Entourage AntiPattern")
 
 ## What is Staiway pattern?
 
@@ -42,6 +43,8 @@ but it would be good if those projects contain no implementations at all.
 
 **The current structure allows the programmers to develop diffent implementations for different clients
 following the same methods signatures by implementing the interfaces.**
+
+![Stairway pattern image](StairwayPattern.png "Stairway Pattern")
 
 # Solution analysis
 

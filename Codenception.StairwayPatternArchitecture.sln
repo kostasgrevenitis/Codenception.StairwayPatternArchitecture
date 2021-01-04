@@ -17,7 +17,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 	ProjectSection(SolutionItems) = preProject
 		appveyor.yml = appveyor.yml
 		CodeMap.dgml = CodeMap.dgml
+		EntourageAntiPattern.png = EntourageAntiPattern.png
 		README.md = README.md
+		StairwayPattern.png = StairwayPattern.png
 	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Codenception.StairwayPatternArchitecture.Mappers", "Codenception.StairwayPatternArchitecture.Mappers\Codenception.StairwayPatternArchitecture.Mappers.csproj", "{3C0A5576-F509-452A-BAAE-BD2F16886C16}"
@@ -30,13 +32,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Codenception.StairwayPatter
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Codenception.StairwayPatternArchitecture.Services.UnitTests", "Codenception.StairwayPatternArchitecture.Services.UnitTests\Codenception.StairwayPatternArchitecture.Services.UnitTests.csproj", "{FDF2B684-1DC5-4ABE-B427-F149B7D78CF6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Codenception.StairwayPatternArchitecture.Infrastructure.Database.Interfaces", "Codenception.StairwayPatternArchitecture.Infrastructure.Database.Interfaces\Codenception.StairwayPatternArchitecture.Infrastructure.Database.Interfaces.csproj", "{D02361F3-00DF-429C-B56E-DE161CFC291A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Codenception.StairwayPatternArchitecture.Infrastructure.Database.Interfaces", "Codenception.StairwayPatternArchitecture.Infrastructure.Database.Interfaces\Codenception.StairwayPatternArchitecture.Infrastructure.Database.Interfaces.csproj", "{D02361F3-00DF-429C-B56E-DE161CFC291A}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Codenception.StairwayPatternArchitecture.Infrastructure.Io.Interfaces", "Codenception.StairwayPatternArchitecture.Infrastructure.Io.Interfaces\Codenception.StairwayPatternArchitecture.Infrastructure.Io.Interfaces.csproj", "{64B804B3-7216-47B0-BFB5-ECAC34764A5D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Codenception.StairwayPatternArchitecture.Infrastructure.Caching.Interfaces", "Codenception.StairwayPatternArchitecture.Infrastructure.Caching.Interfaces\Codenception.StairwayPatternArchitecture.Infrastructure.Caching.Interfaces.csproj", "{DFCDCA2E-CDB6-4312-86A9-0B1D9D2D92EF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Codenception.StairwayPatternArchitecture.Infrastructure.Caching.Interfaces", "Codenception.StairwayPatternArchitecture.Infrastructure.Caching.Interfaces\Codenception.StairwayPatternArchitecture.Infrastructure.Caching.Interfaces.csproj", "{DFCDCA2E-CDB6-4312-86A9-0B1D9D2D92EF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Codenception.StairwayPatternArchitecture.Infrastructure.Messsaging.Interfaces", "Codenception.StairwayPatternArchitecture.Infrastructure.Messsaging.Interfaces\Codenception.StairwayPatternArchitecture.Infrastructure.Messsaging.Interfaces.csproj", "{74BC9CF2-CB17-4F71-B2A4-DCB240EC603A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Codenception.StairwayPatternArchitecture.Infrastructure.Messsaging.Interfaces", "Codenception.StairwayPatternArchitecture.Infrastructure.Messsaging.Interfaces\Codenception.StairwayPatternArchitecture.Infrastructure.Messsaging.Interfaces.csproj", "{74BC9CF2-CB17-4F71-B2A4-DCB240EC603A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
