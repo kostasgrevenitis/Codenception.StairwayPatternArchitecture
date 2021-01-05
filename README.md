@@ -4,7 +4,7 @@
 
 🚧 Work in progress. Source code nor documentation can be used yet! 🚧
 
-⚠️ Disclaimer. This is one man project, some its progress won't be the fastest one ⚠️
+⚠️ Disclaimer. This is a one-man's project, so its progress is not the fastest one. ⚠️
 
 > Last update 05/01/2021
 > 
@@ -70,7 +70,7 @@ following the same methods signatures by implementing the interfaces.**
 
 # Solution analysis
 
-As we speak: 
+At the moment: 
 
 - The codebase has 14 projects.
   - 2 clients projects
@@ -144,7 +144,41 @@ is more scalable this ways.
 
 ### Appveyor
 
--- TODO --
+appveyor.yml
+
+```yaml
+version: '1.0.{build}'
+image: Visual Studio 2019
+branches:
+  only:
+  - main
+init:
+  # Good practise, because Windows line endings are different from Unix/Linux ones
+  - cmd: git config --global core.autocrlf true
+#install:
+  # Install repo specific stuff here
+before_build:
+  # Display .NET Core version
+  - cmd: dotnet --version
+  # Display minimal restore text
+  - cmd: dotnet restore 
+build_script:
+  - cmd: dotnet publish
+#after_build:
+  # For once the build has completed
+#artifacts:
+# - path: '\src\bin\Debug\netcoreapp1.1\publish'
+#   name: WebSite
+#   type: WebDeployPackage
+clone_depth: 1
+test_script:
+  # restore packages for our unit tests
+  - cmd: dotnet restore
+  - cmd: dotnet test
+#on_finish :
+  # any cleanup in here
+deploy: off
+```
 
 ### Github actions
 
@@ -164,6 +198,10 @@ is more scalable this ways.
 
 Always include
 - Unit tests
+
+## Implement a behaviour
+
+-- TODO --
 
 
 # Features roadmap
