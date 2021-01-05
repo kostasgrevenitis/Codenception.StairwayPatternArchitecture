@@ -312,19 +312,19 @@ a common pattern. It also ensures higher code quality, better unit testing and e
 
 | Features  | Description |	Version|
 | ------------- | ------------- |--|
-| Option monad  | `null` is used to indicate no value. The method called can't produce a value of the expected type, and therefore it returns "nothing". The programmer must continually check if the value is null. It's only a matter of time before a null reference exception crops up because the variable wasn't checked. This is where `Option` monad steps in. In functional languages use what's known as an option type. In F# it's called Option, in Haskell it's called Maybe. Option<T> works in a very similar way to Nullable<T>, except it works with all types rather than just value types. It's a struct and therefore can't be null. An instance can be created by either calling Some(value), which represents a positive "I have a value" response, or None, which is the equivalent of returning null. Also read [this](https://devblogs.microsoft.com/dotnet/nullable-reference-types-in-csharp/)  | TODO |
-| Exceptions  | TODO  | TODO |
-| To json  | TODO  | TODO |
-| Data source access  | Implementation with Dapper  | TODO |
-| Authentication/Authorization/Roles  | Implementation with IdentityServer  | TODO |
-| Caching management  | - Implementation with InMemory cache <br/> - Implementation with Redis   | TODO |
-| IO management  | Microsoft Office files management with DocumentFormat.OpenXml  | TODO |
-| Logging  | - Implementation with Serilog to files <br/> - Implementation with Serilog, ElasticSearch, Kibana  | TODO |
-| UI project  | UI project built with Blazor  | TODO |
-| Messaging management  | Implementation with MassTransit  | TODO |
-| Docker/Containers  | TODO  | TODO |
-| Programmer's documentation  | Implementation with DocxFx  | TODO |
-| Multitenant support (extra feature)  | Implementation with Finbuckle.MultiTenant  | TODO |
+| Option monad  | `null` is used to indicate no value. The method called can't produce a value of the expected type, and therefore it returns "nothing". The programmer must continually check if the value is null. It's only a matter of time before a null reference exception crops up because the variable wasn't checked. This is where `Option` monad steps in. In functional languages use what's known as an option type. In F# it's called Option, in Haskell it's called Maybe. Option<T> works in a very similar way to Nullable<T>, except it works with all types rather than just value types. It's a struct and therefore can't be null. An instance can be created by either calling Some(value), which represents a positive "I have a value" response, or None, which is the equivalent of returning null. Also read [this](https://devblogs.microsoft.com/dotnet/nullable-reference-types-in-csharp/)  | 0.2.0.0 |
+| Exceptions  | TODO  | 0.3.0.0 |
+| To json  | TODO  | 0.3.0.0|
+| Data source access  | Implementation with Dapper  | 0.4.0.0|
+| Authentication/Authorization/Roles  | Implementation with IdentityServer  | 0.5.0.0 |
+| Caching management  | - Implementation with InMemory cache <br/> - Implementation with Redis   | 0.5.0.0 |
+| IO management  | Microsoft Office files management with DocumentFormat.OpenXml  | 0.6.0.0 |
+| Logging  | - Implementation with Serilog to files <br/> - Implementation with Serilog, ElasticSearch, Kibana  | 0.7.0.0 |
+| UI project  | UI project built with Blazor  | 0.8.0.0 |
+| Programmer's documentation  | Implementation with DocxFx  | 0.9.0.0 |
+| Docker/Containers  | TODO  | 1.0.0.0 |
+| Messaging management  | Implementation with MassTransit  | 1.1.0.0 |
+| Multitenant support (extra feature)  | Implementation with Finbuckle.MultiTenant  | 2.0.0.0 |
 
 # Versions
 
