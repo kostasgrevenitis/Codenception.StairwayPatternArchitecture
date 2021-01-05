@@ -138,17 +138,6 @@ to be isolated by the data structures the client app uses, and the data structur
 The isolated domain is easier to be unit tested by the programmers, and the solution structure 
 is more scalable this ways.
 
-## Clients
-
-### Console app client
-
--- TODO --
-
-### Web Api client
-
--- TODO --
-
-
 # How to use
 
 ## Implement a feature
@@ -178,14 +167,16 @@ Always include
 | IO management  | Microsoft Office files management with DocumentFormat.OpenXml  | TODO |
 | Logging  | - Implementation with Serilog to files <br/> - Implementation with Serilog, ElasticSearch, Kibana  | TODO |
 | UI project  | UI project built with Blazor  | TODO |
-| Docker/Containers  | TODO  | TODO |
 | Messaging management  | Implementation with MassTransit  | TODO |
+| Docker/Containers  | TODO  | TODO |
 | Multitenant support  | Implementation with Finbuckle.MultiTenant  | TODO |
 | Programmer's documentation  | Implementation with DocxFx  | TODO |
 
 # Versions
 
+[Semantic versioning](https://semver.org/) is used
+
 <details>
-  <summary>0.0.1.0</summary>
+  <summary>0.1.0.0</summary>
   Building the scaffold
 </details>
