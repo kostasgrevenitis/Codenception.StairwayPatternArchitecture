@@ -159,8 +159,7 @@ is more scalable this ways.
 # Database schema
 
 Rules of thumb
-- No null values allowed in the db
-- 
+- No null values allowed in the database
 
 # DevOps
 
@@ -286,10 +285,17 @@ jobs:
 
 Always include
 - Unit tests
+- Integration tests
 
 ## Implement a behaviour
 
--- TODO --
+For each namespace we have the interfaces and the method signatures.
+So based on our needs, we can develop **different** concrete implementantion based on 
+the desired requirements, by making sure we use the same methods signatures 
+provided by the interfaces.
+
+This ensures that programmers don't name the methods based on whatever they like, but they follow
+a common pattern. It also ensures higher code quality, better unit testing and easier code review.
 
 
 # Features roadmap
