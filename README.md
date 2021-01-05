@@ -2,13 +2,13 @@
 
 ![alt text](https://repository-images.githubusercontent.com/324436469/d8b51780-4db8-11eb-8c68-f890b154a1b4)
 
-🚧 Work in progress. It can't be used yet! 🚧
+🚧 Work in progress. Source code nor documentation can be used yet! 🚧
 
 ⚠️ Disclaimer. This is one man project, some its progress won't be the fastest one ⚠️
 
-> Last update 04/01/2021
+> Last update 05/01/2021
 > 
-> Document version 0.4
+> Document version 0.5.0
 > 
 > ![Appveyor status image](https://ci.appveyor.com/api/projects/status/github/kostasgrevenitis/Codenception.StairwayPatternArchitecture?branch=main&svg=true)
 >
@@ -45,6 +45,26 @@ but it would be good if those projects contain no implementations at all.
 following the same methods signatures by implementing the interfaces.**
 
 ![Stairway pattern image](StairwayPattern.png "Stairway Pattern")
+
+# Prerequisites
+
+- [.NET version 5.0.1 SDK](https://dotnet.microsoft.com/download/dotnet/5.0)
+- [RabbitMQ](https://www.rabbitmq.com/), if RabbitMQ messagging implementation is used
+- [ElasticSearch](https://www.elastic.co/downloads/elasticsearch), [Kibana](https://www.elastic.co/downloads/kibana) if Serilog + ElasticSearch + Kibana implementation is used
+
+# Nuget dependencies
+	
+- [Autofac](https://www.nuget.org/packages/Autofac/)
+- [Carter](https://www.nuget.org/packages/Carter/)
+- [DocumentFormat.OpenXml](https://www.nuget.org/packages/DocumentFormat.OpenXml/)
+- [Finbuckle.MultiTenant](https://www.nuget.org/packages/Finbuckle.MultiTenant/)
+- [Fluent validation](https://www.nuget.org/packages/FluentValidation/)
+- [MassTransit](https://www.nuget.org/packages/MassTransit/)
+- [Microsoft.Extensions.Caching.Redis](https://www.nuget.org/packages/Microsoft.Extensions.Caching.Redis)
+- [NSubstitute](https://www.nuget.org/packages/NSubstitute)
+- [NSubstitute.Analyzers.CSharp](https://www.nuget.org/packages/NSubstitute.Analyzers.CSharp/)
+- [Serilog](https://www.nuget.org/packages/Serilog/2.10.1-dev-01265)
+- [xunit](https://www.nuget.org/packages/xunit/)
 
 # Solution analysis
 
@@ -107,7 +127,7 @@ that comprises the data source layer.
 
 -- TODO --
 
-###	Queue messaging
+###	Messaging
 
 -- TODO --
 
@@ -128,21 +148,22 @@ is more scalable this ways.
 
 -- TODO --
 
-## External dependencies
-	
-- [Autofac](https://www.nuget.org/packages/Autofac/)
-- [Carter](https://www.nuget.org/packages/Carter/)
-- [DocumentFormat.OpenXml](https://www.nuget.org/packages/DocumentFormat.OpenXml/)
-- [Finbuckle.MultiTenant](https://www.nuget.org/packages/Finbuckle.MultiTenant/)
-- [Fluent validation](https://www.nuget.org/packages/FluentValidation/)
-- [Microsoft.Extensions.Caching.Redis](https://www.nuget.org/packages/Microsoft.Extensions.Caching.Redis)
-- [NSubstitute](https://www.nuget.org/packages/NSubstitute)
-- [NSubstitute.Analyzers.CSharp](https://www.nuget.org/packages/NSubstitute.Analyzers.CSharp/)
-- [Serilog](https://www.nuget.org/packages/Serilog/2.10.1-dev-01265)
-- [xunit](https://www.nuget.org/packages/xunit/)
 
+# How to use
 
-# How to use the solution
+## Implement a feature
+
+1. If Web Api client is used, create a controller class and the related DTO class(es)
+2. Create a service class
+3. Create an entity class, a record item and a validator class
+4. Create a repository class
+5. Create a data model class
+6. Create the source access class
+7. Add them into the Autofac IoC container, into the Startup.cs or Program.cs class
+
+Always include
+- Unit tests
+
 
 # Features roadmap
 
@@ -151,14 +172,16 @@ is more scalable this ways.
 | Option monad  | `null` is used to indicate no value. The method called can't produce a value of the expected type, and therefore it returns "nothing". The programmer must continually check if the value is null. It's only a matter of time before a null reference exception crops up because the variable wasn't checked. This is where `Option` monad steps in. In functional languages use what's known as an option type. In F# it's called Option, in Haskell it's called Maybe. Option<T> works in a very similar way to Nullable<T>, except it works with all types rather than just value types. It's a struct and therefore can't be null. An instance can be created by either calling Some(value), which represents a positive "I have a value" response, or None, which is the equivalent of returning null.  | TODO |
 | Exceptions  | TODO  | TODO |
 | To json  | TODO  | TODO |
+| Data source access  | TODO  | TODO |
 | Authentication/Authorization/Roles  | TODO  | TODO |
-| Caching management  | Implementation with Redis   | TODO |
+| Caching management  | - Implementation with InMemory cache <br/> - Implementation with Redis   | TODO |
 | IO management  | Microsoft Office files management with DocumentFormat.OpenXml  | TODO |
-| Logging  | Implementation with Serilog, ElasticSearch, Kibana  | TODO |
+| Logging  | - Implementation with Serilog to files <br/> - Implementation with Serilog, ElasticSearch, Kibana  | TODO |
 | UI project  | UI project built with Blazor  | TODO |
 | Docker/Containers  | TODO  | TODO |
-| Queue messaging management  | Implementation with MassTransit  | TODO |
+| Messaging management  | Implementation with MassTransit  | TODO |
 | Multitenant support  | Implementation with Finbuckle.MultiTenant  | TODO |
+| Programmer's documentation  | Implementation with DocxFx  | TODO |
 
 # Versions
 
