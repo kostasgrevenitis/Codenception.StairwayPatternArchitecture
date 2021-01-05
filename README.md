@@ -8,7 +8,7 @@
 
 > Last update 05/01/2021
 > 
-> Document version 0.5.0
+> Document version 0.6.0
 > 
 > ![Appveyor status image](https://ci.appveyor.com/api/projects/status/github/kostasgrevenitis/Codenception.StairwayPatternArchitecture?branch=main&svg=true)
 > [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
@@ -84,12 +84,10 @@ At the moment:
 - It embraces DI
 - Carter template is used instead of ASP.NET Core WebApi template, for the Web API
 
-## Domain
+## Domain namespace
 
-The **.Domain.Interfaces** has all the interfaces organized per domain entity.
-
-The **.Domain**	namespace has all the implementations of the agreed upon system behaviours.
-In those classes we write the code that is related to the *functional requirements*. 
+This namespace is related to the agreed upon system behaviours.
+In the implementation classes we write the code that is related to the *functional requirements*. 
 Each domain entity is assembled by three items:
 
 - An Entity class item, that carries the domain (or business) logic
@@ -99,46 +97,70 @@ Each domain entity is assembled by three items:
 All 3 are immutable and any state changes should only be possible using methods. 
 Data must be validated to ensure that we always have a valid state.
 
-## Services
-
-The **.Services.Interfaces** has all the interfaces organized per domain entity.
+## Services namespace
 
 A service class is an orchestrator. A stateless object that performs actions.
 It includes all the objects and data, and dictates how all of
 them will work together. It actually implements pipelines of 
 "input data -> transform data -> run calculations -> results -> persist and/or return results".
 
-## Repositories
+## Repositories namespace
 
 A repository encapsulates the logic that retrieves the data from a data source.
 It mediates between the domain and data mapping layers, acting like an in-memory
 domain object collection. The domain must be agnostic to the type of data 
 that comprises the data source layer.
 
-## Infrastructure
+## Infrastructure namespace
 
-### Database
+### Database namespace
 
--- TODO --
+All the behaviours in this namespace are related to CRUD operations, no matter if its a
+SQL database, or a flat-file database.
 
-### IO
+### I/O namespace
 
--- TODO --
+The namespace is responsible to files retrieving, editing, saving and deleting. 
+These files might be persisted in the hard drive or consumed by a web service. 
+The implementation for this template, will support .txt and Microsoft Office files.
 
-### Caching
+### Caching namespace
 
--- TODO --
+Caching is a technique of storing frequently used data in memory, or memory like infrastructure, 
+so that, when the same data is needed next time, it would be directly retrieved from the memory 
+instead executing more expensive statements, in order to retrieve the data from the data source.
 
-###	Messaging
+The cached data will not be available in the following cases:
 
--- TODO --
+- If its lifetime expires,
+- If the application releases its memory,
+- If caching does not take place for some reason.
 
-## Mappers
+You can access items in the cache using an indexer and may control the lifetime of objects in the cache and set up links between the cached objects and their physical sources.
+
+This template will support in-memory and Redis caching .
+
+###	Messaging namespace
+
+A message queue is a form of asynchronous service-to-service communication. 
+Messages are stored on the queue until they are processed and deleted. 
+Message queues can be used to decouple heavyweight processing, to buffer or batch work, 
+and to smooth spiky workloads.
+
+This template will support in-memory and RabbitMq messaging.
+
+## Mappers namespace
 
 Mapper classes are in charge of mapping data from one object to another. This allows the domain
 to be isolated by the data structures the client app uses, and the data structures the repositories use.
 The isolated domain is easier to be unit tested by the programmers, and the solution structure 
 is more scalable this ways.
+
+# Database schema
+
+Rules of thumb
+- No null values allowed in the db
+- 
 
 # DevOps
 
@@ -277,8 +299,8 @@ Always include
 | Option monad  | `null` is used to indicate no value. The method called can't produce a value of the expected type, and therefore it returns "nothing". The programmer must continually check if the value is null. It's only a matter of time before a null reference exception crops up because the variable wasn't checked. This is where `Option` monad steps in. In functional languages use what's known as an option type. In F# it's called Option, in Haskell it's called Maybe. Option<T> works in a very similar way to Nullable<T>, except it works with all types rather than just value types. It's a struct and therefore can't be null. An instance can be created by either calling Some(value), which represents a positive "I have a value" response, or None, which is the equivalent of returning null.  | TODO |
 | Exceptions  | TODO  | TODO |
 | To json  | TODO  | TODO |
-| Data source access  | TODO  | TODO |
-| Authentication/Authorization/Roles  | TODO  | TODO |
+| Data source access  | Implementation with Dapper  | TODO |
+| Authentication/Authorization/Roles  | Implementation with IdentityServer  | TODO |
 | Caching management  | - Implementation with InMemory cache <br/> - Implementation with Redis   | TODO |
 | IO management  | Microsoft Office files management with DocumentFormat.OpenXml  | TODO |
 | Logging  | - Implementation with Serilog to files <br/> - Implementation with Serilog, ElasticSearch, Kibana  | TODO |
