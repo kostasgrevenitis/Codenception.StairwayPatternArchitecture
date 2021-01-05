@@ -19,6 +19,8 @@
 There is an excellent book called 
 [**"Adaptive Code: Agile coding with design patterns and SOLID principles (Developer Best Practices) 2nd Edition"**](https://www.amazon.com/Adaptive-Code-principles-Developer-Practices/dp/1509302581), by Gary McLean Hall.
 
+I am using this book as the basis for this project.
+
 ## What is Entourage anti-pattern?
 
 The Entourage anti-pattern in simple Enlgish means that when you invite one, and only one, friend
@@ -138,7 +140,17 @@ to be isolated by the data structures the client app uses, and the data structur
 The isolated domain is easier to be unit tested by the programmers, and the solution structure 
 is more scalable this ways.
 
-# How to use
+## CI
+
+### Appveyor
+
+-- TODO --
+
+### Github actions
+
+-- TODO --
+
+# How to use it
 
 ## Implement a feature
 
