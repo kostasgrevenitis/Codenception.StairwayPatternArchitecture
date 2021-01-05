@@ -1,4 +1,4 @@
-name: CI and sonarcloud report generation
+name: CI and sonarcloud report generation - windows latest
 on:
   push:
     branches:
