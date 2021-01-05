@@ -71,6 +71,15 @@ following the same methods signatures by implementing the interfaces.**
 
 # Solution analysis
 
+## Scenario
+
+The template, in order to be functional and provide a solid full set of functionalities, embraces the following scenario:
+
+*"Think of yourself travelling to another city, or country for a bussiness trip. You want a list
+of restaraunts available, and some information about them (cost, food quality, timetable, cusine)."*  
+
+## Technical details
+
 At the moment: 
 
 - The codebase has 14 projects.
@@ -303,7 +312,7 @@ a common pattern. It also ensures higher code quality, better unit testing and e
 
 | Features  | Description |	Version|
 | ------------- | ------------- |--|
-| Option monad  | `null` is used to indicate no value. The method called can't produce a value of the expected type, and therefore it returns "nothing". The programmer must continually check if the value is null. It's only a matter of time before a null reference exception crops up because the variable wasn't checked. This is where `Option` monad steps in. In functional languages use what's known as an option type. In F# it's called Option, in Haskell it's called Maybe. Option<T> works in a very similar way to Nullable<T>, except it works with all types rather than just value types. It's a struct and therefore can't be null. An instance can be created by either calling Some(value), which represents a positive "I have a value" response, or None, which is the equivalent of returning null.  | TODO |
+| Option monad  | `null` is used to indicate no value. The method called can't produce a value of the expected type, and therefore it returns "nothing". The programmer must continually check if the value is null. It's only a matter of time before a null reference exception crops up because the variable wasn't checked. This is where `Option` monad steps in. In functional languages use what's known as an option type. In F# it's called Option, in Haskell it's called Maybe. Option<T> works in a very similar way to Nullable<T>, except it works with all types rather than just value types. It's a struct and therefore can't be null. An instance can be created by either calling Some(value), which represents a positive "I have a value" response, or None, which is the equivalent of returning null. Also read [this](https://devblogs.microsoft.com/dotnet/nullable-reference-types-in-csharp/)  | TODO |
 | Exceptions  | TODO  | TODO |
 | To json  | TODO  | TODO |
 | Data source access  | Implementation with Dapper  | TODO |
@@ -314,8 +323,8 @@ a common pattern. It also ensures higher code quality, better unit testing and e
 | UI project  | UI project built with Blazor  | TODO |
 | Messaging management  | Implementation with MassTransit  | TODO |
 | Docker/Containers  | TODO  | TODO |
-| Multitenant support  | Implementation with Finbuckle.MultiTenant  | TODO |
 | Programmer's documentation  | Implementation with DocxFx  | TODO |
+| Multitenant support (extra feature)  | Implementation with Finbuckle.MultiTenant  | TODO |
 
 # Versions
 
