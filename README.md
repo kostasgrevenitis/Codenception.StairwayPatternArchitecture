@@ -140,6 +140,8 @@ to be isolated by the data structures the client app uses, and the data structur
 The isolated domain is easier to be unit tested by the programmers, and the solution structure 
 is more scalable this ways.
 
+# DevOps
+
 ## CI
 
 ### Appveyor
@@ -181,6 +183,10 @@ deploy: off
 ```
 
 ### Github actions
+
+-- TODO --
+
+## Codecov
 
 -- TODO --
 
