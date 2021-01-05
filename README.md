@@ -8,7 +8,7 @@
 
 > Last update 05/01/2021
 > 
-> Document version 0.6.0
+> Document version 1.0.0
 > 
 > ![Appveyor status image](https://ci.appveyor.com/api/projects/status/github/kostasgrevenitis/Codenception.StairwayPatternArchitecture?branch=main&svg=true)
 > [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
