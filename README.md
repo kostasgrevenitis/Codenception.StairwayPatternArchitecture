@@ -51,6 +51,7 @@ following the same methods signatures by implementing the interfaces.**
 # Prerequisites
 
 - [.NET version 5.0.1 SDK](https://dotnet.microsoft.com/download/dotnet/5.0)
+- [Identity server](https://identityserver.io/)
 - [RabbitMQ](https://www.rabbitmq.com/), if RabbitMQ messagging implementation is used
 - [ElasticSearch](https://www.elastic.co/downloads/elasticsearch), [Kibana](https://www.elastic.co/downloads/kibana) if Serilog + ElasticSearch + Kibana implementation is used
 
