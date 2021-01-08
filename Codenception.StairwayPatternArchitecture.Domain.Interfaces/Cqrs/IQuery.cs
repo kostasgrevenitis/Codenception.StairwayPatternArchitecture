@@ -5,10 +5,10 @@ namespace Codenception.StairwayPatternArchitecture.Domain.Interfaces.Cqrs
 {
     public interface IQuery<TDatabaseRecord, TId> where TDatabaseRecord : IDatabaseRecord<TId>
     {
-        ICollection<TDatabaseRecord> All<T>();
+        IList<TDatabaseRecord> All<T>();
 
         TDatabaseRecord ById(TId id);
 
-        ICollection<TDatabaseRecord> ManyById(TId id);
+        IList<TDatabaseRecord> ManyById(TId id);
     }
 }
