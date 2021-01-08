@@ -6,6 +6,6 @@ namespace Codenception.StairwayPatternArchitecture.Services.Interfaces
     {
         string Restaurant(TId id);
 
-        ICollection<string> Restaurants();
+        IList<string> Restaurants();
     }
 }

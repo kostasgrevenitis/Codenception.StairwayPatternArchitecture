@@ -1,5 +1,5 @@
-﻿using Codenception.StairwayPatternArchitecture.Domain.Interfaces.Restaurant.Mappers;
-using Codenception.StairwayPatternArchitecture.Domain.Interfaces.Restaurant.Records;
+﻿using Codenception.StairwayPatternArchitecture.Domain.Interfaces.Mappers;
+using Codenception.StairwayPatternArchitecture.Domain.Interfaces.Records;
 using System;
 
 namespace Codenception.StairwayPatternArchitecture.Mappers

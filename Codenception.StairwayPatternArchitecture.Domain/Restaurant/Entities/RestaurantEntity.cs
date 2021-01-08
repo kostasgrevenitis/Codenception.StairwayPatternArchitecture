@@ -1,10 +1,12 @@
-﻿using Codenception.StairwayPatternArchitecture.Domain.Interfaces.Restaurant.Entities;
+﻿using Codenception.StairwayPatternArchitecture.Domain.Interfaces.Entities;
+using Codenception.StairwayPatternArchitecture.Domain.Interfaces.Records;
 using Codenception.StairwayPatternArchitecture.Domain.Restaurant.Records;
+using Codenception.StairwayPatternArchitecture.Domain.Restaurant.Validators;
 using Codenception.StairwayPatternArchitecture.Domain.Validators;
 
 namespace Codenception.StairwayPatternArchitecture.Domain.Restaurant.Entities
 {
-    public class RestaurantEntity : IEntity<RestaurantRecord, AddressInfo>
+    public class RestaurantEntity : IEntity<RestaurantRecord, AddressInfo, RestaurantRecordValidationResult>
     {
         private readonly RestaurantValidator _restaurantValidator;
 
@@ -13,18 +15,15 @@ namespace Codenception.StairwayPatternArchitecture.Domain.Restaurant.Entities
             this._restaurantValidator = restaurantValidator;
         }
 
-        public void Validate(RestaurantRecord restaurantRecord)
+        public IRecordValidationResult<IValidationError> RecordValidationResult(RestaurantRecord restaurantRecord)
         {
             var validationResult = this._restaurantValidator.Validate(restaurantRecord);
-            if (!validationResult.IsValid)
-            {
-                throw new System.Exception();
-            }
+            return new RestaurantRecordValidationResult(validationResult);
         }
 
         public RestaurantRecord WithUpdatedAddressInfo(RestaurantRecord restaurantRecord, AddressInfo addressInfo)
         {
-            this.Validate(restaurantRecord);
+            this.RecordValidationResult(restaurantRecord);
             return restaurantRecord with
             {
                 AddressInfo = addressInfo
@@ -33,7 +32,7 @@ namespace Codenception.StairwayPatternArchitecture.Domain.Restaurant.Entities
 
         public RestaurantRecord WithUpdatedName(RestaurantRecord restaurantRecord, string name)
         {
-            this.Validate(restaurantRecord);
+            this.RecordValidationResult(restaurantRecord);
             return restaurantRecord with
             {
                 Name = name

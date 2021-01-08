@@ -1,6 +1,6 @@
-﻿using Codenception.StairwayPatternArchitecture.Domain.Interfaces.Restaurant.Records;
+﻿using Codenception.StairwayPatternArchitecture.Domain.Interfaces.Records;
 
-namespace Codenception.StairwayPatternArchitecture.Domain.Interfaces.Restaurant.Mappers
+namespace Codenception.StairwayPatternArchitecture.Domain.Interfaces.Mappers
 {
     public interface IMapper<TRecord, TDatabaseRecord>
         where TRecord : IDomainRecord

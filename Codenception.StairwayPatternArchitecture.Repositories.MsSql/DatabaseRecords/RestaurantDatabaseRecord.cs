@@ -1,4 +1,4 @@
-﻿using Codenception.StairwayPatternArchitecture.Domain.Interfaces.Restaurant.Records;
+﻿using Codenception.StairwayPatternArchitecture.Domain.Interfaces.Records;
 
 namespace Codenception.StairwayPatternArchitecture.Repositories.MsSql.DatabaseRecords
 {

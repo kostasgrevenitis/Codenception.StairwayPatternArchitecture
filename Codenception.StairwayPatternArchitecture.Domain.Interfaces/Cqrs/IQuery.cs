@@ -1,7 +1,7 @@
-﻿using Codenception.StairwayPatternArchitecture.Domain.Interfaces.Restaurant.Records;
+﻿using Codenception.StairwayPatternArchitecture.Domain.Interfaces.Records;
 using System.Collections.Generic;
 
-namespace Codenception.StairwayPatternArchitecture.Domain.Interfaces.Restaurant.Cqrs
+namespace Codenception.StairwayPatternArchitecture.Domain.Interfaces.Cqrs
 {
     public interface IQuery<TDatabaseRecord, TId> where TDatabaseRecord : IDatabaseRecord<TId>
     {

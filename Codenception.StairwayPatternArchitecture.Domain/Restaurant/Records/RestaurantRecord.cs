@@ -1,4 +1,4 @@
-﻿using Codenception.StairwayPatternArchitecture.Domain.Interfaces.Restaurant.Records;
+﻿using Codenception.StairwayPatternArchitecture.Domain.Interfaces.Records;
 using System;
 
 namespace Codenception.StairwayPatternArchitecture.Domain.Restaurant.Records
@@ -9,6 +9,7 @@ namespace Codenception.StairwayPatternArchitecture.Domain.Restaurant.Records
         {
             get; init;
         }
+
         public string Name
         {
             get; init;
