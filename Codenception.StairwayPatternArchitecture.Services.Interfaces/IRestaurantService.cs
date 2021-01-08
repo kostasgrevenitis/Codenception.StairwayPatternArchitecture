@@ -1,11 +1,12 @@
-﻿using System.Collections.Generic;
+﻿using LanguageExt;
+using System.Collections.Generic;
 
 namespace Codenception.StairwayPatternArchitecture.Services.Interfaces
 {
     public interface IRestaurantService<TId>
     {
-        string Restaurant(TId id);
+        Option<string> Restaurant(TId id);
 
-        IList<string> Restaurants();
+        IList<Option<string>> Restaurants();
     }
 }

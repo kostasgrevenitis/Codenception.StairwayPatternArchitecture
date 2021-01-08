@@ -1,21 +1,22 @@
-﻿using System.Collections.Generic;
+﻿using LanguageExt;
+using System.Collections.Generic;
 
 namespace Codenception.StairwayPatternArchitecture.Domain.Interfaces.Records
 {
     public interface IRecordValidationResult<TValidationFailure>
         where TValidationFailure : IValidationError
     {
-        public IList<TValidationFailure> Errors
+        public IList<Option<IValidationError>> Errors
         {
             get;
         }
 
-        public bool IsValid
+        public Option<bool> IsValid
         {
             get;
         }
 
-        public string[] RuleSetsExecuted
+        public Option<string[]> RuleSetsExecuted
         {
             get;
         }

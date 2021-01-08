@@ -1,31 +1,32 @@
 ﻿using Codenception.StairwayPatternArchitecture.Domain.Interfaces.Records;
+using LanguageExt;
 using System;
 
 namespace Codenception.StairwayPatternArchitecture.Domain.Restaurant.Records
 {
     public record AddressInfo : IDomainRecord
     {
-        public string StreetName
+        public Option<string> StreetName
         {
             get; init;
         }
 
-        public int StreetNumber
+        public Option<int> StreetNumber
         {
             get; init;
         }
 
-        public int PostalCode
+        public Option<int> PostalCode
         {
             get; init;
         }
 
-        public Tuple<double, double> GeoPosition
+        public Option<Tuple<double, double>> GeoPosition
         {
             get; init;
         }
 
-        public string RecordToString()
+        public Option<string> RecordToString()
         {
             return this.ToString();
         }

@@ -1,8 +1,10 @@
-﻿namespace Codenception.StairwayPatternArchitecture.Domain.Interfaces.Records
+﻿using LanguageExt;
+
+namespace Codenception.StairwayPatternArchitecture.Domain.Interfaces.Records
 {
     public interface IDatabaseRecord<TId>
     {
-        TId Id
+        Option<TId> Id
         {
             get; init;
         }

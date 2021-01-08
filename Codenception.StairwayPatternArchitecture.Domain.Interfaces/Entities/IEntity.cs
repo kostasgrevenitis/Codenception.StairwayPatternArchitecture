@@ -1,4 +1,5 @@
 ﻿using Codenception.StairwayPatternArchitecture.Domain.Interfaces.Records;
+using LanguageExt;
 
 namespace Codenception.StairwayPatternArchitecture.Domain.Interfaces.Entities
 {
@@ -7,10 +8,10 @@ namespace Codenception.StairwayPatternArchitecture.Domain.Interfaces.Entities
         where TAddressInfo : IDomainRecord
         where TRecordValidationResult : IRecordValidationResult<IValidationError>
     {
-        public IRecordValidationResult<IValidationError> RecordValidationResult(TRestaurantRecord restaurantRecord);
+        public Option<IRecordValidationResult<IValidationError>> RecordValidationResult(TRestaurantRecord restaurantRecord);
 
-        public TRestaurantRecord WithUpdatedAddressInfo(TRestaurantRecord restaurantRecord, TAddressInfo addressInfo);
+        public Option<TRestaurantRecord> WithUpdatedAddressInfo(TRestaurantRecord restaurantRecord, TAddressInfo addressInfo);
 
-        public TRestaurantRecord WithUpdatedName(TRestaurantRecord restaurantRecord, string name);
+        public Option<TRestaurantRecord> WithUpdatedName(TRestaurantRecord restaurantRecord, string name);
     }
 }

@@ -3,10 +3,11 @@ using Codenception.StairwayPatternArchitecture.Domain.Interfaces.Records;
 using Codenception.StairwayPatternArchitecture.Domain.Restaurant.Records;
 using Codenception.StairwayPatternArchitecture.Domain.Restaurant.Validators;
 using Codenception.StairwayPatternArchitecture.Domain.Validators;
+using LanguageExt;
 
 namespace Codenception.StairwayPatternArchitecture.Domain.Restaurant.Entities
 {
-    public class RestaurantEntity : IEntity<RestaurantRecord, AddressInfo, RestaurantRecordValidationResult>
+    public class RestaurantEntity : IEntity<RestaurantRecord, AddressInfo, IRecordValidationResult<IValidationError>>
     {
         private readonly RestaurantValidator _restaurantValidator;
 
@@ -15,13 +16,13 @@ namespace Codenception.StairwayPatternArchitecture.Domain.Restaurant.Entities
             this._restaurantValidator = restaurantValidator;
         }
 
-        public IRecordValidationResult<IValidationError> RecordValidationResult(RestaurantRecord restaurantRecord)
+        public Option<IRecordValidationResult<IValidationError>> RecordValidationResult(RestaurantRecord restaurantRecord)
         {
             var validationResult = this._restaurantValidator.Validate(restaurantRecord);
             return new RestaurantRecordValidationResult(validationResult);
         }
 
-        public RestaurantRecord WithUpdatedAddressInfo(RestaurantRecord restaurantRecord, AddressInfo addressInfo)
+        public Option<RestaurantRecord> WithUpdatedAddressInfo(RestaurantRecord restaurantRecord, AddressInfo addressInfo)
         {
             this.RecordValidationResult(restaurantRecord);
             return restaurantRecord with
@@ -30,7 +31,7 @@ namespace Codenception.StairwayPatternArchitecture.Domain.Restaurant.Entities
             };
         }
 
-        public RestaurantRecord WithUpdatedName(RestaurantRecord restaurantRecord, string name)
+        public Option<RestaurantRecord> WithUpdatedName(RestaurantRecord restaurantRecord, string name)
         {
             this.RecordValidationResult(restaurantRecord);
             return restaurantRecord with

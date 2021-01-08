@@ -3,6 +3,7 @@ using Codenception.StairwayPatternArchitecture.Domain.Interfaces.Cqrs;
 using Codenception.StairwayPatternArchitecture.Domain.Interfaces.Entities;
 using Codenception.StairwayPatternArchitecture.Domain.Interfaces.Records;
 using Codenception.StairwayPatternArchitecture.Services.Interfaces;
+using LanguageExt;
 using System.Collections.Generic;
 
 namespace Codenception.StairwayPatternArchitecture.Services
@@ -20,18 +21,18 @@ namespace Codenception.StairwayPatternArchitecture.Services
             this._restaurantEntity = restaurantEntity;
         }
 
-        public string Restaurant(System.ValueType id)
+        public Option<string> Restaurant(System.ValueType id)
         {
             var restaurantRecord = this._query.ById(id).ToDomainRecord();
             this._restaurantEntity.RecordValidationResult(restaurantRecord);
             return restaurantRecord.RecordToString();
         }
 
-        public IList<string> Restaurants()
+        public IList<Option<string>> Restaurants()
         {
-            var restaurants = new List<string>();
+            var restaurants = new List<Option<string>>();
 
-            foreach (var restaurantDatabaseRecord in this._query.All<IDatabaseRecord<int>>())
+            foreach (var restaurantDatabaseRecord in this._query.All<Option<IDatabaseRecord<int>>>())
             {
                 var restaurantRecord = restaurantDatabaseRecord.ToDomainRecord();
                 this._restaurantEntity.RecordValidationResult(restaurantRecord);

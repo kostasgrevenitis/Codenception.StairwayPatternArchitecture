@@ -1,4 +1,5 @@
 ﻿using Codenception.StairwayPatternArchitecture.Domain.Interfaces.Records;
+using LanguageExt;
 
 namespace Codenception.StairwayPatternArchitecture.Domain.Restaurant.Validators
 {
@@ -12,22 +13,22 @@ namespace Codenception.StairwayPatternArchitecture.Domain.Restaurant.Validators
             PropertyName = propertyName;
         }
 
-        public object AttemptedValue
+        public Option<object> AttemptedValue
         {
             get; private set;
         }
 
-        public string ErrorCode
+        public Option<string> ErrorCode
         {
             get; private set;
         }
 
-        public string ErrorMessage
+        public Option<string> ErrorMessage
         {
             get; private set;
         }
 
-        public string PropertyName
+        public Option<string> PropertyName
         {
             get; private set;
         }

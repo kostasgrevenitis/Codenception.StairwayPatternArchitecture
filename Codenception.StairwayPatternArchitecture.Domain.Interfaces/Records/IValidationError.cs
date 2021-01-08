@@ -1,23 +1,25 @@
-﻿namespace Codenception.StairwayPatternArchitecture.Domain.Interfaces.Records
+﻿using LanguageExt;
+
+namespace Codenception.StairwayPatternArchitecture.Domain.Interfaces.Records
 {
     public interface IValidationError
     {
-        public object AttemptedValue
+        public Option<object> AttemptedValue
         {
             get;
         }
 
-        public string ErrorCode
+        public Option<string> ErrorCode
         {
             get;
         }
 
-        public string ErrorMessage
+        public Option<string> ErrorMessage
         {
             get;
         }
 
-        public string PropertyName
+        public Option<string> PropertyName
         {
             get;
         }
