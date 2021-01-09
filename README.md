@@ -43,8 +43,43 @@ Also, those interface only projects should not depend
 on other third party (e.g. nuget) references. It's not possible all the time, 
 but it would be good if those projects contain no implementations at all.
 
-**The current structure allows the programmers to develop diffent implementations for different clients
-following the same methods signatures by implementing the interfaces.**
+Stairway pattern is an orthogonal architecture. "Orthogonality" is a term borrowed from geometry. 
+Two lines are orthogonal if they meet at right angles, such as the axes on a graph. 
+In vector terms, the two lines are independent. Move along one of the lines, and your 
+position projected onto the other doesn't change.
+
+In computing, the term has come to signify a kind of independence or decoupling. Two or
+more things are orthogonal if changes in one do not affect any of the others. In a
+well-designed system, the database code will be orthogonal to the user interface: you can
+change the interface without affecting the database, and swap databases without changing
+the interface.
+
+Changes are localized, so development time and testing time are reduced. It is
+easier to write relatively small, self-contained components than a single large block
+of code. Simple components can be designed, coded, unit tested, and then
+forgotten—there is no need to keep changing existing code as you add new code.
+
+An orthogonal approach also promotes reuse. If components have specific,
+well-defined responsibilities, they can be combined with new components in ways
+that were not envisioned by their original implementors. The more loosely coupled
+your systems, the easier they are to reconfigure and reengineer.
+
+There is a fairly subtle gain in productivity when you combine orthogonal
+components. Assume that one component does M distinct things and another does
+N things. If they are orthogonal and you combine them, the result does M × N
+things. However, if the two components are not orthogonal, there will be overlap,
+and the result will do less. You get more functionality per unit effort by combining
+orthogonal components.
+
+Diseased sections of code are isolated. If a module is sick, it is less likely to spread
+the symptoms around the rest of the system. It is also easier to slice it out and
+transplant in something new and healthy. The resulting system is less fragile. 
+Make small changes and fixes to a particular
+area, and any problems you generate will be restricted to that area.
+
+You will not be as tightly tied to a particular vendor, product, or platform, because
+the interfaces to these third-party components will be isolated to smaller parts of the
+overall development.
 
 ![Stairway pattern image](StairwayPattern.png "Stairway Pattern")
 
@@ -101,8 +136,7 @@ Each domain entity is assembled by two items:
 - An Entity class item, that carries the domain (or business) logic
 - A Record type item, that carries the data
 
-All 3 are immutable and any state changes should only be possible using methods. 
-Data must be validated to ensure that we always have a valid state.
+They are immutable and any state changes should only be possible by using methods. 
 
 ## Services namespace
 
