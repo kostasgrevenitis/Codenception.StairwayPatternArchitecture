@@ -61,7 +61,6 @@ following the same methods signatures by implementing the interfaces.**
 - [Carter](https://www.nuget.org/packages/Carter/)
 - [DocumentFormat.OpenXml](https://www.nuget.org/packages/DocumentFormat.OpenXml/)
 - [Finbuckle.MultiTenant](https://www.nuget.org/packages/Finbuckle.MultiTenant/)
-- [Fluent validation](https://www.nuget.org/packages/FluentValidation/)
 - [MassTransit](https://www.nuget.org/packages/MassTransit/)
 - [Microsoft.Extensions.Caching.Redis](https://www.nuget.org/packages/Microsoft.Extensions.Caching.Redis)
 - [NSubstitute](https://www.nuget.org/packages/NSubstitute)
@@ -76,19 +75,18 @@ following the same methods signatures by implementing the interfaces.**
 The template, in order to be functional and provide a solid full set of functionalities, embraces the following scenario:
 
 *"Think of yourself travelling to another city, or country for a bussiness trip. You want a list
-of restaraunts available, and some information about them (cost, food quality, timetable, cusine)."*  
+of restaraunts available, and some information about them (cost, food quality, timetable, cuisine)."*  
 
 ## Technical details
 
 At the moment: 
 
-- The codebase has 14 projects.
+- The codebase has 13 projects.
   - 2 clients projects
   - 2 unit tests projects
   - 6 interfaces projects
-  - 4 implementations projects
+  - 3 implementations projects
  - An appveyor.yml file
-- It borrows elements from DDD.
 - It is layer structured.
 - It is tier structured.
 - It embraces DI
@@ -111,8 +109,7 @@ Data must be validated to ensure that we always have a valid state.
 
 A service class is an orchestrator. A stateless object that performs actions.
 It includes all the objects and data, and dictates how all of
-them will work together. It actually implements pipelines of 
-"input data -> transform data -> run calculations -> results -> persist and/or return results".
+them will work together.
 
 ## Repositories namespace
 
@@ -312,8 +309,7 @@ a common pattern. It also ensures higher code quality, better unit testing and e
 
 | Features  | Description |	Version|
 | ------------- | ------------- |--|
-| Option monad  | `null` is used to indicate no value. The method called can't produce a value of the expected type, and therefore it returns "nothing". The programmer must continually check if the value is null. It's only a matter of time before a null reference exception crops up because the variable wasn't checked. This is where `Option` monad steps in. In functional languages use what's known as an option type. In F# it's called Option, in Haskell it's called Maybe. Option<T> works in a very similar way to Nullable<T>, except it works with all types rather than just value types. It's a struct and therefore can't be null. An instance can be created by either calling Some(value), which represents a positive "I have a value" response, or None, which is the equivalent of returning null. Also read [this](https://devblogs.microsoft.com/dotnet/nullable-reference-types-in-csharp/)  | 0.2.0.0 |
-| Exceptions  | TODO  | 0.3.0.0 |
+| Exceptions  | TODO  | 0.2.0.0 |
 | To json  | TODO  | 0.3.0.0|
 | Data source access  | Implementation with Dapper  | 0.4.0.0|
 | Authentication/Authorization/Roles  | Implementation with IdentityServer  | 0.5.0.0 |
