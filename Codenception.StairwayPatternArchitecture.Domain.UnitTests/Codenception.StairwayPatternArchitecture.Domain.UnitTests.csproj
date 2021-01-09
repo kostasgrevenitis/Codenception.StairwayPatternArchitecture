@@ -15,10 +15,15 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
-    <PackageReference Include="coverlet.collector" Version="1.3.0">
+    <PackageReference Include="coverlet.collector" Version="3.0.0">
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Codenception.StairwayPatternArchitecture.Domain.Interfaces\Codenception.StairwayPatternArchitecture.Domain.Interfaces.csproj" />
+    <ProjectReference Include="..\Codenception.StairwayPatternArchitecture.Repositories.MsSql\Codenception.StairwayPatternArchitecture.Repositories.MsSql.csproj" />
   </ItemGroup>
 
 </Project>

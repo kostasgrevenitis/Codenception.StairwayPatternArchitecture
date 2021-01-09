@@ -5,10 +5,10 @@ namespace Codenception.StairwayPatternArchitecture.Domain.Interfaces.Cqrs
 {
     public interface ICommand<TRecord> where TRecord : IDatabaseRecord<ValueType>
     {
-        void Create<T>(TRecord entity);
+        void Create(TRecord entity);
 
         void DeleteById(ValueType id);
 
-        void UpdateById<T>(TRecord entity);
+        void UpdateById(TRecord entity);
     }
 }

@@ -5,11 +5,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Commands\" />
-    <Folder Include="Queries\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\Codenception.StairwayPatternArchitecture.Domain.Interfaces\Codenception.StairwayPatternArchitecture.Domain.Interfaces.csproj" />
   </ItemGroup>
 

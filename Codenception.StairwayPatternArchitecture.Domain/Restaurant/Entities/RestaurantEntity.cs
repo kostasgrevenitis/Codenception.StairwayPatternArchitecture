@@ -1,9 +1,9 @@
 ﻿using Codenception.StairwayPatternArchitecture.Domain.Interfaces.Cqrs;
 using Codenception.StairwayPatternArchitecture.Domain.Interfaces.Entities;
 using Codenception.StairwayPatternArchitecture.Domain.Interfaces.Records;
+using Codenception.StairwayPatternArchitecture.Domain.Restaurant.ExtensionMethods;
 using System;
 using System.Collections.Generic;
-using System.Linq;
 
 namespace Codenception.StairwayPatternArchitecture.Domain.Restaurant.Entities
 {
@@ -22,7 +22,7 @@ namespace Codenception.StairwayPatternArchitecture.Domain.Restaurant.Entities
 
         public IList<IDomainRecord> AllDomainRecords()
         {
-            return this.MapToDomainRecordsList(this._query.AllDatabaseRecords<System.ValueType>());
+            return this._query.AllDatabaseRecords<System.ValueType>().MapToDomainRecordsList();
         }
 
         public void CreateDomainRecord(IDomainRecord domainRecord)
@@ -37,61 +37,17 @@ namespace Codenception.StairwayPatternArchitecture.Domain.Restaurant.Entities
 
         public IDomainRecord DomainRecord(ValueType id)
         {
-            return this.MapToDomainRecord(this._query.DatabaseRecordById(id));
+            return this._query.DatabaseRecordById(id).MapToDomainRecord();
         }
 
         public IList<IDomainRecord> ManyDomainRecords(ValueType[] ids)
         {
-            return this.MapToDomainRecordsList(this._query.ManyDatabaseRecordByIds(ids));
+            return this._query.ManyDatabaseRecordByIds(ids).MapToDomainRecordsList();
         }
 
         public void UpdateDomainRecord(IDomainRecord domainRecord)
         {
             throw new NotImplementedException();
-        }
-
-        private IDomainRecord MapToDomainRecord(IDatabaseRecord<ValueType> databaseRecord)
-        {
-            var databaseRecordProperties = databaseRecord.GetType().GetProperties();
-            var type = typeof(IDomainRecord);
-            var domainRecord = Activator.CreateInstance(type);
-            var domainRecordPropeties = domainRecord.GetType().GetProperties();
-
-            for (int i = 0; i < databaseRecordProperties.Length; i++)
-            {
-                var databaseRecordProperty = databaseRecordProperties[i];
-                var domainRecordProperty = domainRecordPropeties
-                    .Single(p => p.Name.Equals(databaseRecordProperty.Name));
-
-                domainRecordProperty.SetValue(domainRecord, databaseRecordProperty.GetValue(databaseRecord));
-            }
-
-            return (IDomainRecord)domainRecord;
-        }
-
-        private IList<IDomainRecord> MapToDomainRecordsList(IList<IDatabaseRecord<ValueType>> databaseRecords)
-        {
-            var domainRecords = new List<IDomainRecord>();
-
-            foreach (var databaseRecord in databaseRecords)
-            {
-                var databaseRecordProperties = databaseRecord.GetType().GetProperties();
-
-                for (int i = 0; i < databaseRecordProperties.Length; i++)
-                {
-                    var databaseRecordProperty = databaseRecordProperties[i];
-                    var type = typeof(IDomainRecord);
-                    var domainRecord = Activator.CreateInstance(type);
-                    var domainRecordPropeties = domainRecord.GetType().GetProperties();
-                    var domainRecordProperty = domainRecordPropeties
-                        .Single(p => p.Name.Equals(databaseRecordProperty.Name));
-
-                    domainRecordProperty.SetValue(domainRecord, databaseRecordProperty.GetValue(databaseRecord));
-                    domainRecords.Add((IDomainRecord)domainRecord);
-                }
-            }
-
-            return domainRecords;
         }
     }
 }
