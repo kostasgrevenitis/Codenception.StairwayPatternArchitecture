@@ -1,5 +1,4 @@
 ﻿using Codenception.StairwayPatternArchitecture.Domain.Interfaces.Records;
-using LanguageExt;
 using System;
 
 namespace Codenception.StairwayPatternArchitecture.Domain.Restaurant.Records
@@ -11,7 +10,7 @@ namespace Codenception.StairwayPatternArchitecture.Domain.Restaurant.Records
             get; init;
         }
 
-        public Option<string> Name
+        public string Name
         {
             get; init;
         }
@@ -21,7 +20,7 @@ namespace Codenception.StairwayPatternArchitecture.Domain.Restaurant.Records
             get; init;
         }
 
-        public Option<string> RecordToString()
+        public string RecordToString()
         {
             return this.ToString();
         }

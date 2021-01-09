@@ -1,13 +1,13 @@
 ﻿using Codenception.StairwayPatternArchitecture.Domain.Interfaces.Records;
 using Codenception.StairwayPatternArchitecture.Domain.Restaurant.Records;
-using LanguageExt;
+using Codenception.StairwayPatternArchitecture.Repositories.MsSql.DatabaseRecords;
 using System;
 
-namespace Codenception.StairwayPatternArchitecture.Domain.ExtensionMethods.Mappers
+namespace Codenception.StairwayPatternArchitecture.ExtensionMethods.Mappers
 {
     public static class RestaurantDatabaseRecordExtensionMethods
     {
-        public static IDomainRecord ToDomainRecord(this Option<IDatabaseRecord<System.ValueType>> databaseRecord)
+        public static IDomainRecord ToDomainRecord(this RestaurantDatabaseRecord databaseRecord)
         {
             return new RestaurantRecord() with
             {

@@ -9,7 +9,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Codenception.StairwayPatternArchitecture.Domain.ExtensionMethods\Codenception.StairwayPatternArchitecture.Domain.ExtensionMethods.csproj" />
     <ProjectReference Include="..\Codenception.StairwayPatternArchitecture.Domain.Interfaces\Codenception.StairwayPatternArchitecture.Domain.Interfaces.csproj" />
     <ProjectReference Include="..\Codenception.StairwayPatternArchitecture.Services.Interfaces\Codenception.StairwayPatternArchitecture.Services.Interfaces.csproj" />
   </ItemGroup>

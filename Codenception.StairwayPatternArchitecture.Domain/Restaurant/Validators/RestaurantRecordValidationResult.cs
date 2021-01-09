@@ -1,6 +1,5 @@
 ﻿using Codenception.StairwayPatternArchitecture.Domain.Interfaces.Records;
 using FluentValidation.Results;
-using LanguageExt;
 using System.Collections.Generic;
 
 namespace Codenception.StairwayPatternArchitecture.Domain.Restaurant.Validators
@@ -14,19 +13,19 @@ namespace Codenception.StairwayPatternArchitecture.Domain.Restaurant.Validators
             this.RuleSetsExecuted = validationResult.RuleSetsExecuted;
         }
 
-        public IList<Option<IValidationError>> Errors
+        public IList<IValidationError> Errors
         {
             get;
             private set;
         }
 
-        public Option<bool> IsValid
+        public bool IsValid
         {
             get;
             private set;
         }
 
-        public Option<string[]> RuleSetsExecuted
+        public string[] RuleSetsExecuted
         {
             get;
             private set;

@@ -1,9 +1,7 @@
-﻿using LanguageExt;
-
-namespace Codenception.StairwayPatternArchitecture.Domain.Interfaces.Records
+﻿namespace Codenception.StairwayPatternArchitecture.Domain.Interfaces.Records
 {
     public interface IDomainRecord
     {
-        public Option<string> RecordToString();
+        public string RecordToString();
     }
 }

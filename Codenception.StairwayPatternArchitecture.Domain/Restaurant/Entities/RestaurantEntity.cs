@@ -3,7 +3,6 @@ using Codenception.StairwayPatternArchitecture.Domain.Interfaces.Records;
 using Codenception.StairwayPatternArchitecture.Domain.Restaurant.Records;
 using Codenception.StairwayPatternArchitecture.Domain.Restaurant.Validators;
 using Codenception.StairwayPatternArchitecture.Domain.Validators;
-using LanguageExt;
 
 namespace Codenception.StairwayPatternArchitecture.Domain.Restaurant.Entities
 {
@@ -16,13 +15,13 @@ namespace Codenception.StairwayPatternArchitecture.Domain.Restaurant.Entities
             this._restaurantValidator = restaurantValidator;
         }
 
-        public Option<IRecordValidationResult<IValidationError>> RecordValidationResult(RestaurantRecord restaurantRecord)
+        public IRecordValidationResult<IValidationError> RecordValidationResult(RestaurantRecord restaurantRecord)
         {
             var validationResult = this._restaurantValidator.Validate(restaurantRecord);
             return new RestaurantRecordValidationResult(validationResult);
         }
 
-        public Option<RestaurantRecord> WithUpdatedAddressInfo(RestaurantRecord restaurantRecord, AddressInfo addressInfo)
+        public RestaurantRecord WithUpdatedAddressInfo(RestaurantRecord restaurantRecord, AddressInfo addressInfo)
         {
             this.RecordValidationResult(restaurantRecord);
             return restaurantRecord with
@@ -31,7 +30,7 @@ namespace Codenception.StairwayPatternArchitecture.Domain.Restaurant.Entities
             };
         }
 
-        public Option<RestaurantRecord> WithUpdatedName(RestaurantRecord restaurantRecord, string name)
+        public RestaurantRecord WithUpdatedName(RestaurantRecord restaurantRecord, string name)
         {
             this.RecordValidationResult(restaurantRecord);
             return restaurantRecord with
