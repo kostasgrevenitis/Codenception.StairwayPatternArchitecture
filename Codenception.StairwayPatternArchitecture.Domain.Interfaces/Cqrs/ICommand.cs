@@ -1,10 +1,13 @@
-﻿namespace Codenception.StairwayPatternArchitecture.Domain.Interfaces.Cqrs
+﻿using Codenception.StairwayPatternArchitecture.Domain.Interfaces.Records;
+using System;
+
+namespace Codenception.StairwayPatternArchitecture.Domain.Interfaces.Cqrs
 {
-    public interface ICommand<TRecord, TId> where TRecord : class
+    public interface ICommand<TRecord> where TRecord : IDatabaseRecord<ValueType>
     {
         void Create<T>(TRecord entity);
 
-        void DeleteById(TId id);
+        void DeleteById(ValueType id);
 
         void UpdateById<T>(TRecord entity);
     }

@@ -5,6 +5,11 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Restaurant\Entities\RestaurantEntity.cs~RF49ebe768.TMP" />
+    <None Remove="Restaurant\Entities\RestaurantEntity.cs~RF4a0d08bb.TMP" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\Codenception.StairwayPatternArchitecture.Domain.Interfaces\Codenception.StairwayPatternArchitecture.Domain.Interfaces.csproj" />
   </ItemGroup>
 

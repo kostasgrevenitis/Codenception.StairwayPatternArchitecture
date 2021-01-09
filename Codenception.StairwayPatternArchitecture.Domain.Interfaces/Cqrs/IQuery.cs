@@ -1,14 +1,15 @@
 ﻿using Codenception.StairwayPatternArchitecture.Domain.Interfaces.Records;
+using System;
 using System.Collections.Generic;
 
 namespace Codenception.StairwayPatternArchitecture.Domain.Interfaces.Cqrs
 {
-    public interface IQuery<TDatabaseRecord, TId> where TDatabaseRecord : IDatabaseRecord<TId>
+    public interface IQuery<TDatabaseRecord> where TDatabaseRecord : IDatabaseRecord<ValueType>
     {
-        IList<TDatabaseRecord> All<T>();
+        IList<TDatabaseRecord> AllDatabaseRecords<T>();
 
-        TDatabaseRecord ById(TId id);
+        TDatabaseRecord DatabaseRecordById(ValueType id);
 
-        IList<TDatabaseRecord> ManyById(TId id);
+        IList<TDatabaseRecord> ManyDatabaseRecordByIds(ValueType[] ids);
     }
 }
