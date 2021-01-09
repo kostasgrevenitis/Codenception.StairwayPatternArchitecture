@@ -7,6 +7,10 @@ namespace Codenception.StairwayPatternArchitecture.Repositories.MsSql.Commands
 {
     public class RestaurantCommand : ICommand<IDatabaseRecord<ValueType>>
     {
+        public RestaurantCommand()
+        {
+        }
+
         public async Task CreateAsync(IDatabaseRecord<ValueType> entity)
         {
             throw new NotImplementedException();

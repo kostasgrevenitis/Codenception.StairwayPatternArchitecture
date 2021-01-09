@@ -8,17 +8,21 @@ namespace Codenception.StairwayPatternArchitecture.Repositories.MsSql.Queries
 {
     public class RestaurantQuery : IQuery<IDatabaseRecord<ValueType>>
     {
-        public Task<IList<IDatabaseRecord<ValueType>>> AllDatabaseRecordsAsync<T>()
+        public RestaurantQuery()
+        {
+        }
+
+        public async Task<IList<IDatabaseRecord<ValueType>>> AllDatabaseRecordsAsync<T>()
         {
             throw new NotImplementedException();
         }
 
-        public Task<IDatabaseRecord<ValueType>> DatabaseRecordByIdAsync(ValueType id)
+        public async Task<IDatabaseRecord<ValueType>> DatabaseRecordByIdAsync(ValueType id)
         {
             throw new NotImplementedException();
         }
 
-        public Task<IList<IDatabaseRecord<ValueType>>> ManyDatabaseRecordByIdsAsync(ValueType[] ids)
+        public async Task<IList<IDatabaseRecord<ValueType>>> ManyDatabaseRecordByIdsAsync(ValueType[] ids)
         {
             throw new NotImplementedException();
         }

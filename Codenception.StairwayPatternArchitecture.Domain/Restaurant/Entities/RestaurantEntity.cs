@@ -29,12 +29,12 @@ namespace Codenception.StairwayPatternArchitecture.Domain.Restaurant.Entities
 
         public async Task CreateDomainRecordAsync(IDomainRecord domainRecord)
         {
-            throw new NotImplementedException();
+            //await this._command.CreateAsync(domainRecord);
         }
 
-        public Task DeleteDomainRecordAsync(ValueType id)
+        public async Task DeleteDomainRecordAsync(ValueType id)
         {
-            throw new NotImplementedException();
+            await this._command.DeleteByIdAsync(id);
         }
 
         public async Task<IDomainRecord> DomainRecordAsync(ValueType id)
@@ -49,9 +49,9 @@ namespace Codenception.StairwayPatternArchitecture.Domain.Restaurant.Entities
             return databaseRecords.MapToDomainRecords<IDomainRecord>();
         }
 
-        public Task UpdateDomainRecordAsync(IDomainRecord domainRecord)
+        public async Task UpdateDomainRecordAsync(IDomainRecord domainRecord)
         {
-            throw new NotImplementedException();
+            //await this._command.UpdateByIdAsync();
         }
     }
 }
