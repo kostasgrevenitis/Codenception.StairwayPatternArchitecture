@@ -8,7 +8,7 @@
 
 > Last update 05/01/2021
 > 
-> Document version 1.0.0
+> Document version 1.2.0
 > 
 > ![Appveyor status image](https://ci.appveyor.com/api/projects/status/github/kostasgrevenitis/Codenception.StairwayPatternArchitecture?branch=main&svg=true)
 > [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
@@ -189,9 +189,10 @@ and to smooth spiky workloads.
 
 This template will support in-memory and RabbitMq messaging.
 
-## Mappers namespace
+# Extension methods
 
-Mapper classes are in charge of mapping data from one object to another. This allows the domain
+## Mappers
+Mapper are in charge of mapping data from one object to another. This allows the domain
 to be isolated by the data structures the client app uses, and the data structures the repositories use.
 The isolated domain is easier to be unit tested by the programmers, and the solution structure 
 is more scalable this ways.
