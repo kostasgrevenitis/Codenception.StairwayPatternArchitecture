@@ -96,11 +96,10 @@ At the moment:
 
 This namespace is related to the agreed upon system behaviours.
 In the implementation classes we write the code that is related to the *functional requirements*. 
-Each domain entity is assembled by three items:
+Each domain entity is assembled by two items:
 
 - An Entity class item, that carries the domain (or business) logic
 - A Record type item, that carries the data
-- A Validator class item, that validates the data integrity
 
 All 3 are immutable and any state changes should only be possible using methods. 
 Data must be validated to ensure that we always have a valid state.
