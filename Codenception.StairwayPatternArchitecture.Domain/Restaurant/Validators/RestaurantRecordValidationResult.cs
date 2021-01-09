@@ -1,16 +1,15 @@
 ﻿using Codenception.StairwayPatternArchitecture.Domain.Interfaces.Records;
-using FluentValidation.Results;
 using System.Collections.Generic;
 
 namespace Codenception.StairwayPatternArchitecture.Domain.Restaurant.Validators
 {
     public class RestaurantRecordValidationResult : IRecordValidationResult<IValidationError>
     {
-        public RestaurantRecordValidationResult(ValidationResult validationResult)
+        public RestaurantRecordValidationResult(IList<IValidationError> errors, bool isValid, string[] ruleSetsExecuted)
         {
-            //this.Errors = validationResult.Errors;
-            this.IsValid = validationResult.IsValid;
-            this.RuleSetsExecuted = validationResult.RuleSetsExecuted;
+            this.Errors = errors;
+            this.IsValid = isValid;
+            this.RuleSetsExecuted = ruleSetsExecuted;
         }
 
         public IList<IValidationError> Errors

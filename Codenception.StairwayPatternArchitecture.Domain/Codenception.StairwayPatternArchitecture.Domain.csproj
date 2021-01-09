@@ -10,7 +10,6 @@
 
   <ItemGroup>
     <PackageReference Include="FluentValidation" Version="9.3.0" />
-    <PackageReference Include="LanguageExt.Core" Version="3.4.15" />
   </ItemGroup>
 
   <ItemGroup>
