@@ -1,14 +1,15 @@
 ﻿using Codenception.StairwayPatternArchitecture.Domain.Interfaces.Records;
 using System;
+using System.Threading.Tasks;
 
 namespace Codenception.StairwayPatternArchitecture.Domain.Interfaces.Cqrs
 {
     public interface ICommand<TRecord> where TRecord : IDatabaseRecord<ValueType>
     {
-        void Create(TRecord entity);
+        Task CreateAsync(TRecord entity);
 
-        void DeleteById(ValueType id);
+        Task DeleteByIdAsync(ValueType id);
 
-        void UpdateById(TRecord entity);
+        Task UpdateByIdAsync(TRecord entity);
     }
 }

@@ -3,6 +3,7 @@ using Codenception.StairwayPatternArchitecture.Domain.Interfaces.Records;
 using Codenception.StairwayPatternArchitecture.Services.Interfaces;
 using System;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace Codenception.StairwayPatternArchitecture.Services
 {
@@ -15,34 +16,34 @@ namespace Codenception.StairwayPatternArchitecture.Services
             this._restaurantEntity = restaurantEntity;
         }
 
-        public void CreateRestaurant(IDomainRecord restaurantDomainRecord)
+        public async Task CreateRestaurantAsync(IDomainRecord restaurantDomainRecord)
         {
-            this._restaurantEntity.CreateDomainRecord(restaurantDomainRecord);
+            await this._restaurantEntity.CreateDomainRecordAsync(restaurantDomainRecord);
         }
 
-        public void DeleteRestaurant(ValueType id)
+        public async Task DeleteRestaurantAsync(ValueType id)
         {
-            this._restaurantEntity.DeleteDomainRecord(id);
+            await this._restaurantEntity.DeleteDomainRecordAsync(id);
         }
 
-        public IDomainRecord Restaurant(ValueType id)
+        public async Task<IDomainRecord> RestaurantAsync(ValueType id)
         {
-            return this._restaurantEntity.DomainRecord(id);
+            return await this._restaurantEntity.DomainRecordAsync(id);
         }
 
-        public IList<IDomainRecord> Restaurants()
+        public async Task<IList<IDomainRecord>> RestaurantsAsync()
         {
-            return this._restaurantEntity.AllDomainRecords();
+            return await this._restaurantEntity.AllDomainRecordsAsync();
         }
 
-        public IList<IDomainRecord> Restaurants(ValueType[] ids)
+        public async Task<IList<IDomainRecord>> RestaurantsAsync(ValueType[] ids)
         {
-            return this._restaurantEntity.ManyDomainRecords(ids);
+            return await this._restaurantEntity.DomainRecordsAsync(ids);
         }
 
-        public void UpdateRestaurant(IDomainRecord restaurantDomainRecord)
+        public async Task UpdateRestaurantAsync(IDomainRecord restaurantDomainRecord)
         {
-            this._restaurantEntity.UpdateDomainRecord(restaurantDomainRecord);
+            await this._restaurantEntity.UpdateDomainRecordAsync(restaurantDomainRecord);
         }
     }
 }

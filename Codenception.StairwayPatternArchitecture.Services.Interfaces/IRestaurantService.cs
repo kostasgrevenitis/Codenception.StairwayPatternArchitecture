@@ -1,21 +1,22 @@
 ﻿using Codenception.StairwayPatternArchitecture.Domain.Interfaces.Records;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace Codenception.StairwayPatternArchitecture.Services.Interfaces
 {
     public interface IRestaurantService<TDomainRecord, TId>
         where TDomainRecord : IDomainRecord
     {
-        void CreateRestaurant(IDomainRecord restaurantDomainRecord);
+        Task CreateRestaurantAsync(IDomainRecord restaurantDomainRecord);
 
-        void DeleteRestaurant(TId id);
+        Task DeleteRestaurantAsync(TId id);
 
-        IDomainRecord Restaurant(TId id);
+        Task<IDomainRecord> RestaurantAsync(TId id);
 
-        IList<IDomainRecord> Restaurants();
+        Task<IList<IDomainRecord>> RestaurantsAsync();
 
-        IList<IDomainRecord> Restaurants(TId[] ids);
+        Task<IList<IDomainRecord>> RestaurantsAsync(TId[] ids);
 
-        void UpdateRestaurant(IDomainRecord restaurantDomainRecord);
+        Task UpdateRestaurantAsync(IDomainRecord restaurantDomainRecord);
     }
 }

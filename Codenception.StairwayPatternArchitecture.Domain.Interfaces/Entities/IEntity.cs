@@ -1,20 +1,21 @@
 ﻿using Codenception.StairwayPatternArchitecture.Domain.Interfaces.Records;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace Codenception.StairwayPatternArchitecture.Domain.Interfaces.Entities
 {
     public interface IEntity<TDomainRecord> where TDomainRecord : IDomainRecord
     {
-        public IList<TDomainRecord> AllDomainRecords();
+        public Task<IList<TDomainRecord>> AllDomainRecordsAsync();
 
-        public void CreateDomainRecord(TDomainRecord domainRecord);
+        public Task CreateDomainRecordAsync(TDomainRecord domainRecord);
 
-        public void DeleteDomainRecord(System.ValueType id);
+        public Task DeleteDomainRecordAsync(System.ValueType id);
 
-        public TDomainRecord DomainRecord(System.ValueType id);
+        public Task<TDomainRecord> DomainRecordAsync(System.ValueType id);
 
-        public IList<TDomainRecord> ManyDomainRecords(System.ValueType[] ids);
+        public Task<IList<TDomainRecord>> DomainRecordsAsync(System.ValueType[] ids);
 
-        public void UpdateDomainRecord(TDomainRecord domainRecord);
+        public Task UpdateDomainRecordAsync(TDomainRecord domainRecord);
     }
 }

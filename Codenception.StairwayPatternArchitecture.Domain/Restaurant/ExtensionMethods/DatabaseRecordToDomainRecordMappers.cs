@@ -5,12 +5,12 @@ using System.Linq;
 
 namespace Codenception.StairwayPatternArchitecture.Domain.Restaurant.ExtensionMethods
 {
-    internal static class DatabaseRecordToDomainRecordMappers
+    public static class DatabaseRecordToDomainRecordMappers
     {
-        internal static IDomainRecord MapToDomainRecord(this IDatabaseRecord<ValueType> databaseRecord)
+        public static IDomainRecord MapToDomainRecord<T>(this IDatabaseRecord<ValueType> databaseRecord)
         {
             var databaseRecordProperties = databaseRecord.GetType().GetProperties();
-            var type = typeof(IDomainRecord);
+            var type = typeof(T);
             var domainRecord = Activator.CreateInstance(type);
             var domainRecordPropeties = domainRecord.GetType().GetProperties();
 
@@ -26,14 +26,14 @@ namespace Codenception.StairwayPatternArchitecture.Domain.Restaurant.ExtensionMe
             return (IDomainRecord)domainRecord;
         }
 
-        internal static IList<IDomainRecord> MapToDomainRecordsList(this IList<IDatabaseRecord<ValueType>> databaseRecords)
+        public static IList<IDomainRecord> MapToDomainRecords<T>(this IList<IDatabaseRecord<ValueType>> databaseRecords)
         {
             var domainRecords = new List<IDomainRecord>();
 
             foreach (var databaseRecord in databaseRecords)
             {
                 var databaseRecordProperties = databaseRecord.GetType().GetProperties();
-                var type = typeof(IDomainRecord);
+                var type = typeof(T);
                 var domainRecord = Activator.CreateInstance(type);
 
                 for (int i = 0; i < databaseRecordProperties.Length; i++)

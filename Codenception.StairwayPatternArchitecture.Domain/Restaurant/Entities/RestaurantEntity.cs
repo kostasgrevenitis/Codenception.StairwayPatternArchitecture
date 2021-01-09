@@ -4,6 +4,7 @@ using Codenception.StairwayPatternArchitecture.Domain.Interfaces.Records;
 using Codenception.StairwayPatternArchitecture.Domain.Restaurant.ExtensionMethods;
 using System;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace Codenception.StairwayPatternArchitecture.Domain.Restaurant.Entities
 {
@@ -20,32 +21,35 @@ namespace Codenception.StairwayPatternArchitecture.Domain.Restaurant.Entities
             this._query = query;
         }
 
-        public IList<IDomainRecord> AllDomainRecords()
+        public async Task<IList<IDomainRecord>> AllDomainRecordsAsync()
         {
-            return this._query.AllDatabaseRecords<System.ValueType>().MapToDomainRecordsList();
+            var allDatabaseRecords = await this._query.AllDatabaseRecordsAsync<ValueType>();
+            return allDatabaseRecords.MapToDomainRecords<IDomainRecord>();
         }
 
-        public void CreateDomainRecord(IDomainRecord domainRecord)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void DeleteDomainRecord(ValueType id)
+        public async Task CreateDomainRecordAsync(IDomainRecord domainRecord)
         {
             throw new NotImplementedException();
         }
 
-        public IDomainRecord DomainRecord(ValueType id)
+        public Task DeleteDomainRecordAsync(ValueType id)
         {
-            return this._query.DatabaseRecordById(id).MapToDomainRecord();
+            throw new NotImplementedException();
         }
 
-        public IList<IDomainRecord> ManyDomainRecords(ValueType[] ids)
+        public async Task<IDomainRecord> DomainRecordAsync(ValueType id)
         {
-            return this._query.ManyDatabaseRecordByIds(ids).MapToDomainRecordsList();
+            var databaseRecord = await this._query.DatabaseRecordByIdAsync(id);
+            return databaseRecord.MapToDomainRecord<IDomainRecord>();
         }
 
-        public void UpdateDomainRecord(IDomainRecord domainRecord)
+        public async Task<IList<IDomainRecord>> DomainRecordsAsync(ValueType[] ids)
+        {
+            var databaseRecords = await this._query.ManyDatabaseRecordByIdsAsync(ids);
+            return databaseRecords.MapToDomainRecords<IDomainRecord>();
+        }
+
+        public Task UpdateDomainRecordAsync(IDomainRecord domainRecord)
         {
             throw new NotImplementedException();
         }

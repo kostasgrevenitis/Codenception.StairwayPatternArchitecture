@@ -1,5 +1,6 @@
+using Codenception.StairwayPatternArchitecture.Domain.Restaurant.ExtensionMethods;
+using Codenception.StairwayPatternArchitecture.Domain.Restaurant.Records;
 using Codenception.StairwayPatternArchitecture.Repositories.MsSql.DatabaseRecords;
-using System.Collections.Generic;
 using Xunit;
 
 namespace Codenception.StairwayPatternArchitecture.Domain.UnitTests
@@ -15,17 +16,13 @@ namespace Codenception.StairwayPatternArchitecture.Domain.UnitTests
         public void MapToDomainRecord_MapDatabaseRecordToDomainRecord_NewDomainRecordCreated()
         {
             // Arrange
-            var restaurantDatabaseRecords = new List<RestaurantDatabaseRecord>
-            {
-                new RestaurantDatabaseRecord(),
-                new RestaurantDatabaseRecord(),
-                new RestaurantDatabaseRecord(),
-                new RestaurantDatabaseRecord(),
-                new RestaurantDatabaseRecord()
-            };
+            var restaurantDatabaseRecord = new RestaurantDatabaseRecord();
+
             // Act
+            var restaurandDomainRecord = restaurantDatabaseRecord.MapToDomainRecord<RestaurantDomainRecord>();
 
             // Assert
+            //Assert.(IDomainRecord, restaurandDomainRecord);
         }
     }
 }
