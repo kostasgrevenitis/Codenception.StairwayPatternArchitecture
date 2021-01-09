@@ -1,16 +1,20 @@
 ﻿using Codenception.StairwayPatternArchitecture.Domain.Interfaces.Records;
+using System.Collections.Generic;
 
 namespace Codenception.StairwayPatternArchitecture.Domain.Interfaces.Entities
 {
-    public interface IEntity<TRestaurantRecord, TAddressInfo, TRecordValidationResult>
-        where TRestaurantRecord : IDomainRecord
-        where TAddressInfo : IDomainRecord
-        where TRecordValidationResult : IRecordValidationResult<IValidationError>
+    public interface IEntity<TDomainRecord> where TDomainRecord : IDomainRecord
     {
-        public IRecordValidationResult<IValidationError> RecordValidationResult(TRestaurantRecord restaurantRecord);
+        public IList<TDomainRecord> AllDomainRecords();
 
-        public TRestaurantRecord WithUpdatedAddressInfo(TRestaurantRecord restaurantRecord, TAddressInfo addressInfo);
+        public void CreateDomainRecord(TDomainRecord domainRecord);
 
-        public TRestaurantRecord WithUpdatedName(TRestaurantRecord restaurantRecord, string name);
+        public void DeleteDomainRecord(System.ValueType id);
+
+        public TDomainRecord DomainRecord(System.ValueType id);
+
+        public IList<TDomainRecord> ManyDomainRecords(System.ValueType[] ids);
+
+        public void UpdateDomainRecord(TDomainRecord domainRecord);
     }
 }
