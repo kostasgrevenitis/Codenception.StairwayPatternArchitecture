@@ -1,12 +1,13 @@
-﻿using LanguageExt;
+﻿using Codenception.StairwayPatternArchitecture.Domain.Interfaces.Records;
 using System.Collections.Generic;
 
 namespace Codenception.StairwayPatternArchitecture.Services.Interfaces
 {
-    public interface IRestaurantService<TId>
+    public interface IRestaurantService<TDomainRecord, TId>
+        where TDomainRecord : IDomainRecord
     {
-        Option<string> Restaurant(TId id);
+        IDomainRecord Restaurant(TId id);
 
-        IList<Option<string>> Restaurants();
+        IList<IDomainRecord> Restaurants();
     }
 }

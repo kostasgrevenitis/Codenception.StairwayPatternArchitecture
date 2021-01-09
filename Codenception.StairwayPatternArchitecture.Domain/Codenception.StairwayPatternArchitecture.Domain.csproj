@@ -5,14 +5,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="Restaurant\Validators\RestaurantRecordValidationResult.cs~RF42c50088.TMP" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <PackageReference Include="FluentValidation" Version="9.3.0" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\Codenception.StairwayPatternArchitecture.Domain.Interfaces\Codenception.StairwayPatternArchitecture.Domain.Interfaces.csproj" />
   </ItemGroup>
 

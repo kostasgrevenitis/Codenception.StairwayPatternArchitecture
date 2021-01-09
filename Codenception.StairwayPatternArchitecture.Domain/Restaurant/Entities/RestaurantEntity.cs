@@ -1,42 +1,50 @@
-﻿using Codenception.StairwayPatternArchitecture.Domain.Interfaces.Entities;
+﻿using Codenception.StairwayPatternArchitecture.Domain.Interfaces.Cqrs;
+using Codenception.StairwayPatternArchitecture.Domain.Interfaces.Entities;
 using Codenception.StairwayPatternArchitecture.Domain.Interfaces.Records;
-using Codenception.StairwayPatternArchitecture.Domain.Restaurant.Records;
-using Codenception.StairwayPatternArchitecture.Domain.Restaurant.Validators;
-using Codenception.StairwayPatternArchitecture.Domain.Validators;
+using System;
+using System.Collections.Generic;
 
 namespace Codenception.StairwayPatternArchitecture.Domain.Restaurant.Entities
 {
-    public class RestaurantEntity : IEntity<RestaurantRecord, AddressInfo, IRecordValidationResult<IValidationError>>
+    public class RestaurantEntity : IEntity<IDomainRecord>
     {
-        private readonly RestaurantValidator _restaurantValidator;
+        private readonly ICommand<IDatabaseRecord<System.ValueType>, System.ValueType> _command;
+        private readonly IQuery<IDatabaseRecord<System.ValueType>, System.ValueType> _query;
 
-        public RestaurantEntity(RestaurantValidator restaurantValidator)
+        public RestaurantEntity(ICommand<IDatabaseRecord<System.ValueType>, System.ValueType> command, IQuery<IDatabaseRecord<System.ValueType>, System.ValueType> query)
         {
-            this._restaurantValidator = restaurantValidator;
+            this._command = command;
+            this._query = query;
         }
 
-        public IRecordValidationResult<IValidationError> RecordValidationResult(RestaurantRecord restaurantRecord)
+        public IList<IDomainRecord> AllDomainRecords()
         {
-            var validationResult = this._restaurantValidator.Validate(restaurantRecord);
-            return new RestaurantRecordValidationResult(validationResult);
+            throw new NotImplementedException();
         }
 
-        public RestaurantRecord WithUpdatedAddressInfo(RestaurantRecord restaurantRecord, AddressInfo addressInfo)
+        public void CreateDomainRecord(IDomainRecord domainRecord)
         {
-            this.RecordValidationResult(restaurantRecord);
-            return restaurantRecord with
-            {
-                AddressInfo = addressInfo
-            };
+            throw new NotImplementedException();
         }
 
-        public RestaurantRecord WithUpdatedName(RestaurantRecord restaurantRecord, string name)
+        public void DeleteDomainRecord(ValueType id)
         {
-            this.RecordValidationResult(restaurantRecord);
-            return restaurantRecord with
-            {
-                Name = name
-            };
+            throw new NotImplementedException();
+        }
+
+        public IDomainRecord DomainRecord(ValueType id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public IList<IDomainRecord> ManyDomainRecords(ValueType[] ids)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void UpdateDomainRecord(IDomainRecord domainRecord)
+        {
+            throw new NotImplementedException();
         }
     }
 }

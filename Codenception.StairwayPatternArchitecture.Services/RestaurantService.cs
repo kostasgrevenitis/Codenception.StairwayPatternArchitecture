@@ -1,45 +1,27 @@
-﻿using Codenception.StairwayPatternArchitecture.Domain.ExtensionMethods.Mappers;
-using Codenception.StairwayPatternArchitecture.Domain.Interfaces.Cqrs;
-using Codenception.StairwayPatternArchitecture.Domain.Interfaces.Entities;
+﻿using Codenception.StairwayPatternArchitecture.Domain.Interfaces.Entities;
 using Codenception.StairwayPatternArchitecture.Domain.Interfaces.Records;
 using Codenception.StairwayPatternArchitecture.Services.Interfaces;
-using LanguageExt;
 using System.Collections.Generic;
 
 namespace Codenception.StairwayPatternArchitecture.Services
 {
-    public class RestaurantService : IRestaurantService<System.ValueType>
+    public class RestaurantService : IRestaurantService<IDomainRecord, System.ValueType>
     {
-        private readonly IQuery<IDatabaseRecord<System.ValueType>, System.ValueType> _query;
-        private readonly IEntity<IDomainRecord, IDomainRecord, IRecordValidationResult<IValidationError>> _restaurantEntity;
+        private readonly IEntity<IDomainRecord> _restaurantEntity;
 
-        public RestaurantService(
-            IQuery<IDatabaseRecord<System.ValueType>, System.ValueType> query,
-            IEntity<IDomainRecord, IDomainRecord, IRecordValidationResult<IValidationError>> restaurantEntity)
+        public RestaurantService(IEntity<IDomainRecord> restaurantEntity)
         {
-            this._query = query;
             this._restaurantEntity = restaurantEntity;
         }
 
-        public Option<string> Restaurant(System.ValueType id)
+        public IDomainRecord Restaurant(System.ValueType id)
         {
-            var restaurantRecord = this._query.ById(id).ToDomainRecord();
-            this._restaurantEntity.RecordValidationResult(restaurantRecord);
-            return restaurantRecord.RecordToString();
+            return this._restaurantEntity.DomainRecord(id);
         }
 
-        public IList<Option<string>> Restaurants()
+        public IList<IDomainRecord> Restaurants()
         {
-            var restaurants = new List<Option<string>>();
-
-            foreach (var restaurantDatabaseRecord in this._query.All<Option<IDatabaseRecord<int>>>())
-            {
-                var restaurantRecord = restaurantDatabaseRecord.ToDomainRecord();
-                this._restaurantEntity.RecordValidationResult(restaurantRecord);
-                restaurants.Add(restaurantRecord.RecordToString());
-            }
-
-            return restaurants;
+            return this._restaurantEntity.AllDomainRecords();
         }
     }
 }
