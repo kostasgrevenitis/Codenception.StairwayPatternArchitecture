@@ -1,6 +1,6 @@
 ﻿using Codenception.StairwayPatternArchitecture.Domain.Interfaces.Records;
 
-namespace Codenception.StairwayPatternArchitecture.Repositories.MsSql.DatabaseRecords
+namespace Codenception.StairwayPatternArchitecture.Domain.Repositories.Restaurant.DatabaseRecords
 {
     public record RestaurantDatabaseRecord : IDatabaseRecord<System.ValueType>
     {

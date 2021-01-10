@@ -29,7 +29,14 @@ namespace Codenception.StairwayPatternArchitecture.Domain.Restaurant.Entities
 
         public async Task CreateDomainRecordAsync(IDomainRecord domainRecord)
         {
-            //await this._command.CreateAsync(domainRecord);
+            //try
+            //{
+            //    //await this._command.CreateAsync(domainRecord);
+            //}
+            //catch (ex)
+            //{
+            //    throw;
+            //}
         }
 
         public async Task DeleteDomainRecordAsync(ValueType id)

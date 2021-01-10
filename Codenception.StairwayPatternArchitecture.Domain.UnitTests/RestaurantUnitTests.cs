@@ -1,6 +1,6 @@
+using Codenception.StairwayPatternArchitecture.Domain.Repositories.Restaurant.DatabaseRecords;
 using Codenception.StairwayPatternArchitecture.Domain.Restaurant.ExtensionMethods;
 using Codenception.StairwayPatternArchitecture.Domain.Restaurant.Records;
-using Codenception.StairwayPatternArchitecture.Repositories.MsSql.DatabaseRecords;
 using Xunit;
 
 namespace Codenception.StairwayPatternArchitecture.Domain.UnitTests
@@ -13,6 +13,7 @@ namespace Codenception.StairwayPatternArchitecture.Domain.UnitTests
         //  --  The expected behavior when the scenario is invoked.
 
         [Fact]
+        //[ExpectedException(typeof(AuthenticationException))]
         public void MapToDomainRecord_MapDatabaseRecordToDomainRecord_NewDomainRecordCreated()
         {
             // Arrange

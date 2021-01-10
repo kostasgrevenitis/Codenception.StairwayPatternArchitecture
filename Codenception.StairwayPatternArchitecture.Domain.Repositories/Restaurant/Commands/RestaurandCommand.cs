@@ -3,7 +3,7 @@ using Codenception.StairwayPatternArchitecture.Domain.Interfaces.Records;
 using System;
 using System.Threading.Tasks;
 
-namespace Codenception.StairwayPatternArchitecture.Repositories.MsSql.Commands
+namespace Codenception.StairwayPatternArchitecture.Domain.Repositories.Restaurant.Commands
 {
     public class RestaurantCommand : ICommand<IDatabaseRecord<ValueType>>
     {

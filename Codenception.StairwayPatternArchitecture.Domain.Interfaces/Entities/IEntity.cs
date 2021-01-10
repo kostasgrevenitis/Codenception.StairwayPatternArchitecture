@@ -1,4 +1,5 @@
 ﻿using Codenception.StairwayPatternArchitecture.Domain.Interfaces.Records;
+using PostSharp.Patterns.Contracts;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
@@ -8,7 +9,7 @@ namespace Codenception.StairwayPatternArchitecture.Domain.Interfaces.Entities
     {
         public Task<IList<TDomainRecord>> AllDomainRecordsAsync();
 
-        public Task CreateDomainRecordAsync(TDomainRecord domainRecord);
+        public Task CreateDomainRecordAsync([Required] TDomainRecord domainRecord);
 
         public Task DeleteDomainRecordAsync(System.ValueType id);
 
