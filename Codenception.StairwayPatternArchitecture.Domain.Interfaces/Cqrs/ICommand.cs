@@ -10,6 +10,6 @@ namespace Codenception.StairwayPatternArchitecture.Domain.Interfaces.Cqrs
 
         Task DeleteByIdAsync(ValueType id);
 
-        Task UpdateByIdAsync(TRecord entity);
+        Task UpdateByIdAsync(ValueType id, TRecord entity);
     }
 }

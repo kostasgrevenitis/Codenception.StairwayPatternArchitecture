@@ -21,7 +21,7 @@ namespace Codenception.StairwayPatternArchitecture.Repositories.MsSql.Commands
             throw new NotImplementedException();
         }
 
-        public async Task UpdateByIdAsync(IDatabaseRecord<ValueType> entity)
+        public async Task UpdateByIdAsync(ValueType id, IDatabaseRecord<ValueType> entity)
         {
             throw new NotImplementedException();
         }

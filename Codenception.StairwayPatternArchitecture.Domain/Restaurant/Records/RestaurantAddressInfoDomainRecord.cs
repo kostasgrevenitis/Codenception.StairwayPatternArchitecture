@@ -3,7 +3,7 @@ using System;
 
 namespace Codenception.StairwayPatternArchitecture.Domain.Restaurant.Records
 {
-    public record AddressInfo : IDomainRecord
+    public record RestaurantAddressInfoDomainRecord : IDomainRecord
     {
         public string StreetName
         {
