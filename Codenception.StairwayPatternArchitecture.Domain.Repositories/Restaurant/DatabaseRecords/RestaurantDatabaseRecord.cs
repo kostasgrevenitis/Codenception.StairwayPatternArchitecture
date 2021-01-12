@@ -1,10 +1,11 @@
 ﻿using Codenception.StairwayPatternArchitecture.Domain.Interfaces.Records;
+using System;
 
 namespace Codenception.StairwayPatternArchitecture.Domain.Repositories.Restaurant.DatabaseRecords
 {
-    public record RestaurantDatabaseRecord : IDatabaseRecord<System.ValueType>
+    public record RestaurantDatabaseRecord : IDatabaseRecord<ValueType>
     {
-        public System.ValueType Id
+        public ValueType Id
         {
             get;
             init;
