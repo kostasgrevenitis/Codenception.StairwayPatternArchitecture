@@ -1,7 +1,7 @@
 using System;
 using Xunit;
 
-namespace Codenception.StairwayPatternArchitecture.Services.UnitTests
+namespace Codenception.StairwayPatternArchitecture.Services.Tests
 {
     public class UnitTest1
     {

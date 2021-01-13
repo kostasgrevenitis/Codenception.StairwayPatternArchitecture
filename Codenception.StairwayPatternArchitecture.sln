@@ -26,8 +26,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Codenception.StairwayPatter
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Codenception.StairwayPatternArchitecture.Domain.UnitTests", "Codenception.StairwayPatternArchitecture.Domain.UnitTests\Codenception.StairwayPatternArchitecture.Domain.UnitTests.csproj", "{08BBA0AE-7D14-445B-8E34-CADD7D5A6002}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Codenception.StairwayPatternArchitecture.Services.UnitTests", "Codenception.StairwayPatternArchitecture.Services.UnitTests\Codenception.StairwayPatternArchitecture.Services.UnitTests.csproj", "{FDF2B684-1DC5-4ABE-B427-F149B7D78CF6}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Codenception.StairwayPatternArchitecture.Infrastructure.Database.Interfaces", "Codenception.StairwayPatternArchitecture.Infrastructure.Database.Interfaces\Codenception.StairwayPatternArchitecture.Infrastructure.Database.Interfaces.csproj", "{D02361F3-00DF-429C-B56E-DE161CFC291A}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Codenception.StairwayPatternArchitecture.Infrastructure.Io.Interfaces", "Codenception.StairwayPatternArchitecture.Infrastructure.Io.Interfaces\Codenception.StairwayPatternArchitecture.Infrastructure.Io.Interfaces.csproj", "{64B804B3-7216-47B0-BFB5-ECAC34764A5D}"
@@ -36,9 +34,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Codenception.StairwayPatter
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Codenception.StairwayPatternArchitecture.Infrastructure.Messsaging.Interfaces", "Codenception.StairwayPatternArchitecture.Infrastructure.Messsaging.Interfaces\Codenception.StairwayPatternArchitecture.Infrastructure.Messsaging.Interfaces.csproj", "{74BC9CF2-CB17-4F71-B2A4-DCB240EC603A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Codenception.StairwayPatternArchitecture.Domain.Repositories", "Codenception.StairwayPatternArchitecture.Domain.Repositories\Codenception.StairwayPatternArchitecture.Domain.Repositories.csproj", "{238C37B9-0A1F-4050-A65A-B0054AB61779}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Codenception.StairwayPatternArchitecture.Domain.Repositories", "Codenception.StairwayPatternArchitecture.Domain.Repositories\Codenception.StairwayPatternArchitecture.Domain.Repositories.csproj", "{238C37B9-0A1F-4050-A65A-B0054AB61779}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Codenception.StairwayPatternArchitecture.Infrastructure.Database.MsSql", "Codenception.StairwayPatternArchitecture.Infrastructure.Database.MsSql\Codenception.StairwayPatternArchitecture.Infrastructure.Database.MsSql.csproj", "{F5AFF83A-B5AD-4224-8A34-7F7EC42F561C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Codenception.StairwayPatternArchitecture.Infrastructure.Database.MsSql", "Codenception.StairwayPatternArchitecture.Infrastructure.Database.MsSql\Codenception.StairwayPatternArchitecture.Infrastructure.Database.MsSql.csproj", "{F5AFF83A-B5AD-4224-8A34-7F7EC42F561C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Codenception.StairwayPatternArchitecture.Services.Tests", "Codenception.StairwayPatternArchitecture.Services.Tests\Codenception.StairwayPatternArchitecture.Services.Tests.csproj", "{E20F898B-3331-412F-84DA-0E5778181ACC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -74,10 +74,6 @@ Global
 		{08BBA0AE-7D14-445B-8E34-CADD7D5A6002}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{08BBA0AE-7D14-445B-8E34-CADD7D5A6002}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{08BBA0AE-7D14-445B-8E34-CADD7D5A6002}.Release|Any CPU.Build.0 = Release|Any CPU
-		{FDF2B684-1DC5-4ABE-B427-F149B7D78CF6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{FDF2B684-1DC5-4ABE-B427-F149B7D78CF6}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{FDF2B684-1DC5-4ABE-B427-F149B7D78CF6}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{FDF2B684-1DC5-4ABE-B427-F149B7D78CF6}.Release|Any CPU.Build.0 = Release|Any CPU
 		{D02361F3-00DF-429C-B56E-DE161CFC291A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{D02361F3-00DF-429C-B56E-DE161CFC291A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D02361F3-00DF-429C-B56E-DE161CFC291A}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -102,6 +98,10 @@ Global
 		{F5AFF83A-B5AD-4224-8A34-7F7EC42F561C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F5AFF83A-B5AD-4224-8A34-7F7EC42F561C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F5AFF83A-B5AD-4224-8A34-7F7EC42F561C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E20F898B-3331-412F-84DA-0E5778181ACC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E20F898B-3331-412F-84DA-0E5778181ACC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E20F898B-3331-412F-84DA-0E5778181ACC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E20F898B-3331-412F-84DA-0E5778181ACC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
