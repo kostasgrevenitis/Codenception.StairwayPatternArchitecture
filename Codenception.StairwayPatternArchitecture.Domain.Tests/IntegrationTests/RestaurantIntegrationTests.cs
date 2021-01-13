@@ -6,7 +6,7 @@ using Codenception.StairwayPatternArchitecture.Domain.Restaurant.Records;
 using System;
 using Xunit;
 
-namespace Codenception.StairwayPatternArchitecture.Domain.UnitTests
+namespace Codenception.StairwayPatternArchitecture.Domain.Tests.IntegrationTests
 {
     public class MappingTestModule : Module
     {
@@ -17,12 +17,12 @@ namespace Codenception.StairwayPatternArchitecture.Domain.UnitTests
         }
     }
 
-    public class RestaurantUnitTests
+    public class RestaurantIntegrationTests
     {
         //https://juristr.com/blog/2011/12/writing-ioc-supported-integration-tests/
         private IContainer _autofacContainer;
 
-        public RestaurantUnitTests()
+        public RestaurantIntegrationTests()
         {
             var builder = new ContainerBuilder();
 
