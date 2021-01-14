@@ -2,7 +2,7 @@
 
 namespace Codenception.StairwayPatternArchitecture.Domain.Restaurant.Records
 {
-    public enum Prices
+    public enum PriceLevel
     {
         VeryCheap = 1,
         Cheap = 2,
@@ -32,7 +32,7 @@ namespace Codenception.StairwayPatternArchitecture.Domain.Restaurant.Records
             get; init;
         }
 
-        public Prices Prices
+        public PriceLevel PriceLevel
         {
             get; init;
         }

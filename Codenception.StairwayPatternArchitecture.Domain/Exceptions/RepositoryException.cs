@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Codenception.StairwayPatternArchitecture.Domain.Repositories.Exceptions
+namespace Codenception.StairwayPatternArchitecture.Domain.Exceptions
 {
     public class RepositoryException : Exception
     {

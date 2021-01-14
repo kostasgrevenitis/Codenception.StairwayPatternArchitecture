@@ -1,11 +1,11 @@
-﻿using Codenception.StairwayPatternArchitecture.Domain.Interfaces.Cqrs;
+﻿using Codenception.StairwayPatternArchitecture.Domain.Exceptions;
+using Codenception.StairwayPatternArchitecture.Domain.Interfaces.Cqrs;
 using Codenception.StairwayPatternArchitecture.Domain.Interfaces.Records;
-using Codenception.StairwayPatternArchitecture.Domain.Repositories.Exceptions;
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace Codenception.StairwayPatternArchitecture.Domain.Repositories.Restaurant.Queries
+namespace Codenception.StairwayPatternArchitecture.Domain.Restaurant.Queries
 {
     public class RestaurantQuery : IQuery<IDatabaseRecord<ValueType>>
     {

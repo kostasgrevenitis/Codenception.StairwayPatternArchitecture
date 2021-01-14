@@ -1,13 +1,14 @@
 ﻿using Codenception.StairwayPatternArchitecture.Domain.Interfaces.Records;
+using Codenception.StairwayPatternArchitecture.Domain.Restaurant.DatabaseRecords;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 
 namespace Codenception.StairwayPatternArchitecture.Domain.Restaurant.ExtensionMethods
 {
-    public static class DatabaseRecordToDomainRecordMappers
+    public static class RestaurantDatabaseRecordToRestaurantDomainRecordMappers
     {
-        public static IDomainRecord MapToDomainRecord<T>(this IDatabaseRecord<ValueType> databaseRecord)
+        public static T MapToDomainRecord<T>(this RestaurantDatabaseRecord databaseRecord)
         {
             var databaseRecordProperties = databaseRecord.GetType().GetProperties();
             var type = typeof(T);
@@ -23,10 +24,10 @@ namespace Codenception.StairwayPatternArchitecture.Domain.Restaurant.ExtensionMe
                 domainRecordProperty.SetValue(domainRecord, databaseRecordProperty.GetValue(databaseRecord));
             }
 
-            return (IDomainRecord)domainRecord;
+            return (T)domainRecord;
         }
 
-        public static IList<IDomainRecord> MapToDomainRecords<T>(this IList<IDatabaseRecord<ValueType>> databaseRecords)
+        public static IList<T> MapToDomainRecords<T>(this IList<RestaurantDatabaseRecord> databaseRecords)
         {
             var domainRecords = new List<IDomainRecord>();
 
@@ -48,7 +49,7 @@ namespace Codenception.StairwayPatternArchitecture.Domain.Restaurant.ExtensionMe
                 }
             }
 
-            return domainRecords;
+            return (IList<T>)domainRecords;
         }
     }
 }
