@@ -11,19 +11,37 @@ namespace Codenception.StairwayPatternArchitecture.Domain.Tests.UnitTests
         //  --  The name of the method being tested.
         //  --  The scenario under which it's being tested.
         //  --  The expected behavior when the scenario is invoked.
+
         [Fact]
-        public void MapToDomainRecord_MapDatabaseRecordToDomainRecord_NewDomainRecordCreated()
+        public void MapToDatabaseRecord_MapDomainRecordToDatabaseRecord_NewDatabaseRecordCreated()
         {
             // Arrange
-            var restaurantDatabaseRecord = new RestaurantDatabaseRecord();
-            var RestaurantDomainRecord.MapToDa
+            var restaurandDomainRecord = new RestaurantDomainRecord() with
+            {
+            };
+
+            //Act
+            var exception = Record.Exception(() =>
+            {
+                restaurandDomainRecord.MapToDatabaseRecord<RestaurantDatabaseRecord>();
+            });
+
+            // Assert
+            Assert.Null(exception);
+        }
+
+        [Fact]
+        public void MapToDomainRecord_MapDatabaseToDomainRecord_NewDomainRecordCreated()
+        {
+            // Arrange
+            var restaurantDatabaseRecord = new RestaurantDatabaseRecord()
+            {
+            };
 
             //Act
             var exception = Record.Exception(() =>
             {
                 restaurantDatabaseRecord.MapToDomainRecord<RestaurantDomainRecord>();
-                //var domainRecord = mapper.Map<RestaurantDomainRecord>(restaurantDatabaseRecord);
-                //var databaseRecord = mapper.Map<RestaurantDatabaseRecord>(restaurandDomainRecord);
             });
 
             // Assert
