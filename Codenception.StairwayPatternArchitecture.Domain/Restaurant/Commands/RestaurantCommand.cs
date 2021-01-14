@@ -1,5 +1,5 @@
 ﻿using Codenception.StairwayPatternArchitecture.Domain.Interfaces.Cqrs;
-using Codenception.StairwayPatternArchitecture.Domain.Interfaces.Records;
+using Codenception.StairwayPatternArchitecture.Infrastructure.Database.Interfaces;
 using System;
 using System.Threading.Tasks;
 

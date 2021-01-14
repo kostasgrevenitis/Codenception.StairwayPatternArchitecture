@@ -1,4 +1,5 @@
 ﻿using Codenception.StairwayPatternArchitecture.Domain.Interfaces.Records;
+using Codenception.StairwayPatternArchitecture.Infrastructure.Database.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
@@ -11,6 +12,6 @@ namespace Codenception.StairwayPatternArchitecture.Domain.Interfaces.Cqrs
 
         Task<TDatabaseRecord> DatabaseRecordByIdAsync(ValueType id);
 
-        Task<IList<TDatabaseRecord>> ManyDatabaseRecordByIdsAsync(ValueType[] ids);
+        Task<IList<TDatabaseRecord>> DatabaseRecordByIdsAsync(ValueType[] ids);
     }
 }

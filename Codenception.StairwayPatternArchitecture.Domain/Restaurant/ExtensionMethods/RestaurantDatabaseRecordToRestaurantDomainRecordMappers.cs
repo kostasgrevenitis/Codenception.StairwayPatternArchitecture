@@ -1,5 +1,5 @@
 ﻿using Codenception.StairwayPatternArchitecture.Domain.Interfaces.Records;
-using Codenception.StairwayPatternArchitecture.Domain.Restaurant.DatabaseRecords;
+using Codenception.StairwayPatternArchitecture.Infrastructure.Database.MsSql.Restaurant;
 using System;
 using System.Collections.Generic;
 using System.Linq;

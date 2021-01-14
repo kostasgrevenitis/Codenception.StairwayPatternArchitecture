@@ -1,8 +1,8 @@
 ﻿using Codenception.StairwayPatternArchitecture.Domain.Interfaces.Cqrs;
 using Codenception.StairwayPatternArchitecture.Domain.Interfaces.Entities;
-using Codenception.StairwayPatternArchitecture.Domain.Restaurant.DatabaseRecords;
 using Codenception.StairwayPatternArchitecture.Domain.Restaurant.ExtensionMethods;
 using Codenception.StairwayPatternArchitecture.Domain.Restaurant.Records;
+using Codenception.StairwayPatternArchitecture.Infrastructure.Database.MsSql.Restaurant;
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
@@ -51,7 +51,7 @@ namespace Codenception.StairwayPatternArchitecture.Domain.Restaurant.Entities
 
         public async Task<IList<RestaurantDomainRecord>> DomainRecordsAsync(ValueType[] ids)
         {
-            var databaseRecords = await this._query.ManyDatabaseRecordByIdsAsync(ids);
+            var databaseRecords = await this._query.DatabaseRecordByIdsAsync(ids);
             return databaseRecords.MapToDomainRecords<RestaurantDomainRecord>();
         }
 

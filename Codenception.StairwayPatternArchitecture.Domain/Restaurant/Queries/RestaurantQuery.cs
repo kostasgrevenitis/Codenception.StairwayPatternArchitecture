@@ -1,23 +1,28 @@
 ﻿using Codenception.StairwayPatternArchitecture.Domain.Exceptions;
 using Codenception.StairwayPatternArchitecture.Domain.Interfaces.Cqrs;
-using Codenception.StairwayPatternArchitecture.Domain.Interfaces.Records;
+using Codenception.StairwayPatternArchitecture.Infrastructure.Database.Interfaces;
+using Codenception.StairwayPatternArchitecture.Infrastructure.Database.MsSql.Restaurant;
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
 namespace Codenception.StairwayPatternArchitecture.Domain.Restaurant.Queries
 {
-    public class RestaurantQuery : IQuery<IDatabaseRecord<ValueType>>
+    public class RestaurantQuery : IQuery<RestaurantDatabaseRecord>
     {
-        public RestaurantQuery()
+        private readonly IReadActions<RestaurantDatabaseRecord> _readActions;
+
+        public RestaurantQuery(IReadActions<RestaurantDatabaseRecord> readActions)
         {
+            this._readActions = readActions;
         }
 
-        public async Task<IList<IDatabaseRecord<ValueType>>> AllDatabaseRecordsAsync<T>()
+        public async Task<IList<RestaurantDatabaseRecord>> AllDatabaseRecordsAsync<T>()
         {
             try
             {
-                return null;
+                var databaseRecords = await this._readActions.SelectAsync();
+                return databaseRecords;
             }
             catch (Exception ex)
             {
@@ -25,23 +30,17 @@ namespace Codenception.StairwayPatternArchitecture.Domain.Restaurant.Queries
             }
         }
 
-        public async Task<IDatabaseRecord<ValueType>> DatabaseRecordByIdAsync(ValueType id)
+        public Task<RestaurantDatabaseRecord> DatabaseRecordByIdAsync(ValueType id)
         {
-            try
-            {
-                return null;
-            }
-            catch (Exception ex)
-            {
-                throw new RepositoryException("", ex);
-            }
+            throw new NotImplementedException();
         }
 
-        public async Task<IList<IDatabaseRecord<ValueType>>> ManyDatabaseRecordByIdsAsync(ValueType[] ids)
+        public async Task<IList<RestaurantDatabaseRecord>> DatabaseRecordByIdsAsync(ValueType[] ids)
         {
             try
             {
-                return null;
+                var databaseRecords = await this._readActions.SelectAsync();
+                return databaseRecords;
             }
             catch (Exception ex)
             {

@@ -8,4 +8,8 @@
     <PackageReference Include="PostSharp.Patterns.Common" Version="6.8.7" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Codenception.StairwayPatternArchitecture.Infrastructure.Database.Interfaces\Codenception.StairwayPatternArchitecture.Infrastructure.Database.Interfaces.csproj" />
+  </ItemGroup>
+
 </Project>

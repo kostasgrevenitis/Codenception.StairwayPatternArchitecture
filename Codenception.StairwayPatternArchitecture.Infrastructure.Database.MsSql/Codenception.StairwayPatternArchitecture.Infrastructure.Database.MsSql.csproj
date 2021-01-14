@@ -1,11 +1,11 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <TargetFramework>net5.0</TargetFramework>
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Exceptions\" />
+    <ProjectReference Include="..\Codenception.StairwayPatternArchitecture.Infrastructure.Database.Interfaces\Codenception.StairwayPatternArchitecture.Infrastructure.Database.Interfaces.csproj" />
   </ItemGroup>
 
 </Project>

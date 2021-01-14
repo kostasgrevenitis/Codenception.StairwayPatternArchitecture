@@ -1,4 +1,4 @@
-﻿namespace Codenception.StairwayPatternArchitecture.Domain.Interfaces.Records
+﻿namespace Codenception.StairwayPatternArchitecture.Infrastructure.Database.Interfaces
 {
     public interface IDatabaseRecord<TId>
     {
