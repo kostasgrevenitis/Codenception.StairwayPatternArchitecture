@@ -10,9 +10,9 @@ namespace Codenception.StairwayPatternArchitecture.Domain.Restaurant.Queries
 {
     public class RestaurantQuery : IQuery<RestaurantDatabaseRecord>
     {
-        private readonly IReadActions<RestaurantDatabaseRecord> _readActions;
+        private readonly IReadFromDbActions<RestaurantDatabaseRecord> _readActions;
 
-        public RestaurantQuery(IReadActions<RestaurantDatabaseRecord> readActions)
+        public RestaurantQuery(IReadFromDbActions<RestaurantDatabaseRecord> readActions)
         {
             this._readActions = readActions;
         }

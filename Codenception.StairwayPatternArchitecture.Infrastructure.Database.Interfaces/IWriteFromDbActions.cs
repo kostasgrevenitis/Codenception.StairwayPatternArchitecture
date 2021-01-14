@@ -1,6 +1,6 @@
 ﻿namespace Codenception.StairwayPatternArchitecture.Infrastructure.Database.Interfaces
 {
-    public interface IWriteActions
+    public interface IWriteFromDbActions
     {
         void Create();
 

@@ -4,9 +4,9 @@ using System.Threading.Tasks;
 
 namespace Codenception.StairwayPatternArchitecture.Infrastructure.Database.Interfaces
 {
-    public interface IReadActions<TRecord> where TRecord : IDatabaseRecord<ValueType>
+    public interface IReadFromDbActions<TDatabaseRecord> where TDatabaseRecord : IDatabaseRecord<ValueType>
 
     {
-        public Task<IList<TRecord>> SelectAsync();
+        public Task<IList<TDatabaseRecord>> SelectAsync();
     }
 }
