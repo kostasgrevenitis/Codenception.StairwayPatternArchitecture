@@ -11,7 +11,7 @@ init:
 before_build:
   # Display .NET Core version
   - cmd: dotnet --version
-  - cmd: dotnet add package OpenCover -OutputDirectory packages -Version 4.7.922
+  - cmd: dotnet add OpenCover package -OutputDirectory packages -Version 4.7.922
   # Display minimal restore text
   - cmd: dotnet restore 
 build_script:
