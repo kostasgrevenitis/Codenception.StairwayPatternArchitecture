@@ -25,8 +25,7 @@ build_script:
 clone_depth: 1
 test_script:
   # restore packages for our unit tests
-  - cmd: dotnet test
-  - cmd: .\packages\OpenCover.4.7.922\tools\OpenCover.Console.exe -register:user -output:"coverage.xml"
+  - cmd: .\packages\OpenCover.4.7.922\tools\OpenCover.Console.exe -register:user -target:"C:/Program Files/dotnet/dotnet.exe" -output:"coverage.xml"
 after_test:
   - ps: |
       $env:PATH = 'C:\msys64\usr\bin;' + $env:PATH
