@@ -1,4 +1,5 @@
 ﻿using Codenception.StairwayPatternArchitecture.Domain.Interfaces.Records;
+using PostSharp.Patterns.Contracts;
 
 namespace Codenception.StairwayPatternArchitecture.Domain.Restaurant.Records
 {
@@ -22,11 +23,13 @@ namespace Codenception.StairwayPatternArchitecture.Domain.Restaurant.Records
 
     public record RestaurantDomainRecord : IDomainRecord
     {
+        [Required]
         public string Name
         {
             get; init;
         }
 
+        [Required]
         public RestaurantType RestaurantType
         {
             get; init;
@@ -37,6 +40,7 @@ namespace Codenception.StairwayPatternArchitecture.Domain.Restaurant.Records
             get; init;
         }
 
+        [Required, NotNull]
         public RestaurantAddressInfoDomainRecord AddressInfo
         {
             get; init;

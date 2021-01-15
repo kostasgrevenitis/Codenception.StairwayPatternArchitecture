@@ -92,7 +92,6 @@ overall development.
 
 # Nuget dependencies
 	
-- [Autofac](https://www.nuget.org/packages/Autofac/)
 - [Carter](https://www.nuget.org/packages/Carter/)
 - [DocumentFormat.OpenXml](https://www.nuget.org/packages/DocumentFormat.OpenXml/)
 - [Finbuckle.MultiTenant](https://www.nuget.org/packages/Finbuckle.MultiTenant/)
@@ -133,8 +132,8 @@ This namespace is related to the agreed upon system behaviours.
 In the implementation classes we write the code that is related to the *functional requirements*. 
 Each domain entity is assembled by two items:
 
-- An Entity class item, that carries the domain (or business) logic
-- A Record type item, that carries the data
+- An Entity class, that carries the domain (or business) logic
+- A Record type item, that carries the data, and each property has a contract attribute for validation
 
 They are immutable and any state changes should only be possible by using methods. 
 

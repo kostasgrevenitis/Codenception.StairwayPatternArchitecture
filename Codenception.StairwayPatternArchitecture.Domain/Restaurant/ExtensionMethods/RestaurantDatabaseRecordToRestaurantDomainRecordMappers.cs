@@ -1,55 +1,50 @@
-﻿using Codenception.StairwayPatternArchitecture.Domain.Interfaces.Records;
+﻿using Codenception.StairwayPatternArchitecture.Domain.Restaurant.Records;
 using Codenception.StairwayPatternArchitecture.Infrastructure.Database.MsSql.Restaurant;
-using System;
 using System.Collections.Generic;
-using System.Linq;
 
 namespace Codenception.StairwayPatternArchitecture.Domain.Restaurant.ExtensionMethods
 {
     public static class RestaurantDatabaseRecordToRestaurantDomainRecordMappers
     {
-        public static T MapToDomainRecord<T>(this RestaurantDatabaseRecord databaseRecord)
+        public static RestaurantDomainRecord MapToDomainRecord(this RestaurantDatabaseRecord databaseRecord)
         {
-            var databaseRecordProperties = databaseRecord.GetType().GetProperties();
-            var type = typeof(T);
-            var domainRecord = Activator.CreateInstance(type);
-            var domainRecordPropeties = domainRecord.GetType().GetProperties();
-
-            for (int i = 0; i < databaseRecordProperties.Length; i++)
+            return new RestaurantDomainRecord() with
             {
-                var databaseRecordProperty = databaseRecordProperties[i];
-                var domainRecordProperty = domainRecordPropeties
-                    .Single(p => p.Name.Equals(databaseRecordProperty.Name));
-
-                domainRecordProperty.SetValue(domainRecord, databaseRecordProperty.GetValue(databaseRecord));
-            }
-
-            return (T)domainRecord;
+                Name = databaseRecord.Name,
+                PriceLevel = (PriceLevel)databaseRecord.PriceLevel,
+                RestaurantType = (RestaurantType)databaseRecord.RestaurantType,
+                AddressInfo = new RestaurantAddressInfoDomainRecord() with
+                {
+                    StreetName = databaseRecord.StreetName,
+                    StreetNumber = databaseRecord.StreetNumber,
+                    PostalCode = databaseRecord.PostalCode,
+                    GeoPosition = databaseRecord.GeoPosition
+                }
+            };
         }
 
-        public static IList<T> MapToDomainRecords<T>(this IList<RestaurantDatabaseRecord> databaseRecords)
+        public static IList<RestaurantDomainRecord> MapToDomainRecords(this IList<RestaurantDatabaseRecord> databaseRecords)
         {
-            var domainRecords = new List<IDomainRecord>();
+            var domainRecords = new List<RestaurantDomainRecord>();
 
             foreach (var databaseRecord in databaseRecords)
             {
-                var databaseRecordProperties = databaseRecord.GetType().GetProperties();
-                var type = typeof(T);
-                var domainRecord = Activator.CreateInstance(type);
-
-                for (int i = 0; i < databaseRecordProperties.Length; i++)
+                domainRecords.Add(new RestaurantDomainRecord()
                 {
-                    var databaseRecordProperty = databaseRecordProperties[i];
-                    var domainRecordPropeties = domainRecord.GetType().GetProperties();
-                    var domainRecordProperty = domainRecordPropeties
-                        .Single(p => p.Name.Equals(databaseRecordProperty.Name));
-
-                    domainRecordProperty.SetValue(domainRecord, databaseRecordProperty.GetValue(databaseRecord));
-                    domainRecords.Add((IDomainRecord)domainRecord);
-                }
+                    Name = databaseRecord.Name,
+                    PriceLevel = (PriceLevel)databaseRecord.PriceLevel,
+                    RestaurantType = (RestaurantType)databaseRecord.RestaurantType,
+                    AddressInfo = new RestaurantAddressInfoDomainRecord() with
+                    {
+                        StreetName = databaseRecord.StreetName,
+                        StreetNumber = databaseRecord.StreetNumber,
+                        PostalCode = databaseRecord.PostalCode,
+                        GeoPosition = databaseRecord.GeoPosition
+                    }
+                });
             }
 
-            return (IList<T>)domainRecords;
+            return domainRecords;
         }
     }
 }

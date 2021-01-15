@@ -7,6 +7,7 @@
   <ItemGroup>
     <None Remove="Restaurant\Entities\RestaurantEntity.cs~RF49ebe768.TMP" />
     <None Remove="Restaurant\Entities\RestaurantEntity.cs~RF4a0d08bb.TMP" />
+    <None Remove="Restaurant\ExtensionMethods\RestaurantDatabaseRecordToRestaurantDomainRecordMappers.cs~RF93f1265.TMP" />
   </ItemGroup>
 
   <ItemGroup>

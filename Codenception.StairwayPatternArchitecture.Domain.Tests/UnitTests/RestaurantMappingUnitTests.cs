@@ -1,6 +1,7 @@
 ﻿using Codenception.StairwayPatternArchitecture.Domain.Restaurant.ExtensionMethods;
 using Codenception.StairwayPatternArchitecture.Domain.Restaurant.Records;
 using Codenception.StairwayPatternArchitecture.Infrastructure.Database.MsSql.Restaurant;
+using System;
 using Xunit;
 
 namespace Codenception.StairwayPatternArchitecture.Domain.Tests.UnitTests
@@ -18,12 +19,22 @@ namespace Codenception.StairwayPatternArchitecture.Domain.Tests.UnitTests
             // Arrange
             var restaurandDomainRecord = new RestaurantDomainRecord() with
             {
+                Name = "Restaurant name",
+                PriceLevel = PriceLevel.Cheap,
+                RestaurantType = RestaurantType.CasualDining,
+                AddressInfo = new RestaurantAddressInfoDomainRecord() with
+                {
+                    StreetName = "Super street",
+                    StreetNumber = 10,
+                    PostalCode = 56429,
+                    GeoPosition = new Tuple<double, double>(0, 0)
+                }
             };
 
             //Act
             var exception = Record.Exception(() =>
             {
-                restaurandDomainRecord.MapToDatabaseRecord<RestaurantDatabaseRecord>();
+                restaurandDomainRecord.MapToDatabaseRecord();
             });
 
             // Assert
@@ -36,12 +47,20 @@ namespace Codenception.StairwayPatternArchitecture.Domain.Tests.UnitTests
             // Arrange
             var restaurantDatabaseRecord = new RestaurantDatabaseRecord()
             {
+                Id = 1,
+                Name = "Restaurant name",
+                PriceLevel = 2,
+                RestaurantType = 3,
+                StreetNumber = 10,
+                PostalCode = 56429,
+                StreetName = "Super street",
+                GeoPosition = new Tuple<double, double>(0, 0)
             };
 
             //Act
             var exception = Record.Exception(() =>
             {
-                restaurantDatabaseRecord.MapToDomainRecord<RestaurantDomainRecord>();
+                restaurantDatabaseRecord.MapToDomainRecord();
             });
 
             // Assert

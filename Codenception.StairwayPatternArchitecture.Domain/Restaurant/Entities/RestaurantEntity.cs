@@ -23,7 +23,7 @@ namespace Codenception.StairwayPatternArchitecture.Domain.Restaurant.Entities
         public async Task<IList<RestaurantDomainRecord>> AllDomainRecordsAsync()
         {
             var allDatabaseRecords = await this._query.AllDatabaseRecordsAsync<ValueType>();
-            return allDatabaseRecords.MapToDomainRecords<RestaurantDomainRecord>();
+            return allDatabaseRecords.MapToDomainRecords();
         }
 
         public async Task CreateDomainRecordAsync(RestaurantDomainRecord domainRecord)
@@ -46,13 +46,13 @@ namespace Codenception.StairwayPatternArchitecture.Domain.Restaurant.Entities
         public async Task<RestaurantDomainRecord> DomainRecordAsync(ValueType id)
         {
             var databaseRecord = await this._query.DatabaseRecordByIdAsync(id);
-            return databaseRecord.MapToDomainRecord<RestaurantDomainRecord>();
+            return databaseRecord.MapToDomainRecord();
         }
 
         public async Task<IList<RestaurantDomainRecord>> DomainRecordsAsync(ValueType[] ids)
         {
             var databaseRecords = await this._query.DatabaseRecordByIdsAsync(ids);
-            return databaseRecords.MapToDomainRecords<RestaurantDomainRecord>();
+            return databaseRecords.MapToDomainRecords();
         }
 
         public async Task UpdateDomainRecordAsync(RestaurantDomainRecord domainRecord)
