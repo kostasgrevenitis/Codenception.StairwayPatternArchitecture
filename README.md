@@ -8,7 +8,7 @@
 
 > Last update 05/01/2021
 > 
-> Document version 1.2.7
+> Document version 1.2.9
 >       
 > [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 >
