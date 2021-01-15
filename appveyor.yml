@@ -12,6 +12,7 @@ before_build:
   # Display .NET Core version
   - cmd: dotnet --version
   - cmd: nuget install OpenCover -OutputDirectory packages -Version 4.7.922
+  - cmd: choco install codecov
   # Display minimal restore text
   - cmd: dotnet restore 
 build_script:
@@ -27,10 +28,7 @@ test_script:
   # restore packages for our unit tests
   - cmd: .\packages\OpenCover.4.7.922\tools\OpenCover.Console.exe -register -target:"C:/Program Files/dotnet/dotnet.exe" -targetargs:"test --logger:trx;LogFileName=results.trx /p:DebugType=full" -output:"coverage.xml" -filter:"+[*]* -[Tests*]*"
 after_test:
-  - ps: |
-      $env:PATH = 'C:\msys64\usr\bin;' + $env:PATH
-      Invoke-WebRequest -Uri 'https://codecov.io/bash' -OutFile codecov.sh
-      bash codecov.sh -f "coverage.xml"
+  - cmd: codecov -f "coverage.xml"
 #on_finish :
   # any cleanup in here
 deploy: off
