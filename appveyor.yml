@@ -30,7 +30,7 @@ after_test:
   - ps: |
       $env:PATH = 'C:\msys64\usr\bin;' + $env:PATH
       Invoke-WebRequest -Uri 'https://codecov.io/bash' -OutFile codecov.sh
-      bash codecov.sh -f "coverage.xml" -t df6335d9-671a-4819-b710-3a1b5bd33dd1
+      bash codecov.sh -f "coverage.xml"
 #on_finish :
   # any cleanup in here
 deploy: off
