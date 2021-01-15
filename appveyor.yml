@@ -26,6 +26,13 @@ test_script:
   # restore packages for our unit tests
   - cmd: dotnet restore
   - cmd: dotnet test
+  - cmd: .\packages\OpenCover.4.6.519\tools\OpenCover.Console.exe -register:user -target:"%xunit20%\xunit.console.x86.exe" -targetargs:"YourTestDll -noshadow" -output:"coverage.xml" -filter:"+[YourSUTNamepace*]* -[YourTestNamespace*]*"
+after_test:
+  - ps: |
+      $env:PATH = 'C:\msys64\usr\bin;' + $env:PATH
+      Invoke-WebRequest -Uri 'https://codecov.io/bash' -OutFile codecov.sh
+      bash codecov.sh -f "coverage.xml" -t df6335d9-671a-4819-b710-3a1b5bd33dd1
 #on_finish :
   # any cleanup in here
 deploy: off
+
