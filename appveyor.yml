@@ -11,6 +11,7 @@ init:
 before_build:
   # Display .NET Core version
   - cmd: dotnet --version
+  - cmd: dotnet add package OpenCover -OutputDirectory packages -Version 4.7.922
   # Display minimal restore text
   - cmd: dotnet restore 
 build_script:
@@ -26,7 +27,7 @@ test_script:
   # restore packages for our unit tests
   - cmd: dotnet restore
   - cmd: dotnet test
-  - cmd: .\packages\OpenCover.4.7.922\tools\OpenCover.Console.exe -register:user -target:"%xunit20%\xunit.console.x86.exe" -targetargs:"YourTestDll -noshadow" -output:"coverage.xml" -filter:"+[YourSUTNamepace*]* -[YourTestNamespace*]*"
+  - cmd: .\packages\OpenCover.4.7.922\tools\OpenCover.Console.exe -register:user -target:"%xunit20%\xunit.console.x86.exe" -output:"coverage.xml"
 after_test:
   - ps: |
       $env:PATH = 'C:\msys64\usr\bin;' + $env:PATH
