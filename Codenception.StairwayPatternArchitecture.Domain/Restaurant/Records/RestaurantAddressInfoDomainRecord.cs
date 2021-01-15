@@ -1,31 +1,31 @@
 ﻿using Codenception.StairwayPatternArchitecture.Domain.Interfaces.Records;
-using PostSharp.Patterns.Contracts;
 using System;
+using System.ComponentModel.DataAnnotations;
 
 namespace Codenception.StairwayPatternArchitecture.Domain.Restaurant.Records
 {
     public record RestaurantAddressInfoDomainRecord : IDomainRecord
     {
         [Required]
-        public string StreetName
+        public virtual string StreetName
         {
             get; init;
         }
 
         [Required]
-        public int StreetNumber
+        public virtual int StreetNumber
         {
             get; init;
         }
 
         [Required]
-        public int PostalCode
+        public virtual int PostalCode
         {
             get; init;
         }
 
         [Required]
-        public Tuple<double, double> GeoPosition
+        public virtual Tuple<double, double> GeoPosition
         {
             get; init;
         }
