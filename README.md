@@ -8,13 +8,15 @@
 
 > Last update 05/01/2021
 > 
-> Document version 1.2.6
-> 
-> ![Appveyor status image](https://ci.appveyor.com/api/projects/status/github/kostasgrevenitis/Codenception.StairwayPatternArchitecture?branch=main&svg=true)
+> Document version 1.2.7
+>       
 > [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+>
+> ![Appveyor status image](https://ci.appveyor.com/api/projects/status/github/kostasgrevenitis/Codenception.StairwayPatternArchitecture?svg=true)
 > [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=kostasgrevenitis_Codenception.StairwayPatternArchitecture&metric=alert_status)](https://sonarcloud.io/dashboard?id=kostasgrevenitis_Codenception.StairwayPatternArchitecture)
 > [![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=kostasgrevenitis_Codenception.StairwayPatternArchitecture&metric=sqale_rating)](https://sonarcloud.io/dashboard?id=kostasgrevenitis_Codenception.StairwayPatternArchitecture)
 > ![](https://github.com/kostasgrevenitis/Codenception.StairwayPatternArchitecture/workflows/CI%20and%20sonarcloud%20report%20generation%20-%20windows%20latest/badge.svg)
+> [![codecov](https://codecov.io/gh/kostasgrevenitis/Codenception.StairwayPatternArchitecture/branch/main/graph/badge.svg?token=ZMFYGXUA6S)](https://codecov.io/gh/kostasgrevenitis/Codenception.StairwayPatternArchitecture)
 
 ## Introduction
 
