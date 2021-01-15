@@ -12,7 +12,7 @@
 >       
 > [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 >
-> ![Appveyor status image](https://ci.appveyor.com/api/projects/status/github/kostasgrevenitis/Codenception.StairwayPatternArchitecture?svg=true)
+> [![Build status](https://ci.appveyor.com/api/projects/status/daj8ybqj31jo8cga?svg=true)](https://ci.appveyor.com/project/kostasgrevenitis/codenception-stairwaypatternarchitecture)
 > [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=kostasgrevenitis_Codenception.StairwayPatternArchitecture&metric=alert_status)](https://sonarcloud.io/dashboard?id=kostasgrevenitis_Codenception.StairwayPatternArchitecture)
 > [![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=kostasgrevenitis_Codenception.StairwayPatternArchitecture&metric=sqale_rating)](https://sonarcloud.io/dashboard?id=kostasgrevenitis_Codenception.StairwayPatternArchitecture)
 > ![](https://github.com/kostasgrevenitis/Codenception.StairwayPatternArchitecture/workflows/CI%20and%20sonarcloud%20report%20generation%20-%20windows%20latest/badge.svg)
