@@ -8,7 +8,7 @@
 
 > Last update 05/01/2021
 > 
-> Document version 1.2.9
+> Document version 1.3.0
 >       
 > [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 >
@@ -17,6 +17,7 @@
 > [![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=kostasgrevenitis_Codenception.StairwayPatternArchitecture&metric=sqale_rating)](https://sonarcloud.io/dashboard?id=kostasgrevenitis_Codenception.StairwayPatternArchitecture)
 > [![Actions Status](https://github.com/kostasgrevenitis/Codenception.StairwayPatternArchitecture/workflows/CI%20and%20sonarcloud%20report%20generation%20-%20windows%20latest/badge.svg)](https://github.com//kostasgrevenitis/Codenception.StairwayPatternArchitecture/actions)
 > [![codecov](https://codecov.io/gh/kostasgrevenitis/Codenception.StairwayPatternArchitecture/branch/main/graph/badge.svg?token=ZMFYGXUA6S)](https://codecov.io/gh/kostasgrevenitis/Codenception.StairwayPatternArchitecture)
+
 
 
 ## Introduction
@@ -28,7 +29,7 @@ I am using this book as the basis for this project.
 
 ## What is Entourage anti-pattern?
 
-The Entourage anti-pattern in simple Enlgish means that when you invite one, and only one, friend
+The Entourage anti-pattern, in simple Enlgish means that when you invite one, and only one, friend
 to your party, we brings his own uninvited friends. This causes undesirable dependency management.
 It brings unnecessary dependencies on board.
 
@@ -217,9 +218,9 @@ appveyor.yml
 ```yaml
 version: '1.0.{build}'
 image: Visual Studio 2019
-branches:
-  only:
-  - main
+# branches:
+#  only:
+#  - main
 init:
   # Good practise, because Windows line endings are different from Unix/Linux ones
   - cmd: git config --global core.autocrlf true
@@ -228,6 +229,8 @@ init:
 before_build:
   # Display .NET Core version
   - cmd: dotnet --version
+  - cmd: nuget install OpenCover -OutputDirectory packages -Version 4.7.922
+  - cmd: choco install codecov
   # Display minimal restore text
   - cmd: dotnet restore 
 build_script:
@@ -241,8 +244,9 @@ build_script:
 clone_depth: 1
 test_script:
   # restore packages for our unit tests
-  - cmd: dotnet restore
-  - cmd: dotnet test
+  - cmd: .\packages\OpenCover.4.7.922\tools\OpenCover.Console.exe -register -target:"C:/Program Files/dotnet/dotnet.exe" -targetargs:"test --logger:trx;LogFileName=results.trx /p:DebugType=full" -output:"coverage.xml" -filter:"+[*]* -[Tests*]*"
+after_test:
+  - cmd: codecov -f "coverage.xml"
 #on_finish :
   # any cleanup in here
 deploy: off

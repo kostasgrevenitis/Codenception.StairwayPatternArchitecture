@@ -31,7 +31,7 @@ namespace Codenception.StairwayPatternArchitecture.Domain.Tests.UnitTests
                 }
             };
 
-            //Act
+            // Act
             var exception = Record.Exception(() =>
             {
                 restaurandDomainRecord.MapToDatabaseRecord();
@@ -57,7 +57,7 @@ namespace Codenception.StairwayPatternArchitecture.Domain.Tests.UnitTests
                 GeoPosition = new Tuple<double, double>(0, 0)
             };
 
-            //Act
+            // Act
             var exception = Record.Exception(() =>
             {
                 restaurantDatabaseRecord.MapToDomainRecord();

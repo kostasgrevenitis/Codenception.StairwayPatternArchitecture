@@ -4,12 +4,12 @@ using System.Threading.Tasks;
 
 namespace Codenception.StairwayPatternArchitecture.Domain.Interfaces.Cqrs
 {
-    public interface ICommand<TRecord> where TRecord : IDatabaseRecord<ValueType>
+    public interface ICommand<TDatabaseRecord> where TDatabaseRecord : IDatabaseRecord<ValueType>
     {
-        Task CreateAsync(TRecord entity);
+        Task CreateAsync(TDatabaseRecord entity);
 
         Task DeleteByIdAsync(ValueType id);
 
-        Task UpdateByIdAsync(ValueType id, TRecord entity);
+        Task UpdateByIdAsync(TDatabaseRecord entity);
     }
 }

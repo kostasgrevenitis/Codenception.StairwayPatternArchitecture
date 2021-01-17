@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Codenception.StairwayPatternArchitecture.Domain.Restaurant.Records
 {
-    public record RestaurantAddressInfoDomainRecord : IDomainRecord
+    public record RestaurantAddressInfoDomainRecord : IDomainRecord<ValueType>
     {
         [Required]
         public virtual string StreetName
@@ -29,10 +29,9 @@ namespace Codenception.StairwayPatternArchitecture.Domain.Restaurant.Records
         {
             get; init;
         }
-
-        public string RecordToString()
+        public ValueType Id
         {
-            return this.ToString();
+            get; init;
         }
     }
 }

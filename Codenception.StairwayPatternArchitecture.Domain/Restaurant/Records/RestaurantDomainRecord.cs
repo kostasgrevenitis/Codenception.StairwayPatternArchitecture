@@ -1,4 +1,5 @@
 ﻿using Codenception.StairwayPatternArchitecture.Domain.Interfaces.Records;
+using System;
 using System.ComponentModel.DataAnnotations;
 
 namespace Codenception.StairwayPatternArchitecture.Domain.Restaurant.Records
@@ -21,7 +22,7 @@ namespace Codenception.StairwayPatternArchitecture.Domain.Restaurant.Records
         FoodTruck = 5
     }
 
-    public record RestaurantDomainRecord : IDomainRecord
+    public record RestaurantDomainRecord : IDomainRecord<ValueType>
     {
         [Required]
         public virtual string Name
@@ -46,10 +47,9 @@ namespace Codenception.StairwayPatternArchitecture.Domain.Restaurant.Records
         {
             get; init;
         }
-
-        public string RecordToString()
+        public ValueType Id
         {
-            return this.ToString();
+            get; init;
         }
     }
 }

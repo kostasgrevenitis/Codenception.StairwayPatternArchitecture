@@ -6,7 +6,19 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="5.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Codenception.StairwayPatternArchitecture.Domain.Interfaces\Codenception.StairwayPatternArchitecture.Domain.Interfaces.csproj" />
+    <ProjectReference Include="..\Codenception.StairwayPatternArchitecture.Domain\Codenception.StairwayPatternArchitecture.Domain.csproj" />
+    <ProjectReference Include="..\Codenception.StairwayPatternArchitecture.Infrastructure.Caching.Interfaces\Codenception.StairwayPatternArchitecture.Infrastructure.Caching.Interfaces.csproj" />
+    <ProjectReference Include="..\Codenception.StairwayPatternArchitecture.Infrastructure.Database.Interfaces\Codenception.StairwayPatternArchitecture.Infrastructure.Database.Interfaces.csproj" />
+    <ProjectReference Include="..\Codenception.StairwayPatternArchitecture.Infrastructure.Database.MsSql\Codenception.StairwayPatternArchitecture.Infrastructure.Database.MsSql.csproj" />
+    <ProjectReference Include="..\Codenception.StairwayPatternArchitecture.Infrastructure.Io.Interfaces\Codenception.StairwayPatternArchitecture.Infrastructure.Io.Interfaces.csproj" />
+    <ProjectReference Include="..\Codenception.StairwayPatternArchitecture.Infrastructure.Messsaging.Interfaces\Codenception.StairwayPatternArchitecture.Infrastructure.Messsaging.Interfaces.csproj" />
     <ProjectReference Include="..\Codenception.StairwayPatternArchitecture.Services.Interfaces\Codenception.StairwayPatternArchitecture.Services.Interfaces.csproj" />
+    <ProjectReference Include="..\Codenception.StairwayPatternArchitecture.Services\Codenception.StairwayPatternArchitecture.Services.csproj" />
   </ItemGroup>
 
 </Project>

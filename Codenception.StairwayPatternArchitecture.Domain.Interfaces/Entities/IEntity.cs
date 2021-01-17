@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Codenception.StairwayPatternArchitecture.Domain.Interfaces.Entities
 {
-    public interface IEntity<TDomainRecord> where TDomainRecord : IDomainRecord
+    public interface IEntity<TDomainRecord> where TDomainRecord : IDomainRecord<ValueType>
     {
         public Task<IList<TDomainRecord>> AllDomainRecordsAsync();
 

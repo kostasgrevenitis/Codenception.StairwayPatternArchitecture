@@ -1,7 +1,10 @@
 ﻿namespace Codenception.StairwayPatternArchitecture.Domain.Interfaces.Records
 {
-    public interface IDomainRecord
+    public interface IDomainRecord<TId>
     {
-        public string RecordToString();
+        TId Id
+        {
+            get; init;
+        }
     }
 }

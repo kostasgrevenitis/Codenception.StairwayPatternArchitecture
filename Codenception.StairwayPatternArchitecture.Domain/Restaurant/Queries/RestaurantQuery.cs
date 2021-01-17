@@ -1,5 +1,5 @@
-﻿using Codenception.StairwayPatternArchitecture.Domain.Exceptions;
-using Codenception.StairwayPatternArchitecture.Domain.Interfaces.Cqrs;
+﻿using Codenception.StairwayPatternArchitecture.Domain.Interfaces.Cqrs;
+using Codenception.StairwayPatternArchitecture.Domain.Interfaces.Exceptions;
 using Codenception.StairwayPatternArchitecture.Infrastructure.Database.Interfaces;
 using Codenception.StairwayPatternArchitecture.Infrastructure.Database.MsSql.Restaurant;
 using System;
