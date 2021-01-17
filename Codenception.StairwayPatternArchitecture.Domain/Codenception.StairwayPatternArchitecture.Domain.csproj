@@ -5,14 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="Restaurant\Entities\RestaurantEntity.cs~RF49ebe768.TMP" />
-    <None Remove="Restaurant\Entities\RestaurantEntity.cs~RF4a0d08bb.TMP" />
-    <None Remove="Restaurant\ExtensionMethods\RestaurantDatabaseRecordToRestaurantDomainRecordMappers.cs~RF93f1265.TMP" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\Codenception.StairwayPatternArchitecture.Domain.Interfaces\Codenception.StairwayPatternArchitecture.Domain.Interfaces.csproj" />
     <ProjectReference Include="..\Codenception.StairwayPatternArchitecture.Infrastructure.Database.MsSql\Codenception.StairwayPatternArchitecture.Infrastructure.Database.MsSql.csproj" />
   </ItemGroup>
-
 </Project>

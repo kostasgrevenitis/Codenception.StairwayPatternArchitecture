@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Codenception.StairwayPatternArchitecture.Services.Restaurant
 {
-    public class RestaurantService : IRestaurantService<IDomainRecord<ValueType>, ValueType>
+    public class RestaurantService : IService<IDomainRecord<ValueType>, ValueType>
     {
         private readonly IEntity<IDomainRecord<ValueType>> _restaurantEntity;
 
@@ -18,7 +18,19 @@ namespace Codenception.StairwayPatternArchitecture.Services.Restaurant
             this._restaurantEntity = restaurantEntity;
         }
 
-        public async Task CreateRestaurantAsync(IDomainRecord<ValueType> restaurantDomainRecord)
+        public async Task<IList<IDomainRecord<ValueType>>> AllAsync()
+        {
+            try
+            {
+                return await this._restaurantEntity.AllDomainRecordsAsync();
+            }
+            catch (DomainException ex)
+            {
+                throw new ServiceException("", ex);
+            }
+        }
+
+        public async Task CreateAsync(IDomainRecord<ValueType> restaurantDomainRecord)
         {
             try
             {
@@ -30,29 +42,52 @@ namespace Codenception.StairwayPatternArchitecture.Services.Restaurant
             }
         }
 
-        public async Task DeleteRestaurantAsync(ValueType id)
+        public async Task DeleteAsync(ValueType id)
         {
-            await this._restaurantEntity.DeleteDomainRecordAsync(id);
+            try
+            {
+                await this._restaurantEntity.DeleteDomainRecordAsync(id);
+            }
+            catch (DomainException ex)
+            {
+                throw new ServiceException("", ex);
+            }
         }
 
-        public async Task<IDomainRecord<ValueType>> RestaurantAsync(ValueType id)
+        public async Task UpdateAsync(IDomainRecord<ValueType> restaurantDomainRecord)
         {
-            return await this._restaurantEntity.DomainRecordAsync(id);
+            try
+            {
+                await this._restaurantEntity.UpdateDomainRecordAsync(restaurantDomainRecord);
+            }
+            catch (DomainException ex)
+            {
+                throw new ServiceException("", ex);
+            }
         }
 
-        public async Task<IList<IDomainRecord<ValueType>>> RestaurantsAsync()
+        public async Task<IList<IDomainRecord<ValueType>>> Where(ValueType[] ids)
         {
-            return await this._restaurantEntity.AllDomainRecordsAsync();
+            try
+            {
+                return await this._restaurantEntity.DomainRecordsAsync(ids);
+            }
+            catch (DomainException ex)
+            {
+                throw new ServiceException("", ex);
+            }
         }
 
-        public async Task<IList<IDomainRecord<ValueType>>> RestaurantsAsync(ValueType[] ids)
+        public async Task<IDomainRecord<ValueType>> Where(ValueType id)
         {
-            return await this._restaurantEntity.DomainRecordsAsync(ids);
-        }
-
-        public async Task UpdateRestaurantAsync(IDomainRecord<ValueType> restaurantDomainRecord)
-        {
-            await this._restaurantEntity.UpdateDomainRecordAsync(restaurantDomainRecord);
+            try
+            {
+                return await this._restaurantEntity.DomainRecordAsync(id);
+            }
+            catch (DomainException ex)
+            {
+                throw new ServiceException("", ex);
+            }
         }
     }
 }

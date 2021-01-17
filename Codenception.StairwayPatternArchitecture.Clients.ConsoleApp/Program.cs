@@ -16,7 +16,7 @@ namespace Codenception.StairwayPatternArchitecture.Clients.ConsoleApp
             var serviceProvider = new ServiceCollection()
                 .AddSingleton<IDomainRecord<ValueType>, RestaurantDomainRecord>()
                 .AddSingleton<IEntity<RestaurantDomainRecord>, RestaurantEntity>()
-                .AddSingleton<IRestaurantService<IDomainRecord<ValueType>, ValueType>, RestaurantService>()
+                .AddSingleton<IService<IDomainRecord<ValueType>, ValueType>, RestaurantService>()
                 .BuildServiceProvider();
         }
     }
