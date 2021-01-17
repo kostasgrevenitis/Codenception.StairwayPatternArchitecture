@@ -17,7 +17,7 @@ namespace Codenception.StairwayPatternArchitecture.Domain.Restaurant.Commands
             throw new NotImplementedException();
         }
 
-        public Task UpdateByIdAsync(IDatabaseRecord<ValueType> entity)
+        public async Task UpdateByIdAsync(IDatabaseRecord<ValueType> entity)
         {
             throw new NotImplementedException();
         }

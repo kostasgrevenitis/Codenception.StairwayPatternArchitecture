@@ -7,17 +7,17 @@ namespace Codenception.StairwayPatternArchitecture.Infrastructure.Database.MsSql
 {
     public class RestaurantReadFromDbActions : IReadFromDbActions<RestaurantDatabaseRecord, ValueType>
     {
-        public Task<IList<RestaurantDatabaseRecord>> All()
+        public Task<IList<RestaurantDatabaseRecord>> AllAsync()
         {
             throw new NotImplementedException();
         }
 
-        public Task<IList<RestaurantDatabaseRecord>> Where(ValueType[] ids)
+        public Task<IList<RestaurantDatabaseRecord>> WhereAsync(ValueType[] ids)
         {
             throw new NotImplementedException();
         }
 
-        public Task<RestaurantDatabaseRecord> Where(ValueType id)
+        public Task<RestaurantDatabaseRecord> WhereAsync(ValueType id)
         {
             throw new NotImplementedException();
         }

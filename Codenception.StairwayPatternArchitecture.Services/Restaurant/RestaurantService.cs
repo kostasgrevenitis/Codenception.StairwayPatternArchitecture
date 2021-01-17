@@ -22,7 +22,7 @@ namespace Codenception.StairwayPatternArchitecture.Services.Restaurant
         {
             try
             {
-                return await this._restaurantEntity.AllDomainRecordsAsync();
+                return await this._restaurantEntity.AllAsync();
             }
             catch (DomainException ex)
             {
@@ -34,7 +34,7 @@ namespace Codenception.StairwayPatternArchitecture.Services.Restaurant
         {
             try
             {
-                await this._restaurantEntity.CreateDomainRecordAsync(restaurantDomainRecord);
+                await this._restaurantEntity.CreateRecordAsync(restaurantDomainRecord);
             }
             catch (DomainException ex)
             {
@@ -46,7 +46,7 @@ namespace Codenception.StairwayPatternArchitecture.Services.Restaurant
         {
             try
             {
-                await this._restaurantEntity.DeleteDomainRecordAsync(id);
+                await this._restaurantEntity.DeleteRecordAsync(id);
             }
             catch (DomainException ex)
             {
@@ -58,7 +58,7 @@ namespace Codenception.StairwayPatternArchitecture.Services.Restaurant
         {
             try
             {
-                await this._restaurantEntity.UpdateDomainRecordAsync(restaurantDomainRecord);
+                await this._restaurantEntity.UpdateRecordAsync(restaurantDomainRecord);
             }
             catch (DomainException ex)
             {
@@ -66,11 +66,11 @@ namespace Codenception.StairwayPatternArchitecture.Services.Restaurant
             }
         }
 
-        public async Task<IList<IDomainRecord<ValueType>>> Where(ValueType[] ids)
+        public async Task<IList<IDomainRecord<ValueType>>> WhereAsync(ValueType[] ids)
         {
             try
             {
-                return await this._restaurantEntity.DomainRecordsAsync(ids);
+                return await this._restaurantEntity.WhereAsync(ids);
             }
             catch (DomainException ex)
             {
@@ -78,11 +78,11 @@ namespace Codenception.StairwayPatternArchitecture.Services.Restaurant
             }
         }
 
-        public async Task<IDomainRecord<ValueType>> Where(ValueType id)
+        public async Task<IDomainRecord<ValueType>> WhereAsync(ValueType id)
         {
             try
             {
-                return await this._restaurantEntity.DomainRecordAsync(id);
+                return await this._restaurantEntity.WhereAsync(id);
             }
             catch (DomainException ex)
             {

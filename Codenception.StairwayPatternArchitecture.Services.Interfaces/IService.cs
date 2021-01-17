@@ -16,8 +16,8 @@ namespace Codenception.StairwayPatternArchitecture.Services.Interfaces
 
         Task UpdateAsync(IDomainRecord<ValueType> restaurantDomainRecord);
 
-        Task<IList<IDomainRecord<ValueType>>> Where(TId[] ids);
+        Task<IList<IDomainRecord<ValueType>>> WhereAsync(TId[] ids);
 
-        Task<IDomainRecord<ValueType>> Where(TId id);
+        Task<IDomainRecord<ValueType>> WhereAsync(TId id);
     }
 }

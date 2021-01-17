@@ -17,11 +17,11 @@ namespace Codenception.StairwayPatternArchitecture.Domain.Restaurant.Queries
             this._readActions = readActions;
         }
 
-        public async Task<IList<RestaurantDatabaseRecord>> All<T>()
+        public async Task<IList<RestaurantDatabaseRecord>> AllAsync<T>()
         {
             try
             {
-                var databaseRecords = await this._readActions.All();
+                var databaseRecords = await this._readActions.AllAsync();
                 return databaseRecords;
             }
             catch (Exception ex)
@@ -30,11 +30,11 @@ namespace Codenception.StairwayPatternArchitecture.Domain.Restaurant.Queries
             }
         }
 
-        public async Task<IList<RestaurantDatabaseRecord>> Where(ValueType[] ids)
+        public async Task<IList<RestaurantDatabaseRecord>> WhereAsync(ValueType[] ids)
         {
             try
             {
-                var databaseRecords = await this._readActions.Where(ids);
+                var databaseRecords = await this._readActions.WhereAsync(ids);
                 return databaseRecords;
             }
             catch (Exception ex)
@@ -43,11 +43,11 @@ namespace Codenception.StairwayPatternArchitecture.Domain.Restaurant.Queries
             }
         }
 
-        public async Task<RestaurantDatabaseRecord> Where(ValueType id)
+        public async Task<RestaurantDatabaseRecord> WhereAsync(ValueType id)
         {
             try
             {
-                var databaseRecords = await this._readActions.Where(id);
+                var databaseRecords = await this._readActions.WhereAsync(id);
                 return databaseRecords;
             }
             catch (Exception ex)

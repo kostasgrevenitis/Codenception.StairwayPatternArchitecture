@@ -7,10 +7,10 @@ namespace Codenception.StairwayPatternArchitecture.Infrastructure.Database.Inter
     public interface IReadFromDbActions<TDatabaseRecord, TId> where TDatabaseRecord : IDatabaseRecord<ValueType>
 
     {
-        public Task<IList<TDatabaseRecord>> All();
+        public Task<IList<TDatabaseRecord>> AllAsync();
 
-        public Task<IList<TDatabaseRecord>> Where(TId[] ids);
+        public Task<IList<TDatabaseRecord>> WhereAsync(TId[] ids);
 
-        public Task<TDatabaseRecord> Where(TId id);
+        public Task<TDatabaseRecord> WhereAsync(TId id);
     }
 }

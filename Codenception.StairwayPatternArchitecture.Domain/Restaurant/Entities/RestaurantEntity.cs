@@ -21,11 +21,11 @@ namespace Codenception.StairwayPatternArchitecture.Domain.Restaurant.Entities
             this._query = query;
         }
 
-        public async Task<IList<RestaurantDomainRecord>> All()
+        public async Task<IList<RestaurantDomainRecord>> AllAsync()
         {
             try
             {
-                var allDatabaseRecords = await this._query.All<ValueType>();
+                var allDatabaseRecords = await this._query.AllAsync<ValueType>();
                 return allDatabaseRecords.MapToDomainRecords();
             }
             catch (RepositoryException ex)
@@ -70,12 +70,12 @@ namespace Codenception.StairwayPatternArchitecture.Domain.Restaurant.Entities
             }
         }
 
-        public async Task<IList<RestaurantDomainRecord>> Where(ValueType[] ids)
+        public async Task<RestaurantDomainRecord> WhereAsync(ValueType id)
         {
             try
             {
-                var databaseRecords = await this._query.Where(ids);
-                return databaseRecords.MapToDomainRecords();
+                var databaseRecord = await this._query.WhereAsync(id);
+                return databaseRecord.MapToDomainRecord();
             }
             catch (RepositoryException ex)
             {
@@ -83,12 +83,12 @@ namespace Codenception.StairwayPatternArchitecture.Domain.Restaurant.Entities
             }
         }
 
-        public async Task<RestaurantDomainRecord> Where(ValueType id)
+        public async Task<IList<RestaurantDomainRecord>> WhereAsync(ValueType[] ids)
         {
             try
             {
-                var databaseRecord = await this._query.Where(id);
-                return databaseRecord.MapToDomainRecord();
+                var databaseRecords = await this._query.WhereAsync(ids);
+                return databaseRecords.MapToDomainRecords();
             }
             catch (RepositoryException ex)
             {
