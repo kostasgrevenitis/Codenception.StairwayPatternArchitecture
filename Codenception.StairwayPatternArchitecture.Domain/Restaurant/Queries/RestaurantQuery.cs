@@ -10,18 +10,18 @@ namespace Codenception.StairwayPatternArchitecture.Domain.Restaurant.Queries
 {
     public class RestaurantQuery : IQuery<RestaurantDatabaseRecord>
     {
-        private readonly IReadFromDbActions<RestaurantDatabaseRecord> _readActions;
+        private readonly IReadFromDbActions<RestaurantDatabaseRecord, ValueType> _readActions;
 
-        public RestaurantQuery(IReadFromDbActions<RestaurantDatabaseRecord> readActions)
+        public RestaurantQuery(IReadFromDbActions<RestaurantDatabaseRecord, ValueType> readActions)
         {
             this._readActions = readActions;
         }
 
-        public async Task<IList<RestaurantDatabaseRecord>> AllDatabaseRecordsAsync<T>()
+        public async Task<IList<RestaurantDatabaseRecord>> All<T>()
         {
             try
             {
-                var databaseRecords = await this._readActions.SelectAsync();
+                var databaseRecords = await this._readActions.All();
                 return databaseRecords;
             }
             catch (Exception ex)
@@ -30,16 +30,24 @@ namespace Codenception.StairwayPatternArchitecture.Domain.Restaurant.Queries
             }
         }
 
-        public Task<RestaurantDatabaseRecord> DatabaseRecordByIdAsync(ValueType id)
-        {
-            throw new NotImplementedException();
-        }
-
-        public async Task<IList<RestaurantDatabaseRecord>> DatabaseRecordByIdsAsync(ValueType[] ids)
+        public async Task<IList<RestaurantDatabaseRecord>> Where(ValueType[] ids)
         {
             try
             {
-                var databaseRecords = await this._readActions.SelectAsync();
+                var databaseRecords = await this._readActions.Where(ids);
+                return databaseRecords;
+            }
+            catch (Exception ex)
+            {
+                throw new RepositoryException("", ex);
+            }
+        }
+
+        public async Task<RestaurantDatabaseRecord> Where(ValueType id)
+        {
+            try
+            {
+                var databaseRecords = await this._readActions.Where(id);
                 return databaseRecords;
             }
             catch (Exception ex)

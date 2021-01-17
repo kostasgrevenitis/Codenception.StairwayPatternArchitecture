@@ -8,16 +8,16 @@ namespace Codenception.StairwayPatternArchitecture.Domain.Interfaces.Entities
 {
     public interface IEntity<TDomainRecord> where TDomainRecord : IDomainRecord<ValueType>
     {
-        public Task<IList<TDomainRecord>> AllDomainRecordsAsync();
+        public Task<IList<TDomainRecord>> All();
 
-        public Task CreateDomainRecordAsync([Required] TDomainRecord domainRecord);
+        public Task CreateRecordAsync([Required] TDomainRecord domainRecord);
 
-        public Task DeleteDomainRecordAsync(ValueType id);
+        public Task DeleteRecordAsync(ValueType id);
 
-        public Task<TDomainRecord> DomainRecordAsync(ValueType id);
+        public Task UpdateRecordAsync(TDomainRecord domainRecord);
 
-        public Task<IList<TDomainRecord>> DomainRecordsAsync(ValueType[] ids);
+        public Task<TDomainRecord> Where(ValueType id);
 
-        public Task UpdateDomainRecordAsync(TDomainRecord domainRecord);
+        public Task<IList<TDomainRecord>> Where(ValueType[] ids);
     }
 }

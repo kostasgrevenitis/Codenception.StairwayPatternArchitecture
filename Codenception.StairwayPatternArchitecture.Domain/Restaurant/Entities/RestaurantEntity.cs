@@ -21,11 +21,11 @@ namespace Codenception.StairwayPatternArchitecture.Domain.Restaurant.Entities
             this._query = query;
         }
 
-        public async Task<IList<RestaurantDomainRecord>> AllDomainRecordsAsync()
+        public async Task<IList<RestaurantDomainRecord>> All()
         {
             try
             {
-                var allDatabaseRecords = await this._query.AllDatabaseRecordsAsync<ValueType>();
+                var allDatabaseRecords = await this._query.All<ValueType>();
                 return allDatabaseRecords.MapToDomainRecords();
             }
             catch (RepositoryException ex)
@@ -34,7 +34,7 @@ namespace Codenception.StairwayPatternArchitecture.Domain.Restaurant.Entities
             }
         }
 
-        public async Task CreateDomainRecordAsync(RestaurantDomainRecord domainRecord)
+        public async Task CreateRecordAsync(RestaurantDomainRecord domainRecord)
         {
             try
             {
@@ -46,7 +46,7 @@ namespace Codenception.StairwayPatternArchitecture.Domain.Restaurant.Entities
             }
         }
 
-        public async Task DeleteDomainRecordAsync(ValueType id)
+        public async Task DeleteRecordAsync(ValueType id)
         {
             try
             {
@@ -58,12 +58,11 @@ namespace Codenception.StairwayPatternArchitecture.Domain.Restaurant.Entities
             }
         }
 
-        public async Task<RestaurantDomainRecord> DomainRecordAsync(ValueType id)
+        public async Task UpdateRecordAsync(RestaurantDomainRecord domainRecord)
         {
             try
             {
-                var databaseRecord = await this._query.DatabaseRecordByIdAsync(id);
-                return databaseRecord.MapToDomainRecord();
+                await this._command.UpdateByIdAsync(domainRecord.MapToDatabaseRecord());
             }
             catch (RepositoryException ex)
             {
@@ -71,11 +70,11 @@ namespace Codenception.StairwayPatternArchitecture.Domain.Restaurant.Entities
             }
         }
 
-        public async Task<IList<RestaurantDomainRecord>> DomainRecordsAsync(ValueType[] ids)
+        public async Task<IList<RestaurantDomainRecord>> Where(ValueType[] ids)
         {
             try
             {
-                var databaseRecords = await this._query.DatabaseRecordByIdsAsync(ids);
+                var databaseRecords = await this._query.Where(ids);
                 return databaseRecords.MapToDomainRecords();
             }
             catch (RepositoryException ex)
@@ -84,11 +83,12 @@ namespace Codenception.StairwayPatternArchitecture.Domain.Restaurant.Entities
             }
         }
 
-        public async Task UpdateDomainRecordAsync(RestaurantDomainRecord domainRecord)
+        public async Task<RestaurantDomainRecord> Where(ValueType id)
         {
             try
             {
-                await this._command.UpdateByIdAsync(domainRecord.MapToDatabaseRecord());
+                var databaseRecord = await this._query.Where(id);
+                return databaseRecord.MapToDomainRecord();
             }
             catch (RepositoryException ex)
             {

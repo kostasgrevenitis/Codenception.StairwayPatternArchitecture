@@ -98,7 +98,7 @@ overall development.
 
 # Nuget dependencies
 	
-- [Carter](https://www.nuget.org/packages/Carter/)
+- [Carter](https://www.nuget.org/packages/Carter/), for the web client
 - [DocumentFormat.OpenXml](https://www.nuget.org/packages/DocumentFormat.OpenXml/)
 - [Finbuckle.MultiTenant](https://www.nuget.org/packages/Finbuckle.MultiTenant/)
 - [MassTransit](https://www.nuget.org/packages/MassTransit/)

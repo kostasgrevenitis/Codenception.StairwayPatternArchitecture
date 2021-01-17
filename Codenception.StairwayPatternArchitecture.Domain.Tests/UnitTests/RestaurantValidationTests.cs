@@ -14,7 +14,32 @@ namespace Codenception.StairwayPatternArchitecture.Domain.Tests.UnitTests
         //  --  The expected behavior when the scenario is invoked.
 
         [Fact]
-        public void AllProperties_ArePropertyHaveValues_PropertyShouldHaveValues()
+        public void AllProperties_PropertiesAreNull_PropertyShouldBeNull()
+        {
+            // Arrange
+            var restaurandDomainRecord = new RestaurantDomainRecord() with
+            {
+                Name = null,
+                PriceLevel = default,
+                RestaurantType = default,
+                AddressInfo = null
+            };
+
+            var validationResults = new List<ValidationResult>();
+            var validationContext = new ValidationContext(restaurandDomainRecord);
+
+            //Act
+            var exception = Record.Exception(() =>
+            {
+                Validator.ValidateObject(restaurandDomainRecord, validationContext, true);
+            });
+
+            // Assert
+            Assert.NotNull(exception);
+        }
+
+        [Fact]
+        public void AllProperties_PropertiesHaveValues_PropertyShouldHaveValues()
         {
             // Arrange
             var restaurandDomainRecord = new RestaurantDomainRecord() with
@@ -42,31 +67,6 @@ namespace Codenception.StairwayPatternArchitecture.Domain.Tests.UnitTests
 
             // Assert
             Assert.Null(exception);
-        }
-
-        [Fact]
-        public void AllProperties_ArePropertyNull_PropertyShouldBeNull()
-        {
-            // Arrange
-            var restaurandDomainRecord = new RestaurantDomainRecord() with
-            {
-                Name = null,
-                PriceLevel = default,
-                RestaurantType = default,
-                AddressInfo = null
-            };
-
-            var validationResults = new List<ValidationResult>();
-            var validationContext = new ValidationContext(restaurandDomainRecord);
-
-            //Act
-            var exception = Record.Exception(() =>
-            {
-                Validator.ValidateObject(restaurandDomainRecord, validationContext, true);
-            });
-
-            // Assert
-            Assert.NotNull(exception);
         }
     }
 }
