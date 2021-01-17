@@ -10,10 +10,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Codenception.StairwayPatternArchitecture.Domain.Interfaces\Codenception.StairwayPatternArchitecture.Domain.Interfaces.csproj" />
     <ProjectReference Include="..\Codenception.StairwayPatternArchitecture.Domain\Codenception.StairwayPatternArchitecture.Domain.csproj" />
     <ProjectReference Include="..\Codenception.StairwayPatternArchitecture.Infrastructure.Caching.Interfaces\Codenception.StairwayPatternArchitecture.Infrastructure.Caching.Interfaces.csproj" />
-    <ProjectReference Include="..\Codenception.StairwayPatternArchitecture.Infrastructure.Database.Interfaces\Codenception.StairwayPatternArchitecture.Infrastructure.Database.Interfaces.csproj" />
     <ProjectReference Include="..\Codenception.StairwayPatternArchitecture.Infrastructure.Database.MsSql\Codenception.StairwayPatternArchitecture.Infrastructure.Database.MsSql.csproj" />
     <ProjectReference Include="..\Codenception.StairwayPatternArchitecture.Infrastructure.Io.Interfaces\Codenception.StairwayPatternArchitecture.Infrastructure.Io.Interfaces.csproj" />
     <ProjectReference Include="..\Codenception.StairwayPatternArchitecture.Infrastructure.Messsaging.Interfaces\Codenception.StairwayPatternArchitecture.Infrastructure.Messsaging.Interfaces.csproj" />
